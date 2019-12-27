@@ -1,0 +1,19 @@
+{
+    "author": [
+		"Project Six"
+    ],
+    "bot_version": [
+        3,
+        0,
+        0
+    ],
+    "hidden": false,
+    "required_cogs": [],
+    "requirements": [],
+    "install_msg": "DnD module installed!~~~ Have fun!",
+    "short": "Useful functions for Dungeons and Dragons cause",
+    "description": "Adds multiple functions that is useful for any kind of Dungeons-and-Dragons type of rolegames.",
+    "tags": [
+        "random"
+    ]
+}

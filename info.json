@@ -1,6 +1,6 @@
 {
-    "author" : ["Project: Six", "and pretty much almost every single author..."],
-    "install_msg" : "INSTALL: SUCCESS. You now may add cogs from Project: Sixth. Worry not, every single plugin here is tested, and no command will overlap with each other or built-in plugins. Have fun.",
-    "short" : "Library of best cogs from all authors.",
-    "description" : "Awesome cogs made by the community. Some cogs are made by me, Project Sixth. Some is just saved here, for localisation (mostly RU) and/or upgrading. Others are saved, because they are too awesome and I dont want to lose them at any time. So this is just a pile of pretty much just awesome cogs.",
+    "author": ["Project: Six", "and pretty much almost every single author..."],
+    "install_msg": "INSTALL: SUCCESS. You now may add cogs from Project: Sixth. Worry not, every single plugin here is tested, and no command will overlap with each other or built-in plugins. Have fun.",
+    "short": "Library of best cogs from all authors.",
+    "description": "Awesome cogs made by the community. Some cogs are made by me, Project Sixth. Some is just saved here, for localisation (mostly RU) and/or upgrading. Others are saved, because they are too awesome and I dont want to lose them at any time. So this is just a pile of pretty much just awesome cogs."
 }
