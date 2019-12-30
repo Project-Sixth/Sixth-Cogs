@@ -68,3 +68,12 @@ class Dnd(commands.Cog):
         The result will be between 1 and 100.
         """
         await self.dndrolld(ctx, 100)
+    
+    @commands.command()
+    async def dndroll3d6(self, ctx):
+        """
+        Roll an 3D6 dice
+        The result will be between 3 and 18.
+        """
+        num1, num2, num3 = randint(1, 6), randint(1, 6), randint(1, 6)
+        await ctx.send("{author.mention} бросил :game_die::game_die::game_die: 3D6. Результат: {n1}, {n2}, {n3} += **{r1}**".format(author=ctx.author, n1=num1, n2=num2, n3=num3, r1=num1+num2+num3))
