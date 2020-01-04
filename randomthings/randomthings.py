@@ -24,7 +24,7 @@ class RandomThings(commands.Cog):
             else:
                 R = choice(G).upper() + choice(S)
         else:
-            R = choice(S).upper + choice(G) + choice(S)
+            R = choice(S).upper() + choice(G) + choice(S)
         await ctx.send("Случайное имя Дневного Плопи: {}.".format(R+"-"+R))
     
     @randomthings.command()
@@ -40,5 +40,5 @@ class RandomThings(commands.Cog):
             else:
                 R = choice(G).upper() + choice(S)
         else:
-            R = choice(S).upper + choice(G) + choice(S)
+            R = choice(S).upper() + choice(G) + choice(S)
         await ctx.send("Random name of Day Plopy: {}.".format(R+"-"+R))
