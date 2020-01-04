@@ -1,0 +1,19 @@
+{
+    "author": [
+		"Project Six"
+    ],
+    "bot_version": [
+        3,
+        0,
+        0
+    ],
+    "hidden": false,
+    "required_cogs": [],
+    "requirements": [],
+    "install_msg": "Random Names Generator module installed!~~~ Have fun!",
+    "short": "Just funny small generator",
+    "description": "Adds a lot of existing random name (and not only name) generators!",
+    "tags": [
+        "random"
+    ]
+}
