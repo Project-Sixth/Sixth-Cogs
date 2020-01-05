@@ -5,7 +5,7 @@ from os import listdir
 from yaml import safe_load as yamlload
 
 def maestro_replace(msg):
-    library = yamlload(open('maestrolist.yaml', 'r'))
+    library = yamlload(open('./maestrolist.yaml', 'r'))
 
     def GetSpecificRandomItem(regexMatch):
         if regexMatch[1] in library:
