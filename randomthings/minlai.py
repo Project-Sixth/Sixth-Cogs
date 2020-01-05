@@ -12,7 +12,7 @@ def generate_dayplopyname():
         R = choice(S).upper() + choice(G) + choice(S)
     return R+"-"+R
     
-async def generate_dayplopyname_english():
+def generate_dayplopyname_english():
     S = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
     G = ['a', 'e', 'i', 'o', 'u']
     if choice([2, 3]) == 2:
