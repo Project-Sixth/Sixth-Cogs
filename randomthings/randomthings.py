@@ -1,9 +1,10 @@
 from random import randint,choice
 from redbot.core import commands
 
-from .minlai import *
-from .starnamegen import *
-from .planetnamegen import *
+from .minlaigen import generate_dayplopyname_russian, generate_dayplopyname_english, generate_shadowdayplopyname_russian, generate_shadowdayplopyname_english
+from .starnamegen import generate_starname_russian, generate_starname_english
+from .planetnamegen import generate_planetname_russian, generate_planetname_english
+from .sylphnamegen import generate_sylphname_russian, generate_sylphname_english
 
 class RandomThings(commands.Cog):
     """
@@ -44,6 +45,20 @@ class RandomThings(commands.Cog):
         await ctx.send("Random planet name: {}.".format(generate_planetname_english()))
 
     @randomthings.command()
+    async def sylphname(self, ctx):
+        """
+        Создать название случайного сильфа на русском языке.
+        """
+        await ctx.send("Случайный сильф: {}.".format(generate_sylphname_russian()))
+    
+    @randomthings.command()
+    async def sylphnameen(self, ctx):
+        """
+        Create a random sylph name on English Language
+        """
+        await ctx.send("Random sylph name: {}.".format(generate_sylphname_english()))
+
+    @randomthings.command()
     async def dayplopyname(self, ctx):
         """
         Создать имя случайного Дневного Плопи на русском языке.
@@ -81,7 +96,7 @@ class RandomThings(commands.Cog):
         Создать имя случайного Ночного Плопи на русском языке.
         Ночные Плопи имеют имена, которые связаны с названиями небесных тел, событий и космосом впринципе.
         """
-        r = choice([generate_planetname_russian, generate_starname_russian])
+        r = choice([generate_planetname_russian, generate_starname_russian, generate_sylphname_russian])
         await ctx.send("Случайное имя Ночного Плопи: {}.".format(r()))
 
     @randomthings.command()
@@ -90,5 +105,5 @@ class RandomThings(commands.Cog):
         Create a random Night Plopy name. Using ENglish language.
         Night Plopies usually have names that somehow connected to stars or cosmos.
         """
-        r = choice([generate_planetname_english, generate_starname_english])
+        r = choice([generate_planetname_english, generate_starname_english, generate_sylphname_english])
         await ctx.send("Random name of Night Plopy: {}.".format(r()))
