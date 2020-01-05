@@ -65,7 +65,7 @@ class RandomThings(commands.Cog):
         Создать имя случайного Ночного Плопи на русском языке.
         Ночные Плопи имеют имена, которые связаны с названиями небесных тел, событий и космосом впринципе.
         """
-        r = choice(generate_planetname_russian, generate_starname_russian)
+        r = choice([generate_planetname_russian, generate_starname_russian])
         await ctx.send("Случайное имя Ночного Плопи: {}.".format(r()))
 
     @randomthings.command()
@@ -74,5 +74,5 @@ class RandomThings(commands.Cog):
         Create a random Night Plopy name. Using ENglish language.
         Night Plopies usually have names that somehow connected to stars or cosmos.
         """
-        r = choice(generate_planetname_english, generate_starname_english)
+        r = choice([generate_planetname_english, generate_starname_english])
         await ctx.send("Random name of Night Plopy: {}.".format(r()))
