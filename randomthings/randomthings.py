@@ -115,4 +115,4 @@ class RandomThings(commands.Cog):
         """
         Пробудить безумного Маэстро!
         """
-        await ctx.send("**Маэстро**: {}!.".format(maestro_replace(msg)))
+        await ctx.send("**Маэстро**: {}".format(maestro_replace(msg)))
