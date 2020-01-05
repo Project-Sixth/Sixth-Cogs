@@ -3,9 +3,10 @@ from time import strftime
 from random import choice
 from os import listdir
 from yaml import safe_load as yamlload
+from pathlib import Path
 
 def maestro_replace(msg):
-    library = yamlload(open('./maestrolist.yaml', 'r'))
+    library = yamlload(open(Path(__file__).parent.resolve() / "maestrolist.yaml", 'r'))
 
     def GetSpecificRandomItem(regexMatch):
         if regexMatch[1] in library:
