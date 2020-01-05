@@ -1,6 +1,6 @@
 from random import choice
 
-def generate_dayplopyname():
+def generate_dayplopyname_russian():
     S = ['б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ']
     G = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
     if choice([2, 3]) == 2:
