@@ -1,10 +1,11 @@
 from random import randint,choice
 from redbot.core import commands
 
-from .minlaigen import generate_dayplopyname_russian, generate_dayplopyname_english, generate_shadowdayplopyname_russian, generate_shadowdayplopyname_english
-from .starnamegen import generate_starname_russian, generate_starname_english
-from .planetnamegen import generate_planetname_russian, generate_planetname_english
-from .sylphnamegen import generate_sylphname_russian, generate_sylphname_english
+from .generators.minlaigen import generate_dayplopyname_russian, generate_dayplopyname_english, generate_shadowdayplopyname_russian, generate_shadowdayplopyname_english
+from .generators.starnamegen import generate_starname_russian, generate_starname_english
+from .generators.planetnamegen import generate_planetname_russian, generate_planetname_english
+from .generators.sylphnamegen import generate_sylphname_russian, generate_sylphname_english
+from .maestro.maestro import maestro_replace
 
 class RandomThings(commands.Cog):
     """
@@ -107,3 +108,11 @@ class RandomThings(commands.Cog):
         """
         r = choice([generate_planetname_english, generate_starname_english, generate_sylphname_english])
         await ctx.send("Random name of Night Plopy: {}.".format(r()))
+
+# ====== MAESTRO ======
+    @randomthings.command()
+    async def maestro(self, ctx, *, msg: str):
+        """
+        Пробудить безумного Маэстро!
+        """
+        await ctx.send("**Маэстро**: {}!.".format(maestro_replace(msg)))

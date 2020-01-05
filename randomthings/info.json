@@ -1,19 +1,8 @@
 {
-    "author": [
-		"Project Six"
-    ],
-    "bot_version": [
-        3,
-        0,
-        0
-    ],
-    "hidden": false,
-    "required_cogs": [],
-    "requirements": [],
-    "install_msg": "Random Names Generator module installed!~~~ Have fun!",
-    "short": "Just funny small generator",
-    "description": "Adds a lot of existing random name (and not only name) generators!",
-    "tags": [
-        "random"
-    ]
+    "author": ["Project: Six"],
+    "short": "A bunch of interesting Random Generators.",
+    "description": "Adds a lot of existing random name (and not only name) generators! Most of them belong to https://www.fantasynamegenerators.com/, others made by myself!",
+    "tags": ["random"],
+    "requirements": ["yaml"],
+    "install_msg": "Random Things Generator module installed!~~~ Have fun!"
 }
