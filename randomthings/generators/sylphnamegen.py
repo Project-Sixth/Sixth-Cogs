@@ -1,6 +1,18 @@
 from random import choice
 # Vowel and Consonant
 def generate_sylphname_english(name=""):
+    """[summary]
+    
+    Parameters
+    ----------
+    name : str, optional
+        [description], by default ""
+    
+    Returns
+    -------
+    [type]
+        [description]
+    """
     FemaleStart = ["c", "ch", "l", "m", "n", "ph", "s", "th", "v", "w", "y"]
     SingingVowel = ["a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "ae", "ea", "ei", "ia", "ie", "ue", "ua", "aei", "aea", "eae"]
     FemaleConsonant = ["bh", "c", "ch", "h", "y", "hl", "hm", "hy", "l", "lm", "ln", "ls", "lt", "lth", "lv", "ll", "m", "mm", "mn", "mh", "ms", "mth", "n", "nh", "nn", "nl", "nt", "ns", "nth", "nv", "nf", "nm", "nh", "nhr", "ph", "phr", "r", "rd", "rph", "rs", "rth", "rh", "rn", "rm", "rv", "ss", "sn", "sh", "st", "t", "th", "thr", "v", "w"]
@@ -41,6 +53,18 @@ def generate_sylphname_english(name=""):
     return R.capitalize()
 
 def generate_sylphname_russian(name=""):
+    """[summary]
+    
+    Parameters
+    ----------
+    name : str, optional
+        [description], by default ""
+    
+    Returns
+    -------
+    [type]
+        [description]
+    """    
     FemaleStart = ["ц", "ч", "л", "м", "н", "ф", "с", "тх", "в", "ви"]
     SingingVowel = ["а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "а", "е", "и", "о", "у", "ае", "еа", "еи", "иа", "ие", "уе", "уа", "аеи", "аеа", "еае"]
     FemaleConsonant = ["бх", "ц", "ч", "х", "y", "хл", "хм", "хи", "л", "лм", "лн", "лс", "лт", "лв", "лл", "м", "мм", "мн", "мх", "мс", "н", "нх", "нн", "нл", "нт", "нс", "нв", "нф", "нм", "нх", "ф", "фр", "р", "рд", "рф", "рс", "рх", "рн", "рм", "рв", "сс", "сн", "ш", "ст", "т", "тх", "в", "ви"]
