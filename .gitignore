@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 .vscode/
-!cogs_by_other_persons/
+.cogsbyotherpersons/
