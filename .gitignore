@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.vscode
-!cogs_by_other_persons
+.vscode/
+!cogs_by_other_persons/
