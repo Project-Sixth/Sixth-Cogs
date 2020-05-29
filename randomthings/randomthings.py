@@ -2,6 +2,7 @@
 Project: Sixth module for doing random stuff
 """
 
+import os
 from redbot.core import commands
 
 # from .generators.minlaigen import generate_dayplopyname_russian, generate_dayplopyname_english, generate_shadowdayplopyname_russian, generate_shadowdayplopyname_english
@@ -42,14 +43,24 @@ class RandomThings(commands.Cog):
         """
         List all available YML-scenarios. / Перечислить все доступные YML-файлы сценариев.
         """
-        pass
+        grep = os.listdir(f'{str(__file__)[:-16]}/gens')
+        scenarios = []
+        for g in grep:
+            if g.endswith('.yml'):
+                scenarios.append(f'`{g[:-4]}`')
+        await ctx.send(f'**Маэстро: Я имею следующий список загруженных сценариев:\n{scenarios.join(", ")}')
     
     @maestro.command()
     async def list_libraries(self, ctx):
         """
         List all available YML-libraries. / Перечислить все доступные YML-файлы библиотек.
         """
-        pass
+        grep = os.listdir(f'{str(__file__)[:-16]}/libs')
+        libs = []
+        for g in grep:
+            if g.endswith('.yml'):
+                libs.append(f'`{g[:-4]}`')
+        await ctx.send(f'**Маэстро: Я имею следующий список загруженных библиотек:\n{libs.join(", ")}')
 
 #     @randomthings.command()
 #     async def starname(self, ctx):
