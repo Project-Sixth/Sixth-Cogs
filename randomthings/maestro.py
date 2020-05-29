@@ -28,7 +28,7 @@ def check_and_define_vars():
 def getMutationFromConfig(match):
     global config
     
-    if match.group(1) in config['vars']:
+    if ('vars' in config) and (match.group(1) in config['vars']):
         return config['vars'][match.group(1)]
     elif match.group(1) in config:
         return random.choice(config[match.group(1)])
