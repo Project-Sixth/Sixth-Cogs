@@ -28,14 +28,14 @@ class RandomThings(commands.Cog):
         """
         Make an improvised text, still, random. / Перечислить все доступные YML-файлы сценариев.
         """
-        ctx.send(MAEsay(text))
+        await ctx.send(MAEsay(text))
 
     @maestro.command()
     async def load(self, ctx, scenario_name):
         """
         Load a YML-file of scenario. / Загрузить YML-файл сценария.
         """
-        ctx.send(MAEload(scenario_name))
+        await ctx.send(MAEload(scenario_name))
     
     @maestro.command()
     async def list_scenarios(self, ctx):
