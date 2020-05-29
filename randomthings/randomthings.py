@@ -8,7 +8,8 @@ from redbot.core import commands
 # from .generators.starnamegen import generate_starname_russian, generate_starname_english
 # from .generators.planetnamegen import generate_planetname_russian, generate_planetname_english
 # from .generators.sylphnamegen import generate_sylphname_russian, generate_sylphname_english
-import maestro as MAE
+from maestro import load as MAEload
+from maestro import say as MAEsay
 
 class RandomThings(commands.Cog):
     """
@@ -27,14 +28,14 @@ class RandomThings(commands.Cog):
         """
         Make an improvised text, still, random. / Перечислить все доступные YML-файлы сценариев.
         """
-        ctx.send(MAE.say(text))
+        ctx.send(MAEsay(text))
 
     @maestro.command()
     async def load(self, ctx, scenario_name):
         """
         Load a YML-file of scenario. / Загрузить YML-файл сценария.
         """
-        ctx.send(MAE.load(scenario_name))
+        ctx.send(MAEload(scenario_name))
     
     @maestro.command()
     async def list_scenarios(self, ctx):
