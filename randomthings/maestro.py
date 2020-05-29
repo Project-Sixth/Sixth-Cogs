@@ -37,11 +37,11 @@ def getMutationFromConfig(match):
 
 def getMutationFromFile(match):
     try:
-        with open(f'./libs/{match.group(1)}.yml', 'r', encoding='utf-8') as f:
+        with open(f'{str(__file__)[:-11]}/libs/{match.group(1)}.yml', 'r', encoding='utf-8') as f:
             lib = yaml.safe_load(f)
             return random.choice(lib)
     except:
-        raise Exception(f'No file "libs/{match.group(1)}.yml" found.')
+        raise Exception(f'No file "./libs/{match.group(1)}.yml" found.')
 
 def mutate(mutationTrail=[]):
     if len(mutationTrail) > 1:
@@ -57,7 +57,7 @@ def load(gen_name):
     global config
 
     try:
-        with open(f'./gens/{gen_name}.yml', 'r', encoding='utf-8') as f:
+        with open(f'{str(__file__)[:-11]}/gens/{gen_name}.yml', 'r', encoding='utf-8') as f:
             config = yaml.safe_load(f)
     except Exception as E:
         return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Reading-State:\n{E}\n```'

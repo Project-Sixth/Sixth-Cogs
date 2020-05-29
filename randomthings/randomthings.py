@@ -8,8 +8,8 @@ from redbot.core import commands
 # from .generators.starnamegen import generate_starname_russian, generate_starname_english
 # from .generators.planetnamegen import generate_planetname_russian, generate_planetname_english
 # from .generators.sylphnamegen import generate_sylphname_russian, generate_sylphname_english
-from maestro import load as MAEload
-from maestro import say as MAEsay
+from .maestro import load as MAEload
+from .maestro import say as MAEsay
 
 class RandomThings(commands.Cog):
     """
