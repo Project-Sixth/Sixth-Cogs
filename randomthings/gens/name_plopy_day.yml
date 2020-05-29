@@ -1,0 +1,16 @@
+pool:
+  - "**Maestro picks a new name from magic hat. And it is {{ day name syllable }}-{{ day name syllable }} !**"
+vars:
+  day name syllable: "{{ name syllable variants }}"
+
+name syllable variants:
+  - "{{ vowel }}{{ consontant }}"
+  - "{{ vowel }}{{ consontant }}{{ consontant }}"
+  - "{{ consontant }}{{ vowel }}"
+  - "{{ consontant }}{{ consontant }}{{ vowel }}"
+  - "{{ consontant }}{{ vowel }}{{ consontant }}"
+  - "{{ consontant }}{{ consontant }}{{ vowel }}{{ consontant }}"
+  - "{{ consontant }}{{ vowel }}{{ consontant }}{{ consontant }}"
+
+consontant: ['b', 'd', 'g', 'j', 'k', 'l', 'm', 'n', 'q', 'r', 'v', 'w', 'b', 'd', 'g', 'j', 'k', 'l', 'm', 'n', 'q', 'r', 'v', 'w', 'c', 'f', 'h', 'p', 's', 't', 'x', 'y', 'z']
+vowel: ['a', 'e', 'i', 'o', 'u']

@@ -1,0 +1,862 @@
+pool:
+    - "**Maestro:** {{ sentence1 }}\n{{ sentence2 }}\n{{ sentence3 }}\n{{ sentence4 }}\n{{ sentence5 }}\n{{ sentence6 }}"
+vars:
+    scientific flower name: "{{ scientific name, left side }} {{ scientific name, right side }}"
+
+# ==== SENTENCES
+sentence1:
+    - The {{ scientific flower name }} is {{ common plant rarity }}, {{ plant size }} plant and can be found {{ common plant location }}. It blooms {{ common bloom time }}. These plants grow {{ common group size }}.
+    - The {{ scientific flower name }} is {{ uncommon plant rarity }}, {{ plant size }} plant and can be found {{ uncommon plant location }}. It blooms {{ uncommon bloom time }}. These plants grow {{ uncommon group size }}.
+    - The {{ scientific flower name }} is {{ epic plant rarity }}, {{ plant size }} plant and can be found {{ epic plant location }}. It blooms {{ epic bloom time }}. These plants grow {{ epic group size }}.
+    - The {{ scientific flower name }} is {{ legendary plant rarity }}, {{ plant size }} plant and can be found {{ legendary plant location }}. It blooms {{ legendary bloom time }}. These plants grow {{ legendary group size }}.
+
+sentence2:
+    - It has {{ size of leaves }}, {{ shape of leaves }} leaves which are usually {{ color of leaves }}. It also grows {{ size of flowers }} flowers, which can be {{ color of flowers }}.
+
+sentence3:
+    - It's {{ diffuculty to maintain }} to control and maintain their growth.
+
+sentence4:
+    - They {{ plant usage }}.
+
+sentence5:
+    - As a defense mechanism the {{ scientific flower name }} {{ defensive mechanism }}.
+
+sentence6:
+    - They rely on {{ pollination mechanism }} to reproduce. {{ pollination results }}
+
+
+# ==== LIBRARY
+scientific name, left side:
+    - Briza
+    - Brodiaea
+    - Browallia
+    - Brugmansia
+    - Buddleia
+    - Bumelia
+    - Buxus
+    - Caladium
+    - Calamagrostis
+    - Calendula
+    - Callicarpa
+    - Callistephus
+    - Calodecedrus
+    - Calochortus
+    - Calonyction
+    - Caltha
+    - Calycanthus
+    - Camassia
+    - Campanula
+    - Campsis
+    - Canna7
+    - Cardiucrinum
+    - Carduus
+    - Carex
+    - Carpinus
+    - Carum
+    - Carya
+    - Caryopteris
+    - Cassia
+    - Castanea
+    - Castilleja
+    - Catalpa
+    - Catharanthus
+    - Ceanothus
+    - Cedrela
+    - Cedrus
+    - Celastrus
+    - Celosia
+    - Celtis
+    - Centaurea
+    - Centranthus
+    - Cephalanthus
+    - Ceratiola
+    - Cercidiphyllum
+    - Cercic
+    - Chamaecyperai
+    - Chamaecyparis
+    - Chasmanthe
+    - Chelone
+    - Chionanthus
+    - Chionodoxa
+    - Chlidanthus
+    - Chrysanthemum
+    - Chrysogonum
+    - Chicorium
+    - Cimicifuga
+    - Cladrastis
+    - Claytonia
+    - Clematis
+    - Cleome
+    - Clerodendrum
+    - Clethra
+    - Clifonia
+    - Clitoria
+    - Clivia
+    - Cobaena
+    - Cocculus
+    - Coix
+    - Colchicum
+    - Coleus
+    - Colocasia
+    - Commelina
+    - Conopholis
+    - Conradina
+    - Convallaria
+    - Coreopsis
+    - Coriandrum
+    - Cornus
+    - Cortaderia
+    - Corylorsis
+    - Corylus
+    - Cosmos
+    - Cotinus
+    - Cotoneaster
+    - Crataegus
+    - Cronum
+    - Crocosmia
+    - Crocus
+    - Cryptomeria
+    - Cunninghamia
+    - Cuphea
+    - Cupressus
+    - Curcuma
+    - Curtonus
+    - Cyclamen
+    - Cydonia
+    - Cymbopogon
+    - Cypredium
+    - Cyressus
+    - Cyrilla
+    - Dahlia
+    - Danae
+    - Daphne
+    - Datura
+    - Daucus
+    - Davidia
+    - Decumaria
+    - Delphinium
+    - Dandranthema
+    - Dennstaedtia
+    - Dentaria
+    - Deparia
+    - Deschampsia
+    - Desmodium
+    - Deutzia
+    - Dianthus
+    - Diascia
+    - Dicentra
+    - Dichichium
+    - Dichromena
+    - Doctamnus
+    - Diervilla
+    - Dietes
+    - Digitalis
+    - Diodia
+    - Dionaea
+    - Diospyros
+    - Dipelta
+    - Diphelleia
+    - Diplazium
+    - Disanthus
+    - Disporum
+    - Dodecatheon
+    - Dilochos
+    - Doronucum
+    - Drosera
+    - Dryopteris
+    - Duchesnea
+    - Duranta
+    - Dyssodia
+    - Eccremocarpus
+    - Echinecea
+    - Ehinops
+    - Echium
+    - Ehretia
+    - Eichornia
+    - Elaegnus
+    - Eleagnus
+    - Eleocharis
+    - Elymus
+    - Enkianthus
+    - Epifagus
+    - Epigaea
+    - Epilobium
+    - Epimedium
+    - Equisetum
+    - Eragrostrum
+    - Eranthis
+    - Eremurus
+    - Erianthus
+    - Erigeron
+    - Eriobotrya
+    - Eriocaulon
+    - Eriophorum
+    - Erysimum
+    - Erythronium
+    - Escallonia
+    - Eschscholzia
+    - Eucalyptus
+    - Eacharis
+    - Eucomis
+    - Eucommia
+    - Ecrosia
+    - Euonymus
+    - Eupotorium
+    - Eophorbia
+    - Euptellea
+    - Euryale
+    - Escaphis
+    - Evodia
+    - Evolvulus
+    - Exochorda
+    - Fagopyrum
+    - Fagus
+    - Falluiga
+    - Fathsedera
+    - Fatsia
+    - Feijoa
+    - Festuca
+    - Ficus
+    - Filipendula
+    - Firmiana
+    - Foeniculum
+    - Fontanesia
+    - Forsythia
+    - Fothergilla
+    - Fragaria
+    - Franklinia
+    - Fraxinus
+    - Freesia
+    - Fritillaria
+    - Fuchsia
+    - Gaillardia
+    - Galactia
+    - Galanthus
+    - Galax
+    - Galearis
+    - Galium
+    - Galtonia
+    - Gardenia
+
+scientific name, right side:
+    - Ligustrina
+    - Ciliata
+    - Clethroides
+    - Numularia
+    - Quadrifolia
+    - Salicaria
+    - Amuremsis
+    - Pomifera
+    - Loebneri
+    - Acuminata
+    - Cylindrica
+    - Denudata
+    - Fraseri
+    - Kobus
+    - Liliflora
+    - Macrophylla
+    - Stella
+    - Tripetala
+    - Soulangiana
+    - Aquifolium
+    - Bealei
+    - Hortensis
+    - Halliana
+    - Hupehensis
+    - Yannanensis
+    - Moschata
+    - Arboreus
+    - Amabalis
+    - Graminifolia
+    - Carolinensis
+    - Recutita
+    - Struthiopteris
+    - Betonicifolia
+    - Paludosum
+    - Lineare
+    - Pratense
+    - Azadarach
+    - Ciliata
+    - Spicata
+    - Piperita
+    - Glyptostroboides
+    - Yunnanensis
+    - Decussata
+    - Lobata
+    - Verna
+    - Jalapa
+    - Floridulus
+    - Sinensis
+    - Transmorrisonensis
+    - Diphylla
+    - Caerulea
+    - Laevis
+    - Didyma
+    - Punctata
+    - Capillaris
+    - Armeniacum
+    - Botryoides
+    - Comosum
+    - Sylvatica
+    - Cerifera
+    - Domestica
+    - Tenuissima
+    - Lutea
+    - Strumosa
+    - Menziesii
+    - Faasenii
+    - Bowdenii
+    - Oleander
+    - Hippomanica
+    - Damascena
+    - Colorata
+    - Odorata
+    - Marliacea
+    - Pelatum
+    - Ogeche
+    - Biennis
+    - Fruticosa
+    - Speciosa
+    - Tetragona
+    - Linifolia
+    - Sensibilis
+    - Jaburan
+    - Majorana
+    - Vulgare
+    - Delavayi
+    - Fragrans
+    - Cinnamomea
+    - Claytoniana
+    - Hyoseroides
+    - Crassipes
+    - Violacea
+    - Arboreum
+    - Caeruleum
+    - Procumbens
+    - Terminalis
+    - Pandorana
+    - Virgatum
+    - Somniferum
+    - Asarifolia
+    - Persica
+    - Integrifolium
+    - Tricuspidata
+    - Incarnata
+    - Peltatum
+    - Hortorum
+    - Alopecuroides
+    - Setaceum
+    - Canescens
+    - Cobaea
+    - Atriplicifolia
+    - Borbonia
+    - Palustris
+    - Crispum
+    - Hybrida
+    - Bipinnatifida
+    - Purshii
+    - Arundarinacea
+    - Arundinaera
+    - Coccineus
+    - Hexagonoptera
+    - Sachalinense
+    - Amurense
+    - Coronarius
+    - Delavayi
+    - Inodorus
+    - Lemoinei
+    - Divaricata
+    - Glaberrima
+    - Paniculata
+    - Stolonifera
+    - Subulata
+    - Glabra
+    - Serrulata
+    - Villosa
+    - Fraseri
+    - Opulifolius
+    - Abies
+    - Asperata
+    - Glauca
+    - Mariana
+    - Omorika
+    - Ailanthoides
+    - Floribunda
+    - Officnarum
+    - Anisum
+    - Caerulea
+    - Baksiana
+    - Bungeana
+    - Cembra
+    - Densiflora
+    - Echinata
+    - Edulis
+    - Flexilis
+    - Heldreichii
+    - Korariensis
+    - Monticola
+    - Mugo
+    - Palustris
+    - Parviflora
+    - Peucea
+    - Piaster
+    - Ponderosa
+    - Rigida
+    - Strobus
+    - Sylvestris
+    - Taeda
+    - Thunbergiana
+    - Wallichiana
+    - Yunnanensis
+    - Stratiotes
+    - Tobira
+    - Psycodes
+    - Ciliaris
+    - Orbiculata
+    - Acerifolia
+    - Argentatus
+    - Fosteri
+    - Auricoma
+    - Variegatus
+    - Auriculata
+    - Macrophyllus
+    - Peltatum
+    - Hydrengeoides
+    - Campanulata
+    - Laustris
+    - Incana
+    - Intergrifolia
+    - Serrata
+    - Makinoi
+    - Spectabile
+    - Spurium
+    - Telepnoides
+    - Ternatum
+    - Tetractinum
+    - Aureus
+    - Giagenteum
+    - Punicea
+    - Pallida
+    - Galacifolia
+    - Intergrifolium
+    - Terebinthinaceum
+    - Rehdreriana
+    - Angustifolium
+
+plant size:
+    - tiny
+    - small
+    - modest
+    - medium-sized
+    - large
+    - tall
+    - giant
+    - huge
+
+plant usage:
+    - have no real use
+    - can be brewed as tea
+    - can be cooked and eaten
+    - can be used as medicine
+    - have no use, but look nice in gardens
+    - have no real use, besides their aesthetics
+    - have no use, but smell nice
+    - can be used to clean land
+    - can be used as an energizer when eaten
+    - can be used as an energizer when drunk as tea
+    - can be used as a hallucinogen
+    - can be used as an anesthetic
+    - can be used as a cooking ingredient, similar to herbs
+    - can be dried and used in cooking
+    - can be used to help relief pain
+    - can be used to relax
+    - can be used to treat wounds
+    - can be eaten to relief a sore throat
+    - can be eaten to relief stomach cramps
+    - can be used to create a poison
+
+color of leaves:
+    - dark green
+    - light green
+    - emerald
+    - lime green
+    - mint green
+    - pine green
+    - yellow-green
+    - blue-green
+    - olive-green
+    - forest green
+    - bright green
+    - dark red
+    - dark yellow
+    - light red
+    - light yellow
+    - green and white
+    - purple
+    - dark orange
+    - light orange
+
+size of leaves:
+    - small
+    - large
+    - tiny
+    - huge
+    - thin
+    - thick
+    - narrow
+    - wide
+
+shape of leaves:
+    - barb shaped
+    - blunt tipped
+    - circular
+    - diamond shaped
+    - egg shaped
+    - elliptic
+    - fan shaped
+    - heart shaped
+    - kidney shaped
+    - lobed
+    - needle
+    - oval
+    - paired
+    - palmate
+    - pointed
+    - rosette
+    - round
+    - sickle shaped
+    - spear shaped
+    - spoon shaped
+    - squared
+    - toothed
+    - triangular
+    - trifoliate
+    - wedge shaped
+
+size of flowers:
+    - tiny
+    - small
+    - quite small
+    - decent sized
+    - quite large
+    - large
+    - huge
+
+color of flowers:
+    - "{{ full color name }}"
+    - "{{ full color name }} and {{ full color name }}"
+    - "{{ full color name }}, {{ full color name }} and {{ full color name }}"
+    - "{{ full color name }}, {{ full color name }}, {{ full color name }} and {{ full color name }}"
+
+full color name:
+    - black
+    - white
+    - "{{ color shade }}blue"
+    - "{{ color shade }}bronze"
+    - "{{ color shade }}brown"
+    - "{{ color shade }}gold"
+    - "{{ color shade }}grey"
+    - "{{ color shade }}orange"
+    - "{{ color shade }}pink"
+    - "{{ color shade }}purple"
+    - "{{ color shade }}red"
+    - "{{ color shade }}silver"
+    - "{{ color shade }}yellow"
+
+color shade:
+    - ""
+    - "dark "
+    - "light "
+    - "dim "
+    - "pastel-"
+
+diffuculty to maintain:
+    - hard
+    - easy
+    - fairly easy
+    - fairly hard
+    - really tricky
+    - tricky
+    - a bit tricky
+    - really difficult
+    - extremely difficult
+    - near impossible
+    - extremely easy
+    - fairly simple
+    - hard, especially without experience,
+    - easy, even without experience,
+    - challenging
+    - tough
+    - very easy
+    - complicated
+    - no trouble
+    - quite straightforward
+
+defensive mechanism:
+    - grows tiny thorns
+    - grows small thorns
+    - grows large thorns
+    - grows thick thorns
+    - tastes horrible, when eaten raw
+    - grows stinging hairs, like a nettle
+    - is poisonous for most creatures
+    - taste extremely sour
+    - taste very bitter
+    - has a thick, wooden stem
+    - produces a thick, sticky wax
+    - grow slippery leaves to prevent insects from easily eaten them
+    - can collapse its flowers when it detects vibrations
+    - mimics the overall look of a different, poisonous plant
+    - relies mostly on its surroundings to survive
+
+pollination mechanism:
+    - animal pollination
+    - insect pollination
+    - wind pollination
+    - self pollination
+    - water currents to carry their seeds away
+    - winds to carry their seeds away
+    - cloning themselves by growing a new specimen
+
+pollination results:
+    - Once pollinated, they grow {{ fruit taste }}, {{ fruit size }} {{ fruit type }}.
+
+fruit type:
+    - nuts
+    - fruits
+    - berries
+
+fruit size:
+    - small
+    - fairly small
+    - fairly large
+    - large
+
+fruit taste:
+    - delicious
+    - sour
+    - spicy
+    - tasteless
+    - bitter
+    - inedible
+
+
+rarity:
+    - common
+    - uncommon
+    - rare
+    - epic
+# ====== COMMON PLANTS
+common plant rarity:
+    - an extremely common
+    - a very common
+    - a common
+
+common plant location:
+    - almost anywhere
+    - in most hot regions
+    - in most wet regions
+    - anywhere near rivers and lakes
+    - anywhere near rivers
+    - anywhere near lakes
+    - anywhere near the sea
+    - in most dry regions
+    - virtually anywhere
+    - in caves and other dark places
+    - in dark and wet places
+    - in damp places
+    - in any cold region
+    - in most mountains
+    - mostly on tropical islands
+    - in most jungles
+    - in most forests
+    - in most tropical regions
+    - in most humid regions
+    - in most highlands
+    - in most snowy regions
+    - in most subarctic regions
+    - mostly in swamps
+    - mostly in savannas
+    - mostly in tundras
+
+common bloom time:
+    - in early spring
+    - in late spring
+    - in early summer
+    - in late summer
+    - in early autumn
+    - in late autumn
+    - in early winter
+    - in late winter
+    - once a year, for 1 month
+    - twice a year, for 1 week
+    - once a year, for 1 week
+    - once a year, for 2 weeks
+    - once a year, for 3 weeks
+    - twice a year, for 2 weeks
+    - twice a year, for 3 weeks
+    - twice a year, for 1 month
+    - twice a year, for 2 months
+    - once a year, for 2 months
+    - once a year, for 3 months
+    - once a year, for 4 months
+    - once a year, for 5 months
+    - once a year, for 6 months
+
+common group size:
+    - in huge numbers
+    - in decent numbers
+    - in small numbers
+    - in small groups
+    - in large groups
+    - within short distances from each other
+    - separated by a fair distance from each other
+    - in huge groups
+    - in tiny groups
+    - alone, but within a decent distance from each other
+
+# ====== UNCOMMON PLANTS
+uncommon plant rarity:
+    - an uncommon
+    - a rare
+
+uncommon plant location:
+    - only in very hot regions
+    - only in very wet regions
+    - only at lake borders
+    - only at river borders
+    - only near very large lakes
+    - only near sea dunes
+    - only in very dry region
+    - only in caves
+    - only in dark, shadowy places
+    - almost exclusively in dark caves
+    - only in very damp places
+    - only in very cold regions
+    - only high in the mountains
+    - only on mountain tops
+    - only on large tropical islands
+    - only on small tropical islands
+    - only in some jungles
+    - only in some forests
+    - only in some tropical regions
+    - only in some humid regions
+    - only in some highlands
+    - only in some snowy regions
+    - only in some subarctic regions
+    - only deep within swamps
+    - only in some savannas
+    - only in some tundras
+    - only in frozen lands
+    - only near volcanoes
+    - only deep within caves
+    - only in deserts
+
+uncommon bloom time:
+    - "{{ common bloom time }}"
+    
+uncommon group size:
+    - "{{ common group size }}"
+
+
+# ====== EPIC PLANTS
+epic plant rarity:
+    - a very rare
+
+epic plant location:
+    - only on a few dozen islands
+    - only near graves
+    - only on a few mountains
+    - only in one large forest
+    - only in a few forests
+    - on the borders of only a few lakes
+    - on the borders of only a few rivers
+    - in the dunes of only a few ocean shores
+    - in only one region of the world
+    - in only one country
+    - next to just a few volcanoes
+    - in only the harshest lands
+    - only deep within murky swamps
+    - only deep within the darkest forests
+    - only deep within the darkest caves
+    - only in desert oases
+    - only on the tops of the highest mountains
+    - only at the bottom of deep cave systems
+    - only in the coldest regions
+    - only where something has died and decayed
+    - only near frozen lakes
+    - only on putrefied soil
+    - only after a fire
+    - only after a flood
+    - only in one mountain range
+    - only in ponds
+
+epic bloom time:
+    - in early spring
+    - in late spring
+    - in early summer
+    - in late summer
+    - in early autumn
+    - in late autumn
+    - in early winter
+    - in late winter
+    - once a year, for 1 month
+    - twice a year, for 1 week
+    - once a year, for 1 week
+    - once a year, for 2 weeks
+    - once a year, for 3 weeks
+
+epic group size:
+    - in small numbers
+    - in small groups
+    - within short distances from each other
+    - seperated by a fair distance from each other
+    - in tiny groups
+    - alone, but within a decent distance from each other
+    - alone, often without another in sight
+    - within a few feet/decimetres from each other
+    - alone, usually without another specimen around
+    - in pairs
+
+# ====== LEGENDARY PLANTS
+legendary plant rarity:
+    - an extremely rare
+
+legendary plant location:
+    - exclusively on one island
+    - exclusively on one mountain
+    - only in one forest
+    - exclusively near one lake
+    - on the borders of only one large lake
+    - on the borders of only one small lake
+    - on the borders of only one large river
+    - on the borders of only one small river
+    - in the dunes of only one sea shore
+    - in only one region of the world
+    - in only one country
+    - next to one large volcano
+    - next to one small volcano
+    - in only one town
+    - in only one city
+    - in only the harshest lands
+    - only deep within a murky swamp
+    - only deep within a dark forest
+    - only deep within a dark cave
+    - only in one desert oasis
+    - only on the top of the highest mountain
+    - only at the bottom of a deep cave system
+    - only in the coldest region
+    - only where something has died and decayed
+    - only near graves
+    - only on putrefied soil
+    - only in the ashes of a fire
+    - only after a flood
+    - only in the gardens of a few lucky people
+    - exclusively in the garden of one person
+
+legendary bloom time:
+    - "{{ epic bloom time }}"
+    
+legendary group size:
+    - "{{ epic group size }}"
