@@ -53,6 +53,27 @@ def mutate(mutationTrail=[]):
     
     return mutate(mutationTrail + [newMutation])
 
+def getExecution(match):
+    actions = match.group(1)
+    affectedwords = match.group(2)
+    
+    if 'C' in actions:
+        affectedwords = affectedwords.capitalize()
+    if 'U' in actions:
+        affectedwords = affectedwords.upper()
+    if 'L' in actions:
+        affectedwords = affectedwords.lower()
+    return affectedwords
+
+def execute(mutationTrail=[]):
+    if len(mutationTrail) > 1:
+        if mutationTrail[-2] == mutationTrail[-1]:
+            return mutationTrail[-1]
+    
+    newMutation = re.sub('\$\$(\w+) (.*?) \$\$', getExecution, mutationTrail[-1], count=1)
+    
+    return execute(mutationTrail + [newMutation])
+
 def load(gen_name):
     global config
 
@@ -67,7 +88,7 @@ def load(gen_name):
     except Exception as E:
         return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Var-Defining-State:\n{E}\n```'
     
-    return mutate([random.choice(config['pool'])])
+    return execute([mutate([random.choice(config['pool'])])])
 
 def say(message):
-    return mutate([message])
+    return execute([mutate([message])])
