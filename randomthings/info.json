@@ -3,6 +3,6 @@
     "short": "Maestro. The Great One. The Mad One. The Best One.",
     "description": "Adds a lot of existing random name (and not only name) generators! Most of them belong to https://www.fantasynamegenerators.com/, others made by myself!",
     "tags": ["random"],
-    "requirements": ["yaml"],
+    "requirements": ["pyyaml"],
     "install_msg": "Maestro has come!~~~ Have fun!"
 }
