@@ -48,7 +48,7 @@ class RandomThings(commands.Cog):
         for g in grep:
             if g.endswith('.yml'):
                 scenarios.append(f'`{g[:-4]}`')
-        await ctx.send(f'**Маэстро: Я имею следующий список загруженных сценариев:\n{scenarios.join(", ")}')
+        await ctx.send(f'**Маэстро: Я имею следующий список загруженных сценариев:\n{', '.join(scenarios)}')
     
     @maestro.command()
     async def list_libraries(self, ctx):
@@ -60,7 +60,7 @@ class RandomThings(commands.Cog):
         for g in grep:
             if g.endswith('.yml'):
                 libs.append(f'`{g[:-4]}`')
-        await ctx.send(f'**Маэстро: Я имею следующий список загруженных библиотек:\n{libs.join(", ")}')
+        await ctx.send(f'**Маэстро: Я имею следующий список загруженных библиотек:\n{', '.join(libs)}')
 
 #     @randomthings.command()
 #     async def starname(self, ctx):
