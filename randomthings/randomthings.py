@@ -9,7 +9,9 @@ from redbot.core import commands
 # from .generators.starnamegen import generate_starname_russian, generate_starname_english
 # from .generators.planetnamegen import generate_planetname_russian, generate_planetname_english
 # from .generators.sylphnamegen import generate_sylphname_russian, generate_sylphname_english
-import maestro as MAE
+from .maestro import say as MAEsay
+from .maestro import loadGenerator as MAEload
+from .maestro import executeScript as MAEexec
 
 class RandomThings(commands.Cog):
     """
@@ -28,21 +30,21 @@ class RandomThings(commands.Cog):
         """
         Make an improvised text, still, random. Limited to use [[ ]] / Сказать импровизированную фразу. Можно использовать только [[ ]]
         """
-        await ctx.send(MAE.say(' '.join(text)))
+        await ctx.send(MAEsay(' '.join(text)))
 
     @maestro.command()
     async def exec(self, ctx, script_name):
         """
         Load a Python-file of scenario. / Загрузить Python-файл сценария.
         """
-        await ctx.send(MAE.executeScript(script_name))
+        await ctx.send(MAEexec(script_name))
     
     @maestro.command()
     async def load(self, ctx, scenario_name):
         """
         Load a YML-file of scenario. / Загрузить YML-файл сценария.
         """
-        await ctx.send(MAE.loadGenerator(scenario_name))
+        await ctx.send(MAEload(scenario_name))
     
     @maestro.command()
     async def list_scenarios(self, ctx):
@@ -77,7 +79,7 @@ class RandomThings(commands.Cog):
         scripts = []
         for g in grep:
             if g.endswith('.py'):
-                scripts.append(f'`{g[:-4]}`')
+                scripts.append(f'`{g[:-3]}`')
         await ctx.send(f'**Маэстро**: Я имею следующий список загруженных скриптов:\n{", ".join(scripts)}')
 
 #     @randomthings.command()

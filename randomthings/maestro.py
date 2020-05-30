@@ -20,6 +20,13 @@ config = {}
 #   - erect
 #   - holding {{ sesso }}
 
+def executeScript(script_name):
+    try:
+        script = importlib.import_module(f'randomthings.scripts.{script_name}')
+        return script.main()
+    except Exception as E:
+        return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Script-Execution-State:\n{E}\n```'
+
 def check_and_define_vars():
     global config
     if 'vars' in config:
@@ -44,6 +51,12 @@ def getMutationFromFile(match):
     except:
         raise Exception(f'No file "./libs/{match.group(1)}.yml" found.')
 
+def getMutationFromScript(match):
+    try:
+        return executeScript(match.group(1))
+    except:
+        raise Exception(f'No file "./scripts/{match.group(1)}.py" found.')
+
 def mutate(mutationTrail=[]):
     if len(mutationTrail) > 1:
         if mutationTrail[-2] == mutationTrail[-1]:
@@ -51,6 +64,7 @@ def mutate(mutationTrail=[]):
     
     newMutation = re.sub('{{ (.*?) }}', getMutationFromConfig, mutationTrail[-1], count=1)
     newMutation = re.sub('\[\[ (.*?) \]\]', getMutationFromFile, newMutation, count=1)
+    newMutation = re.sub('\(\( (.*?) \)\)', getMutationFromScript, newMutation, count=1)
     
     return mutate(mutationTrail + [newMutation])
 
@@ -99,10 +113,3 @@ def say(message):
         return execute([mutate([message])])
     except Exception as E:
         return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Mutation-State:\n{E}\n```'
-
-def executeScript(script_name):
-    try:
-        script = importlib.import_module(f'.scripts.{script_name}')
-        return script.main()
-    except Exception as E:
-        return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Script-Execution-State:\n{E}\n```'

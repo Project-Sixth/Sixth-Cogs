@@ -30,14 +30,12 @@ def generate_dayplopynamepart_english():
 
     return R
 
-def generate_shadowdayplopyname_english():
+def generate_dayplopyname_english():
     """
     :returns String: Random Shadow-Day Plopy name in English
     """
-    A = generate_dayplopynamepart_english()
-    A += A[::-1]
-    R = A.capitalize() + "-" + generate_dayplopynamepart_english().capitalize()
-    return R
+    R = generate_dayplopynamepart_english().capitalize()
+    return R+"-"+R
 
 def main():
-    return f'**Маэстро** smiles, generating new name: {generate_shadowdayplopyname_english()}'
+    return generate_dayplopyname_english()
