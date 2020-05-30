@@ -9,8 +9,7 @@ from redbot.core import commands
 # from .generators.starnamegen import generate_starname_russian, generate_starname_english
 # from .generators.planetnamegen import generate_planetname_russian, generate_planetname_english
 # from .generators.sylphnamegen import generate_sylphname_russian, generate_sylphname_english
-from .maestro import load as MAEload
-from .maestro import say as MAEsay
+import maestro as MAE
 
 class RandomThings(commands.Cog):
     """
@@ -25,18 +24,25 @@ class RandomThings(commands.Cog):
         pass
 
     @maestro.command()
-    async def say(self, ctx, text):
+    async def say(self, ctx, *text):
         """
-        Make an improvised text, still, random. / Перечислить все доступные YML-файлы сценариев.
+        Make an improvised text, still, random. Limited to use [[ ]] / Сказать импровизированную фразу. Можно использовать только [[ ]]
         """
-        await ctx.send(MAEsay(text))
+        await ctx.send(MAE.say(' '.join(text)))
 
+    @maestro.command()
+    async def exec(self, ctx, script_name):
+        """
+        Load a Python-file of scenario. / Загрузить Python-файл сценария.
+        """
+        await ctx.send(MAE.executeScript(script_name))
+    
     @maestro.command()
     async def load(self, ctx, scenario_name):
         """
         Load a YML-file of scenario. / Загрузить YML-файл сценария.
         """
-        await ctx.send(MAEload(scenario_name))
+        await ctx.send(MAE.loadGenerator(scenario_name))
     
     @maestro.command()
     async def list_scenarios(self, ctx):
@@ -61,6 +67,18 @@ class RandomThings(commands.Cog):
             if g.endswith('.yml'):
                 libs.append(f'`{g[:-4]}`')
         await ctx.send(f'**Маэстро**: Я имею следующий список загруженных библиотек:\n{", ".join(libs)}')
+    
+    @maestro.command()
+    async def list_scripts(self, ctx):
+        """
+        List all available Python-scenarios. / Перечислить все доступные Python-файлы сценариев.
+        """
+        grep = sorted(os.listdir(f'{str(__file__)[:-16]}/scripts'))
+        scripts = []
+        for g in grep:
+            if g.endswith('.py'):
+                scripts.append(f'`{g[:-4]}`')
+        await ctx.send(f'**Маэстро**: Я имею следующий список загруженных скриптов:\n{", ".join(scripts)}')
 
 #     @randomthings.command()
 #     async def starname(self, ctx):

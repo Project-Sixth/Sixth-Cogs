@@ -1,5 +1,6 @@
 import re
 import random
+import importlib
 import yaml
 
 config = {}
@@ -74,7 +75,7 @@ def execute(mutationTrail=[]):
     
     return execute(mutationTrail + [newMutation])
 
-def load(gen_name):
+def loadGenerator(gen_name):
     global config
 
     try:
@@ -88,7 +89,20 @@ def load(gen_name):
     except Exception as E:
         return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Var-Defining-State:\n{E}\n```'
     
-    return execute([mutate([random.choice(config['pool'])])])
+    try:
+        return execute([mutate([random.choice(config['pool'])])])
+    except Exception as E:
+        return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Mutation-State:\n{E}\n```'
 
 def say(message):
-    return execute([mutate([message])])
+    try:
+        return execute([mutate([message])])
+    except Exception as E:
+        return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Mutation-State:\n{E}\n```'
+
+def executeScript(script_name):
+    try:
+        script = importlib.import_module(f'.scripts.{script_name}')
+        return script.main()
+    except Exception as E:
+        return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Script-Execution-State:\n{E}\n```'
