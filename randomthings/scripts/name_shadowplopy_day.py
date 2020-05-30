@@ -40,4 +40,4 @@ def generate_shadowdayplopyname_english():
     return R
 
 def main():
-    return f'**Маэстро** smiles, generating new name: {generate_shadowdayplopyname_english()}'
+    return generate_shadowdayplopyname_english()

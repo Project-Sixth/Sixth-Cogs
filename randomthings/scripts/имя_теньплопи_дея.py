@@ -45,4 +45,4 @@ def generate_shadowdayplopyname_russian():
     return R
 
 def main():
-    return f'**Маэстро** улыбается, создавая новое имя: {generate_shadowdayplopyname_russian()}'
+    return generate_shadowdayplopyname_russian()
