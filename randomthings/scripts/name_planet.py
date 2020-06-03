@@ -121,3 +121,6 @@ def generate_planetname_english():
             B = choice(all_consontants_and_basic_syllables)
         R = A + choice(all_vowels) + B + choice(all_vowels) + choice(planet_endings)
     return R.capitalize()
+
+def main(*args):
+    return 'Planet name gen not working now'

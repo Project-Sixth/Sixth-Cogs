@@ -42,5 +42,5 @@ def generate_dayplopyname_russian():
     R = generate_dayplopynamepart_russian().capitalize()
     return R+"-"+R
 
-def main():
+def main(*args):
     return generate_dayplopyname_russian()

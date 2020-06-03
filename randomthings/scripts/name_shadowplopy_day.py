@@ -39,5 +39,5 @@ def generate_shadowdayplopyname_english():
     R = A.capitalize() + "-" + generate_dayplopynamepart_english().capitalize()
     return R
 
-def main():
+def main(*args):
     return generate_shadowdayplopyname_english()

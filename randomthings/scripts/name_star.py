@@ -127,3 +127,6 @@ def generate_starname_english():
             B + \
             choice(all_consonants_sth_with_chance_of_nothing)
     return R.capitalize()
+
+def main(*args):
+    return 'Star name gen not working now'

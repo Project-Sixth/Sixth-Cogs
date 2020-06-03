@@ -20,10 +20,11 @@ config = {}
 #   - erect
 #   - holding {{ sesso }}
 
-def executeScript(script_name):
+def executeScript(script_name_and_args):
     try:
-        script = importlib.import_module(f'randomthings.scripts.{script_name}')
-        return script.main()
+        nargs = script_name_and_args.split(' ')
+        script = importlib.import_module(f'randomthings.scripts.{nargs[0]}')
+        return script.main(nargs[1:])
     except Exception as E:
         return f'**Маэстро:** Ох! Кажется, произошла какая-то серьезная ошибка!\n```\nError of Script-Execution-State:\n{E}\n```'
 
