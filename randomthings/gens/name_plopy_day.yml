@@ -1,5 +1,5 @@
 pool:
-  - "**Maestro picks a new name from magic hat. And it is {{ day name syllable }}-{{ day name syllable }} !**"
+  - "**Maestro picks a new name from magic hat. And it is (( name_plopy_day )) !**"
 vars:
   day name syllable: "$$C {{ name syllable variants }} $$"
 
