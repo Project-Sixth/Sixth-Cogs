@@ -1,0 +1,294 @@
+pool:
+    - "**Maestro:** Before you stands a creature.\n\n{{ character appearance }}"
+vars:
+    creature gender: "{{ single gender }}"
+
+single gender:
+  - he
+  - she
+
+character appearance:
+  - "{{ character body parameters }}\n{{ character age }}\n{{ character look }}"
+# Высота
+# Мускулатура (ширина)
+# Возраст
+# Цвет шкурки
+# Цвет глаз?
+# Длина усиков
+# Внешний вид хвоста (число пар, узкий-широкий)
+# Количество сегментов тела
+# Внешний вид лап
+# Узор на спине
+# Шерсть на шее
+
+character body parameters:
+  - "$$C {{ creature gender }} $$ is {{ body length }} long, with {{ body width }} body."
+  - "This pet appears to be having {{ body width }}, {{ body length }} body."
+
+character age:
+  - It seems that creature is relatively young, teenish.
+  - It seems that creature is mature.
+  - It seems that creature is old enough to be senior.
+  - "$$C {{ creature gender }} $$ is a grown-up teen."
+  - "$$C {{ creature gender }} $$ is a fully matured creature."
+
+character look:
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Other parts have sightly brighter color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Other parts have sightly dimmer color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Other parts have sightly lighter color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Other parts have sightly darker color."
+  - "$$C {{ creature gender }} $$ have {{ color }} belly, with {{ pattern }} at it. Other parts have sightly brighter color."
+  - "$$C {{ creature gender }} $$ have {{ color }} belly, with {{ pattern }} at it. Other parts have sightly dimmer color."
+  - "$$C {{ creature gender }} $$ have {{ color }} belly, with {{ pattern }} at it. Other parts have sightly lighter color."
+  - "$$C {{ creature gender }} $$ have {{ color }} belly, with {{ pattern }} at it. Other parts have sightly darker color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Belly have {{ color }} with {{ pattern }}. Other parts have sightly brighter color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Belly have {{ color }} with {{ pattern }}. Other parts have sightly dimmer color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Belly have {{ color }} with {{ pattern }}. Other parts have sightly lighter color."
+  - "$$C {{ creature gender }} $$ have {{ color }} back, with {{ pattern }} at it. Belly have {{ color }} with {{ pattern }}. Other parts have sightly darker color."
+
+body length:
+  - "(( random_number 80 150 )) millimeters"
+
+body width:
+  - muscular
+  - ample
+  - wide
+  - fat
+  - thin
+  - lean
+  - average
+
+color:
+  - white
+  - black
+  - "{{ color shade }}red"
+  - "{{ color shade }}orange"
+  - "{{ color shade }}yellow"
+  - "{{ color shade }}green"
+  - "{{ color shade }}teal"
+  - "{{ color shade }}blue"
+  - "{{ color shade }}purple"
+  - "{{ color shade }}gray"
+  - "{{ color shade }}brown"
+  - "{{ color shade }}pink"
+  - "{{ color shade }}crimson"
+  - "{{ color shade }}aquamarine"
+  - "{{ color shade }}gold"
+  - "{{ color shade }}silver"
+  - "{{ color shade }}bronze"
+  - "{{ color shade }}iron"
+  - "{{ color shade }}steel"
+  - "{{ color }}-{{ color }}"
+
+color shade:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "dark "
+  - "dark "
+  - "dark "
+  - "light "
+  - "light "
+  - "light "
+  - "bright "
+  - "dim "
+  - "metallic "
+  - "pearl "
+
+pattern:
+  - no particular pattern at all
+  - no particular pattern at all
+  - no particular pattern at all
+  - no particular pattern at all
+  - no particular pattern at all
+  - "{{ pattern size }} {{ pattern frequency }} bright {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} glowing {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} contrast {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} {{ color }} {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} unnoticeable {{ pattern type }} all over"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} bright {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} glowing {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} contrast {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} {{ color }} {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} unnoticeable {{ pattern type }}"
+
+pattern size:
+  - tiny
+  - small
+  - sizable
+  - big
+  - giant
+  - enourmous
+
+pattern frequency:
+  - frequent
+  - uncommon
+  - rare
+
+pattern type:
+  - stripes
+  - circles
+  - squares
+  - stars
+  - lines
+  - crosses
+  - fur-imitation
+  - scale-imitation
+  - scales
+  - diamonds
+  - spades
+  - triangles
+
+whiskers size:
+  - fullbody-long
+
+
+personality:
+  - active
+  - adventurous
+  - affectionate
+  - aggressive
+  - ambitious
+  - annoying
+  - anxious
+  - artistic
+  - attentive
+  - bad-tempered
+  - bossy
+  - brave
+  - broad-minded
+  - busive
+  - calm
+  - careful
+  - careless
+  - cautious
+  - charming
+  - cheeky
+  - cheerful
+  - compassionate
+  - compulsive
+  - confident
+  - conscientious
+  - conservative
+  - courageous
+  - courteous
+  - cowardly
+  - crazy
+  - creative
+  - cruel
+  - cynical
+  - decisive
+  - determined
+  - diplomatic
+  - direct
+  - discreet
+  - dishonest
+  - disobedient
+  - distracted
+  - domineering
+  - dynamic
+  - easygoing
+  - emotional
+  - energetic
+  - enthusiastic
+  - extroverted
+  - fair-minded
+  - faithful
+  - fearful
+  - fearless
+  - frank
+  - friendly
+  - funny
+  - generous
+  - gentle
+  - good-tempered
+  - greedy
+  - gregarious
+  - gullible
+  - happy
+  - hard-working
+  - helpful
+  - honest
+  - humble
+  - humorous
+  - hypocritical
+  - imaginative
+  - impartial
+  - impatient
+  - impulsive
+  - independent
+  - intellectual
+  - intelligent
+  - introverted
+  - jealous
+  - kind
+  - lazy
+  - lively
+  - loving
+  - loyal
+  - mean
+  - messy
+  - modest
+  - moody
+  - naughty
+  - neat
+  - nervous
+  - nice
+  - obedient
+  - obsessive
+  - optimistic
+  - outgoing
+  - passionate
+  - patient
+  - persistent
+  - pessimistic
+  - placid
+  - plucky
+  - polite
+  - pompous
+  - popular
+  - practical
+  - proud
+  - rational
+  - reliable
+  - reserved
+  - romantic
+  - rude
+  - ruthless
+  - sarcastic
+  - scared
+  - secretive
+  - self-centered
+  - self-confident
+  - self-disciplined
+  - selfish
+  - sensible
+  - sensitive
+  - serious
+  - shy
+  - silly
+  - sincere
+  - smart
+  - sociable
+  - straightforward
+  - stubborn
+  - superficial
+  - supportive
+  - tactful
+  - tactless
+  - talkative
+  - thoughtful
+  - tidy
+  - timid
+  - unfriendly
+  - unpleasant
+  - untidy
+  - versatile
+  - warm-hearted
+  - witty
+  - worried
