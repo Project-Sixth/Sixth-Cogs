@@ -22,23 +22,10 @@ character appearance:
 # Шерсть на шее
 
 visual appearance:
-  - > 
-    Gender: $$C {{ creature gender }} $$\n
-    Age: {{ character age }}\n
-    Length: {{ body length }}\n
-    Body segment count: {{ body segment count }}\n
-    Width: {{ body width }}\n
-    Main color: {{ color }}\n
-    Additional color: {{ color }}\n
-    Pattern: {{ pattern }}\n
-    Wiskers size: {{ whiskers size }}\n
-    Tail size: {{ tail size }}\n
-    Neck fur: {{ neck fur type }}\n
+  - "Gender: $$C {{ creature gender }} $$\nAge: {{ character age }}\nLength: {{ body length }}\nBody segment count: {{ body segment count }}\nWidth: {{ body width }}\nMain color: {{ color }}\nAdditional color: {{ color }}\nPattern: {{ pattern }}\nWiskers size: {{ whiskers size }}\nTail size: {{ tail size }}\nNeck fur: {{ neck fur type }}\n"
 
 intellectual appearance:
-  - > 
-    Intellectual level: {{ intellectual level }}\n
-    Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n
+  - "Intellectual level: {{ intellectual level }}\nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}\n"
 
 intellectual level:
   - non-existent
