@@ -1,0 +1,355 @@
+pool:
+    - "**Maestro:** Before you stands a creature.\n\n{{ character appearance }}"
+vars:
+    creature gender: "{{ single gender }}"
+
+single gender:
+  - he
+  - she
+
+character appearance:
+  - "__Visual appearance:__\n{{ visual appearance }}\n__Capabilities:__\n{{ intellectual appearance }}"
+# Высота
+# Мускулатура (ширина)
+# Возраст
+# Цвет шкурки
+# Цвет глаз?
+# Длина усиков
+# Внешний вид хвоста (число пар, узкий-широкий)
+# Количество сегментов тела
+# Внешний вид лап
+# Узор на спине
+# Шерсть на шее
+
+visual appearance:
+  - > 
+    "Gender: $$C {{ creature gender }} $$\n"
+    "Age: {{ character age }}\n"
+    "Length: {{ body length }}\n"
+    "Body segment count: {{ body segment count }}\n"
+    "Width: {{ body width }}\n"
+    "Main color: {{ color }}\n"
+    "Additional color: {{ color }}\n"
+    "Pattern: {{ pattern }}\n"
+    "Wiskers size: {{ whiskers size }}\n"
+    "Tail size: {{ tail size }}\n"
+    "Neck fur: {{ neck fur type }}\n"
+
+intellectual appearance:
+  - > 
+    "Intellectual level: {{ intellectual level }}\n"
+    "Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n"
+
+intellectual level:
+  - non-existent
+  - instinctive
+  - instinctive
+  - dumb
+  - low
+  - low
+  - limited
+  - limited
+  - primitive
+  - primitive
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - collective
+  - smart
+  - smart
+  - cunning
+  - cunning
+  - very high
+  - genius
+
+character age:
+  - baby ((( random_number 2 5 )) years)
+  - teen ((( random_number 7 12 )) years)
+  - teen ((( random_number 7 12 )) years)
+  - mature ((( random_number 13 20 )) years)
+  - mature ((( random_number 13 20 )) years)
+  - mature ((( random_number 13 20 )) years)
+  - adult ((( random_number 21 41 )) years)
+  - adult ((( random_number 21 41 )) years)
+  - adult ((( random_number 21 41 )) years)
+  - adult ((( random_number 21 41 )) years)
+  - senior ((( random_number 42 70 )) years)
+
+neck fur type:
+  - long, fluffy
+  - long, lean
+  - short, fluffy
+  - short, lean
+
+body segment count:
+  - "(( random_number 12 16 )) segments"
+
+tail size:
+  - same as body size
+  - very long
+  - longish
+  - medium
+  - short-ish
+  - short
+
+body length:
+  - "(( random_number 80 150 )) millimeters"
+
+body width:
+  - muscular
+  - ample
+  - wide
+  - fat
+  - thin
+  - lean
+  - average
+
+color:
+  - white
+  - black
+  - "{{ color shade }}red"
+  - "{{ color shade }}orange"
+  - "{{ color shade }}yellow"
+  - "{{ color shade }}green"
+  - "{{ color shade }}teal"
+  - "{{ color shade }}blue"
+  - "{{ color shade }}purple"
+  - "{{ color shade }}gray"
+  - "{{ color shade }}brown"
+  - "{{ color shade }}pink"
+  - "{{ color shade }}crimson"
+  - "{{ color shade }}aquamarine"
+  - "{{ color shade }}gold"
+  - "{{ color shade }}silver"
+  - "{{ color shade }}bronze"
+  - "{{ color shade }}iron"
+  - "{{ color shade }}steel"
+  - "{{ color }}-{{ color }}"
+
+color shade:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "dark "
+  - "dark "
+  - "dark "
+  - "light "
+  - "light "
+  - "light "
+  - "bright "
+  - "dim "
+  - "metallic "
+  - "pearl "
+
+pattern:
+  - no particular pattern at all
+  - no particular pattern at all
+  - no particular pattern at all
+  - no particular pattern at all
+  - no particular pattern at all
+  - "{{ pattern size }} {{ pattern frequency }} bright {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} glowing {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} contrast {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} {{ color }} {{ pattern type }} all over"
+  - "{{ pattern size }} {{ pattern frequency }} unnoticeable {{ pattern type }} all over"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} bright {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} glowing {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} contrast {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} {{ color }} {{ pattern type }}"
+  - "partially covering {{ pattern size }} {{ pattern frequency }} unnoticeable {{ pattern type }}"
+
+pattern size:
+  - tiny
+  - small
+  - sizable
+  - big
+  - giant
+  - enourmous
+
+pattern frequency:
+  - frequent
+  - uncommon
+  - rare
+
+pattern type:
+  - stripes
+  - circles
+  - squares
+  - stars
+  - lines
+  - crosses
+  - fur-imitation
+  - scale-imitation
+  - scales
+  - diamonds
+  - spades
+  - triangles
+
+whiskers size:
+  - fullbody-long
+  - very long
+  - long
+  - medium
+  - short-ish
+  - short
+  - shortest
+  - almost absent
+
+personality:
+  - active
+  - adventurous
+  - affectionate
+  - aggressive
+  - ambitious
+  - annoying
+  - anxious
+  - artistic
+  - attentive
+  - bad-tempered
+  - bossy
+  - brave
+  - broad-minded
+  - busive
+  - calm
+  - careful
+  - careless
+  - cautious
+  - charming
+  - cheeky
+  - cheerful
+  - compassionate
+  - compulsive
+  - confident
+  - conscientious
+  - conservative
+  - courageous
+  - courteous
+  - cowardly
+  - crazy
+  - creative
+  - cruel
+  - cynical
+  - decisive
+  - determined
+  - diplomatic
+  - direct
+  - discreet
+  - dishonest
+  - disobedient
+  - distracted
+  - domineering
+  - dynamic
+  - easygoing
+  - emotional
+  - energetic
+  - enthusiastic
+  - extroverted
+  - fair-minded
+  - faithful
+  - fearful
+  - fearless
+  - frank
+  - friendly
+  - funny
+  - generous
+  - gentle
+  - good-tempered
+  - greedy
+  - gregarious
+  - gullible
+  - happy
+  - hard-working
+  - helpful
+  - honest
+  - humble
+  - humorous
+  - hypocritical
+  - imaginative
+  - impartial
+  - impatient
+  - impulsive
+  - independent
+  - intellectual
+  - intelligent
+  - introverted
+  - jealous
+  - kind
+  - lazy
+  - lively
+  - loving
+  - loyal
+  - mean
+  - messy
+  - modest
+  - moody
+  - naughty
+  - neat
+  - nervous
+  - nice
+  - obedient
+  - obsessive
+  - optimistic
+  - outgoing
+  - passionate
+  - patient
+  - persistent
+  - pessimistic
+  - placid
+  - plucky
+  - polite
+  - pompous
+  - popular
+  - practical
+  - proud
+  - rational
+  - reliable
+  - reserved
+  - romantic
+  - rude
+  - ruthless
+  - sarcastic
+  - scared
+  - secretive
+  - self-centered
+  - self-confident
+  - self-disciplined
+  - selfish
+  - sensible
+  - sensitive
+  - serious
+  - shy
+  - silly
+  - sincere
+  - smart
+  - sociable
+  - straightforward
+  - stubborn
+  - superficial
+  - supportive
+  - tactful
+  - tactless
+  - talkative
+  - thoughtful
+  - tidy
+  - timid
+  - unfriendly
+  - unpleasant
+  - untidy
+  - versatile
+  - warm-hearted
+  - witty
+  - worried
