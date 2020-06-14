@@ -27,40 +27,39 @@ single gender:
 
 character appearance:
   - "__Visual appearance:__\n
-{{ visual appearance }}\n
-__Capabilities:__\n
-{{ intellectual appearance }}"
+  {{ visual appearance }}\n__Capabilities:__\n
+  {{ intellectual appearance }}"
 
 visual appearance:
   - "{{ visual appearance basic section }}\n
-{{ visual appearance color section }}\n
-{{ visual appearance body section }}"
+  {{ visual appearance color section }}\n
+  {{ visual appearance body section }}"
 
 visual appearance basic section:
   - "Name, gender, age: $$C {{ creature name }} $$, {{ creature gender }}, {{ character age }}\n
-Length, body segment count, width: {{ body length }}, {{ body segment count }}, {{ body width }}\n
-Native place: {{ native place }}"
+  Length, body segment count, width: {{ body length }}, {{ body segment count }}, {{ body width }}\n
+  Native place: {{ native place }}"
 
 visual appearance color section:
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
 
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
-Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
-Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
+  Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
-Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
-Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
+  Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
 
 visual appearance color section pattern deviation:
   - "no deviations"
@@ -76,23 +75,23 @@ visual appearance color section pattern deviation:
 
 visual appearance body section:
   - "{{ visual appearance body section head }}\n
-{{ visual appearance body section tail }}"
+  {{ visual appearance body section tail }}"
 
 visual appearance body section head:
   - "Nose size: {{ nose size }}\n
-Eye shape: {{ eye shape }}\n
-Ears shape: {{ ears shape }}\n
-Neck fur: {{ neck fur type }}\n
-Wiskers size: {{ whiskers size }}"
+  Eye shape: {{ eye shape }}\n
+  Ears shape: {{ ears shape }}\n
+  Neck fur: {{ neck fur type }}\n
+  Wiskers size: {{ whiskers size }}"
 
 visual appearance body section tail:
   - "Tail size: {{ tail size }}"
 
 intellectual appearance:
   - "Intellectual level: {{ intellectual level }}\n
-Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n
-Favorite food: {{ favotire food }}\n
-Unique ability: {{ unique ability }}"
+  Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n
+  Favorite food: {{ favotire food }}\n
+  Unique ability: {{ unique ability }}"
 
 native place:
   - forest
