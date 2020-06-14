@@ -42,21 +42,21 @@ visual appearance basic section:
 
 visual appearance color section:
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  No pattern attached to main color.{{visual appearance color section possible recessive}}"
+  No pattern attached to main color.{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  No pattern attached to main color.{{visual appearance color section possible recessive}}"
+  No pattern attached to main color.{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  No pattern attached to main color.{{visual appearance color section possible recessive}}"
+  No pattern attached to main color.{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
 
 visual appearance color section possible recessive:
   - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
