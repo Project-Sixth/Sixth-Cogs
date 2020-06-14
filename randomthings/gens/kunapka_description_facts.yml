@@ -42,28 +42,54 @@ visual appearance basic section:
 
 visual appearance color section:
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  No pattern attached to main color.{{visual appearance color section possible recessive}}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  No pattern attached to main color.{{visual appearance color section possible recessive}}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  No pattern attached to main color.{{visual appearance color section possible recessive}}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
   - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{visual appearance color section possible recessive}}"
 
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
-  Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
+visual appearance color section possible recessive:
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  No pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  No pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  No pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  No pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  No pattern attached to additional color."
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
   Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
-  Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
   Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
 
 visual appearance color section pattern deviation:
-  - "no deviations"
-  - "no deviations"
   - "single deviation: {{ pattern deviation }}"
   - "single deviation: {{ pattern deviation }}"
   - "single deviation: {{ pattern deviation }}"
@@ -222,21 +248,67 @@ color location two:
 color:
   - white
   - black
+  - "{{ color shade }}ivory"
+  - "{{ color shade }}charcoal"
+  - "{{ color shade }}almond"
   - "{{ color shade }}red"
+  - "{{ color shade }}crimson"
+  - "{{ color shade }}scarlet"
+  - "{{ color shade }}bostonred"
+  - "{{ color shade }}ruby"
+  - "{{ color shade }}flame"
+  - "{{ color shade }}rose"
+  - "{{ color shade }}cherry"
+  - "{{ color shade }}brown"
+  - "{{ color shade }}cinnamon"
+  - "{{ color shade }}tangerine"
+  - "{{ color shade }}auburn"
+  - "{{ color shade }}blush"
   - "{{ color shade }}orange"
   - "{{ color shade }}yellow"
+  - "{{ color shade }}daffodil"
+  - "{{ color shade }}canaryyellow"
+  - "{{ color shade }}banana"
+  - "{{ color shade }}bisque"
+  - "{{ color shade }}amber"
+  - "{{ color shade }}lime"
   - "{{ color shade }}green"
+  - "{{ color shade }}forestgreen"
+  - "{{ color shade }}olive"
+  - "{{ color shade }}dollarbill"
+  - "{{ color shade }}jade"
+  - "{{ color shade }}cadmiumgreen"
+  - "{{ color shade }}bottlegreen"
+  - "{{ color shade }}armygreen"
+  - "{{ color shade }}apple"
+  - "{{ color shade }}emerald"
+  - "{{ color shade }}grass"
+  - "{{ color shade }}aquamarine"
+  - "{{ color shade }}ultramarine"
   - "{{ color shade }}teal"
   - "{{ color shade }}blue"
+  - "{{ color shade }}lapislazuli"
+  - "{{ color shade }}iris"
+  - "{{ color shade }}sapphire"
+  - "{{ color shade }}cobalt"
+  - "{{ color shade }}cerulean"
+  - "{{ color shade }}capri"
+  - "{{ color shade }}azure"
+  - "{{ color shade }}royalblue"
   - "{{ color shade }}purple"
-  - "{{ color shade }}gray"
-  - "{{ color shade }}brown"
+  - "{{ color shade }}amethyst"
+  - "{{ color shade }}fuchsia"
+  - "{{ color shade }}lust"
+  - "{{ color shade }}indigo"
+  - "{{ color shade }}purpleheart"
+  - "{{ color shade }}lavander"
+  - "{{ color shade }}heliotrope"
   - "{{ color shade }}pink"
-  - "{{ color shade }}crimson"
-  - "{{ color shade }}aquamarine"
+  - "{{ color shade }}gray"
   - "{{ color shade }}gold"
   - "{{ color shade }}silver"
   - "{{ color shade }}bronze"
+  - "{{ color shade }}brass"
   - "{{ color shade }}iron"
   - "{{ color shade }}steel"
   - "{{ color }}-{{ color }}"
@@ -250,31 +322,94 @@ color shade:
   - ""
   - ""
   - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
   - "dark "
   - "dark "
   - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
   - "light "
   - "light "
   - "light "
   - "bright "
+  - "bright "
+  - "bright "
+  - "bright "
+  - "bright "
   - "dim "
+  - "dim "
+  - "dim "
+  - "dim "
+  - "dim "
+  - "medium "
+  - "warm "
+  - "cold "
   - "metallic "
   - "pearl "
-
-pattern:
-  - no particular pattern at all
-  - no particular pattern at all
-  - "{{ pattern size }} {{ pattern frequency }} {{ pattern type }}"
+  - "pastel "
+  - "neon "
+  - "glowing "
+  - "chrome "
+  - "celestial "
+  - "deep "
+  - "electric "
 
 pattern deviation:
-  - dim color
-  - bright color
-  - dark color
-  - light color
-  - barely noticeable
+  - darker color
+  - darker color
+  - darker color
+  - darker color
+  - lighter color
+  - lighter color
+  - lighter color
+  - lighter color
+  - dimmer color
+  - dimmer color
+  - brighter color
+  - brighter color
+  - contrast
   - contrast
   - glowing
-  - "{{ color }} color"
+  - tactile
+  - barely noticeable
+  - "have {{ color }} color"
+
+pattern:
+  - "{{ pattern size }} {{ pattern frequency }} {{ pattern type }}"
 
 pattern size:
   - nano
@@ -331,7 +466,6 @@ whiskers size:
   - short
   - shortest
   - almost absent
-
 
 ears shape:
   - pointy
