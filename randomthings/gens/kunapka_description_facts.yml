@@ -1,6 +1,24 @@
+## ====== ВНЕШКА
+# ------ Общие данные
+# Имя, Пол, Возраст
+# Высота(длина, число сегментов тела), мускулатура (ширина)
+# Место нативное (лес, луга и пр)
+# ------ Цветовая гамма
+# Основной цвет (доминирующий), Местоположение доминирующего цвета (спина/грудь/голова/хвост)
+# Паттерн основного цвета (если имеется)
+# Дополнительный цвет (поддерживающий)
+# Паттерн дополнительного цвета (если имеется)
+# ------ Описание тела, начиная с головы
+# Форма глаз, Длина усиков, Длина бровей, форма бровей
+# Количество сегментов тела
+# Внешний вид лап
+# Внешний вид хвоста (число пар, узкий-широкий)
+# Шерсть на шее
+
 pool:
     - "**Maestro:** Before you stands a creature.\n\n{{ character appearance }}"
 vars:
+    creature name: "{{ name }}"
     creature gender: "{{ single gender }}"
 
 single gender:
@@ -8,24 +26,86 @@ single gender:
   - she
 
 character appearance:
-  - "__Visual appearance:__\n{{ visual appearance }}\n__Capabilities:__\n{{ intellectual appearance }}"
-# Высота
-# Мускулатура (ширина)
-# Возраст
-# Цвет шкурки
-# Цвет глаз?
-# Длина усиков
-# Внешний вид хвоста (число пар, узкий-широкий)
-# Количество сегментов тела
-# Внешний вид лап
-# Узор на спине
-# Шерсть на шее
+  - "__Visual appearance:__\n
+  {{ visual appearance }}\n
+  __Capabilities:__\n
+  {{ intellectual appearance }}"
 
 visual appearance:
-  - "Gender: $$C {{ creature gender }} $$\nAge: {{ character age }}\nLength: {{ body length }}\nBody segment count: {{ body segment count }}\nWidth: {{ body width }}\nMain color: {{ color }}\nAdditional color: {{ color }}\nPattern: {{ pattern }}\nWiskers size: {{ whiskers size }}\nTail size: {{ tail size }}\nNeck fur: {{ neck fur type }}\n"
+  - "{{ visual appearance basic section }}\n
+  {{ visual appearance color section }}\n
+  {{ visual appearance body section }}"
+
+visual appearance basic section:
+  - "Name, gender, age: $$C {{ creature name }} $$, {{ creature gender }}, {{ character age }}\n
+  Length, body segment count, width: {{ body length }}, {{ body segment count }}, {{ body width }}\n
+  Native place: {{ native place }}"
+
+visual appearance color section:
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
+  Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
+  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}\n
+  Additional (recessive) color: {{ color }}, located at {{ color location two }}\n
+  Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+
+visual appearance color section pattern deviation:
+  - "no deviations"
+  - "no deviations"
+  - "no deviations"
+  - "no deviations"
+  - "no deviations"
+  - "no deviations"
+  - "single deviation: {{ pattern deviation }}"
+  - "single deviation: {{ pattern deviation }}"
+  - "single deviation: {{ pattern deviation }}"
+  - "two deviations: {{ pattern deviation }} and {{ pattern deviation }}"
+
+visual appearance body section:
+  - "{{ visual appearance body section head }}\n
+  {{ visual appearance body section tail }}"
+
+visual appearance body section head:
+  - "Nose size: {{ nose size }}\n
+  Eye shape: {{ eye shape }}\n
+  Ears shape: {{ ears shape }}\n
+  Neck fur: {{ neck fur type }}\n
+  Wiskers size: {{ whiskers size }}"
+
+visual appearance body section tail:
+  - "Tail size: {{ tail size }}"
 
 intellectual appearance:
-  - "Intellectual level: {{ intellectual level }}\nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}\n"
+  - "Intellectual level: {{ intellectual level }}\n
+  Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n
+  Favorite food: {{ favotire food }}\n
+  Unique ability: {{ unique ability }}"
+
+native place:
+  - forest
+  - forest
+  - forest
+  - forest
+  - forest
+  - meadow
+  - meadow
+  - meadow
+  - swamp
+  - swamp
+  - desert
 
 intellectual level:
   - non-existent
@@ -59,23 +139,40 @@ intellectual level:
   - genius
 
 character age:
-  - baby ((( random_number 2 5 )) years)
-  - teen ((( random_number 7 12 )) years)
-  - teen ((( random_number 7 12 )) years)
-  - mature ((( random_number 13 20 )) years)
-  - mature ((( random_number 13 20 )) years)
-  - mature ((( random_number 13 20 )) years)
-  - adult ((( random_number 21 41 )) years)
-  - adult ((( random_number 21 41 )) years)
-  - adult ((( random_number 21 41 )) years)
-  - adult ((( random_number 21 41 )) years)
-  - senior ((( random_number 42 70 )) years)
+  - baby ((( random_number 1 20 )) days)
+  - teen ((( random_number 21 51 )) days)
+  - teen ((( random_number 21 51 )) days)
+  - teen ((( random_number 21 51 )) days)
+  - mature ((( random_number 61 121 )) days)
+  - mature ((( random_number 61 121 )) days)
+  - mature ((( random_number 61 121 )) days)
+  - mature ((( random_number 61 121 )) days)
+  - adult ((( random_number 4 24 )) months)
+  - adult ((( random_number 4 24 )) months)
+  - adult ((( random_number 4 24 )) months)
+  - adult ((( random_number 4 24 )) months)
+  - adult ((( random_number 4 24 )) months)
+  - senior ((( random_number 2 5 )) years)
 
 neck fur type:
-  - long, fluffy
-  - long, lean
-  - short, fluffy
-  - short, lean
+  - "{{ neck fur length }}, {{ neck fur variant }}"
+
+neck fur length:
+  - velvet
+  - shortest
+  - short
+  - medium
+  - long
+  - very long
+
+neck fur variant:
+  - fluffy
+  - lean
+  - curly
+  - wavy
+  - tangled
+  - spiked
+  - heavy
 
 body segment count:
   - "(( random_number 12 16 )) segments"
@@ -89,7 +186,7 @@ tail size:
   - short
 
 body length:
-  - "(( random_number 80 150 )) millimeters"
+  - "(( random_number 50 150 )) millimeters"
 
 body width:
   - muscular
@@ -99,6 +196,29 @@ body width:
   - thin
   - lean
   - average
+
+color location:
+  - spine
+  - spine
+  - spine
+  - spine
+  - belly
+  - belly
+  - belly
+  - belly
+  - head
+  - head
+  - tail
+  - tail
+  - "{{ color location }} and {{ color location }}"
+
+color location two:
+  - rest of the body
+  - rest of the body
+  - rest of the body
+  - rest of the body
+  - rest of the body
+  - "{{ color location }}"
 
 color:
   - white
@@ -145,31 +265,46 @@ color shade:
 pattern:
   - no particular pattern at all
   - no particular pattern at all
-  - no particular pattern at all
-  - no particular pattern at all
-  - no particular pattern at all
-  - "{{ pattern size }} {{ pattern frequency }} bright {{ pattern type }} all over"
-  - "{{ pattern size }} {{ pattern frequency }} glowing {{ pattern type }} all over"
-  - "{{ pattern size }} {{ pattern frequency }} contrast {{ pattern type }} all over"
-  - "{{ pattern size }} {{ pattern frequency }} {{ color }} {{ pattern type }} all over"
-  - "{{ pattern size }} {{ pattern frequency }} unnoticeable {{ pattern type }} all over"
-  - "partially covering {{ pattern size }} {{ pattern frequency }} bright {{ pattern type }}"
-  - "partially covering {{ pattern size }} {{ pattern frequency }} glowing {{ pattern type }}"
-  - "partially covering {{ pattern size }} {{ pattern frequency }} contrast {{ pattern type }}"
-  - "partially covering {{ pattern size }} {{ pattern frequency }} {{ color }} {{ pattern type }}"
-  - "partially covering {{ pattern size }} {{ pattern frequency }} unnoticeable {{ pattern type }}"
+  - "{{ pattern size }} {{ pattern frequency }} {{ pattern type }}"
+
+pattern deviation:
+  - dim color
+  - bright color
+  - dark color
+  - light color
+  - barely noticeable
+  - contrast
+  - glowing
+  - "{{ color }} color"
 
 pattern size:
+  - nano
+  - tiny
+  - tiny
   - tiny
   - small
+  - small
+  - small
+  - small
+  - shorty
   - sizable
+  - sizable
+  - lengthy
   - big
   - giant
   - enourmous
 
 pattern frequency:
+  - fractal
+  - frequent
   - frequent
   - uncommon
+  - uncommon
+  - uncommon
+  - uncommon
+  - rare
+  - rare
+  - rare
   - rare
 
 pattern type:
@@ -185,6 +320,8 @@ pattern type:
   - diamonds
   - spades
   - triangles
+  - hexes
+  - digital
 
 whiskers size:
   - fullbody-long
@@ -195,6 +332,42 @@ whiskers size:
   - short
   - shortest
   - almost absent
+
+
+ears shape:
+  - pointy
+  - pointy
+  - pointy
+  - pointy
+  - soft
+  - soft
+  - soft
+  - soft
+  - fluffy
+  - fluffy
+  - longish
+  - scarred
+
+nose size:
+  - small
+  - nominal
+  - nominal
+  - nominal
+  - nominal
+  - big
+
+eye shape:
+  - predator shape
+  - predator shape
+  - predator shape
+  - predator shape
+  - predator shape
+  - predator shape
+  - predator shape
+  - predator shape
+  - round shape
+  - dome shape
+  - eye shape
 
 personality:
   - active
@@ -340,3 +513,95 @@ personality:
   - warm-hearted
   - witty
   - worried
+
+favotire food:
+  - milk
+  - honey
+  - mikris
+  - egg
+  - nut
+
+# Name: Треск, бульканье и визг
+name:
+  - "{{ name beginning }}{{ name vowel }}{{ name middle }}{{ name vowel }}{{ name ending }}"
+
+name beginning:
+  - kr
+  - tr
+  - cr
+  - hr
+  - pr
+  - kx
+  - kh
+
+name vowel:
+  - i
+  - vi
+  - ri
+  - ki
+  - yi
+
+name middle:
+  - kr
+  - tr
+  - cr
+  - hr
+  - pr
+  - kx
+  - kh
+  - bl
+  - br
+  - bk
+  - gl
+  - ul
+  - kl
+  - vi
+  - ri
+  - ki
+  - yi
+
+name ending:
+  - kr
+  - tr
+  - cr
+  - hr
+  - pr
+  - kx
+  - kh
+  - bl
+  - br
+  - bk
+  - gl
+  - ul
+  - kl
+  - vi
+  - ri
+  - ki
+  - yi
+
+unique ability:
+  - speed
+  - speed
+  - speed
+  - scent
+  - scent
+  - scent
+  - eyesight
+  - eyesight
+  - eyesight
+  - bite power
+  - bite power
+  - bite power
+  - bite accuracy
+  - bite accuracy
+  - scouting
+  - scouting
+  - storage
+  - storage
+  - female charm
+  - female charm
+  - heavy coiling
+  - throwing ability
+  - duel fight
+  - mass fight
+  - tool handling
