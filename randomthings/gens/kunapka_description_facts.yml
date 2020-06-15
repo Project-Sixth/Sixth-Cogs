@@ -26,14 +26,14 @@ single gender:
   - she
 
 character appearance:
-  - "__Visual appearance:__\n
-  {{ visual appearance }}\n__Capabilities:__\n
-  {{ intellectual appearance }}"
+  - "__Visual appearance:__
+  \n{{ visual appearance }}\n__Capabilities:__
+  \n{{ intellectual appearance }}"
 
 visual appearance:
-  - "{{ visual appearance basic section }}\n
-  {{ visual appearance color section }}\n
-  {{ visual appearance body section }}"
+  - "{{ visual appearance basic section }}
+  \n{{ visual appearance color section }}
+  \n{{ visual appearance body section }}"
 
 visual appearance basic section:
   - "Name, gender, age: $$C {{ creature name }} $$, {{ creature gender }}, {{ character age }}\n
@@ -146,9 +146,13 @@ native place:
   - forest
   - forest
   - forest
+  - forest
+  - forest
   - meadow
   - meadow
   - meadow
+  - meadow
+  - swamp
   - swamp
   - swamp
   - desert
@@ -278,13 +282,34 @@ body length:
   - "(( random_number 50 150 )) millimeters"
 
 body width:
-  - muscular
+  - fat
   - ample
   - wide
-  - fat
-  - thin
-  - lean
+  - wide
+  - tough
+  - muscular
+  - muscular
+  - muscular
+  - muscular
   - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - taut
+  - taut
+  - taut
+  - lean
+  - lean
+  - lean
+  - springy
+  - springy
+  - springy
+  - thin
+  - thin
 
 color location:
   - spine
