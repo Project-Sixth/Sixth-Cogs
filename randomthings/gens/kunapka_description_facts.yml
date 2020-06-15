@@ -871,6 +871,12 @@ favotire food:
 # Name: Треск, бульканье и визг
 name:
   - "{{ name beginning }}{{ name vowel }}{{ name middle }}{{ name vowel }}{{ name ending }}"
+  - "{{ name beginning }}{{ name vowel }}{{ name ending }}"
+  - "{{ name beginning }}{{ name vowel }}{{ name ending }}"
+  - "{{ name vowel }}{{ name beginning }}{{ name vowel }}{{ name ending }}"
+  - "{{ name vowel }}{{ name beginning }}{{ name vowel }}{{ name ending }}"
+  - "{{ name vowel }}{{ name middle }}{{ name vowel }}{{ name ending }}"
+  - "{{ name vowel }}{{ name middle }}{{ name vowel }}{{ name ending }}"
 
 name beginning:
   - kr
