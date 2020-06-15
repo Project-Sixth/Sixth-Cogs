@@ -101,22 +101,43 @@ visual appearance color section pattern deviation:
 
 visual appearance body section:
   - "{{ visual appearance body section head }}\n
-  {{ visual appearance body section tail }}"
+  {{ visual appearance body section body }}\n
+  {{ visual appearance body section tail }}\n
+  {{ visual appearance body section damage }}"
 
 visual appearance body section head:
   - "Nose size: {{ nose size }}\n
   Eye shape: {{ eye shape }}\n
   Ears shape: {{ ears shape }}\n
   Neck fur: {{ neck fur type }}\n
-  Wiskers size: {{ whiskers size }}"
+  Wiskers size and shape: {{ whiskers size }} {{ whiskers shape }}"
+
+visual appearance body section body:
+  - "Body segment shape: {{ body segment shape }}"
 
 visual appearance body section tail:
-  - "Tail size: {{ tail size }}"
+  - "Tail type and size: {{ tail type }}, {{ tail size }}"
+
+visual appearance body section damage:
+  - "Vitality level: {{ vitality level }}\n
+  No damage"
+  - "Vitality level: {{ vitality level }}\n
+  No damage"
+  - "Vitality level: {{ vitality level }}\n
+  No damage"
+  - "Vitality level: {{ vitality level }}\n
+  No damage"
+  - "Vitality level: {{ vitality level }}\n
+  No damage"
+  - "Vitality level: {{ vitality level }}\n
+  Damage: {{ damage types }}"
 
 intellectual appearance:
   - "Intellectual level: {{ intellectual level }}\n
+  Social level: {{ social level }}\n
   Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n
   Favorite food: {{ favotire food }}\n
+  Favorite activity: {{ favotire activity }}\n
   Unique ability: {{ unique ability }}"
 
 native place:
@@ -163,6 +184,23 @@ intellectual level:
   - very high
   - genius
 
+social level:
+  - insociable
+  - insociable
+  - distrusting
+  - distrusting
+  - distrusting
+  - low
+  - low
+  - low
+  - low
+  - medium
+  - medium
+  - medium
+  - high
+  - high
+  - ultrasocial
+
 character age:
   - baby ((( random_number 1 20 )) days)
   - teen ((( random_number 21 51 )) days)
@@ -201,6 +239,32 @@ neck fur variant:
 
 body segment count:
   - "(( random_number 12 16 )) segments"
+
+tail type:
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - jagged, duo pairs
+  - feathered, duo pairs
+  - feathered, duo pairs
+  - feathered, duo pairs
+  - feathered, duo pairs
+  - jagged, single pair
+  - jagged, single mono
+  - jagged, triple pairs
+  - pointy, single mono
+  - pointy, single pair
+  - pointy, duo pair
+  - feathered, single pair
+  - feathered, triple pairs
+  - leaflike, single pair
+  - leaflike, single mono
 
 tail size:
   - same as body size
@@ -467,6 +531,87 @@ whiskers size:
   - shortest
   - almost absent
 
+whiskers shape:
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - featherlike
+  - droplet
+  - droplet
+  - droplet
+  - droplet
+  - scarred
+  - scarred
+  - jagged
+  - jagged
+  - separated
+  - roundlike
+  - curled ball
+
+body segment shape:
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - v-shaped
+  - doubled
+  - doubled
+  - doubled
+  - rounded
+  - rounded
+  - squared
+  - armorplated
+  - dragonscaled
+
+damage types:
+  - missing eye
+  - head scar
+  - head scar
+  - head scar
+  - head wound
+  - ear scar
+  - ear scar
+  - ear scar
+  - ear missing
+  - bite marks on head
+  - slash marks on head
+  - bite marks on torso
+  - slash marks on torso
+  - bite marks on back
+  - slash marks on back
+  - bite marks on tail
+  - slash marks on tail
+  - scarred torso
+  - scarred torso
+  - scarred torso
+  - scarred torso
+  - scarred spine
+  - scarred spine
+  - scarred spine
+  - scarred spine
+  - scarred tail
+  - scarred tail
+  - scarred tail
+  - scarred tail
+  - limb damage
+  - limb missing
+  - tail damage
+  - tail missing something
+  - no tail
+  - "{{ damage types }} & {{ damage types }}"
+
 ears shape:
   - pointy
   - pointy
@@ -501,6 +646,29 @@ eye shape:
   - round shape
   - dome shape
   - eye shape
+
+vitality level:
+  - powerful
+  - strong
+  - potent
+  - active
+  - active
+  - active
+  - active
+  - normal
+  - normal
+  - normal
+  - normal
+  - stable
+  - stable
+  - stable
+  - stable
+  - supreme
+  - supreme
+  - fragile
+  - anemic
+  - weak
+  - diminished
 
 personality:
   - active
@@ -647,12 +815,58 @@ personality:
   - witty
   - worried
 
+favotire activity:
+  - playing
+  - playing
+  - playing
+  - playing
+  - hunting
+  - hunting
+  - hunting
+  - hunting
+  - climbing
+  - climbing
+  - climbing
+  - running
+  - running
+  - running
+  - hiding
+  - hiding
+  - hiding
+  - sleeping
+  - sleeping
+  - sleeping
+  - sleeping
+  - sleeping
+  - sleeping
+  - show affection
+  - scouting
+  - fighting
+  - mating
+
 favotire food:
   - milk
+  - milk
+  - honey
   - honey
   - mikris
+  - mikris
+  - meat
+  - meat
+  - insects
+  - insects
+  - snail
+  - snail
+  - berry
+  - berry
+  - fruit
+  - fruit
+  - egg
   - egg
   - nut
+  - nut
+  - sweets
+  - selfkin
 
 # Name: Треск, бульканье и визг
 name:
@@ -719,6 +933,9 @@ unique ability:
   - scent
   - scent
   - scent
+  - stealth
+  - stealth
+  - stealth
   - eyesight
   - eyesight
   - eyesight
