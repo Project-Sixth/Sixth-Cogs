@@ -27,7 +27,8 @@ single gender:
 
 character appearance:
   - "__Visual appearance:__
-  \n{{ visual appearance }}\n__Capabilities:__
+  \n{{ visual appearance }}
+  \n__Capabilities:__
   \n{{ intellectual appearance }}"
 
 visual appearance:
@@ -36,39 +37,39 @@ visual appearance:
   \n{{ visual appearance body section }}"
 
 visual appearance basic section:
-  - "Name, gender, age: $$C {{ creature name }} $$, {{ creature gender }}, {{ character age }}\n
-  Length, body segment count, width: {{ body length }}, {{ body segment count }}, {{ body width }}\n
-  Native place: {{ native place }}"
+  - "Name, gender, age: $$C {{ creature name }} $$, {{ creature gender }}, {{ character age }}
+  \nLength, body segment count, width: {{ body length }}, {{ body segment count }}, {{ body width }}
+  \nNative place: {{ native place }}"
 
 visual appearance color section:
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  No pattern attached to main color.{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  No pattern attached to main color.{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  No pattern attached to main color.{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
-  - "Main (dominating) color: {{ color }}, located at {{ color location }}\n
-  Pattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nNo pattern attached to main color.{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nNo pattern attached to main color.{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nNo pattern attached to main color.{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nPattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nPattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nPattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nPattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
+  - "Main (dominating) color: {{ color }}, located at {{ color location }}
+  \nPattern attached to main color: {{ pattern }}, {{ visual appearance color section pattern deviation }}{{ visual appearance color section possible recessive }}"
 
 visual appearance color section possible recessive:
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  No pattern attached to additional color."
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  No pattern attached to additional color."
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  No pattern attached to additional color."
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  No pattern attached to additional color."
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  No pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nNo pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nNo pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nNo pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nNo pattern attached to additional color."
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nNo pattern attached to additional color."
   - ""
   - ""
   - ""
@@ -84,10 +85,10 @@ visual appearance color section possible recessive:
   - ""
   - ""
   - ""
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
-  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}\n
-  Pattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nPattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
+  - "\nAdditional (recessive) color: {{ color }}, located at {{ color location two }}
+  \nPattern attached to additional color: {{ pattern }}, {{ visual appearance color section pattern deviation }}"
 
 visual appearance color section pattern deviation:
   - "single deviation: {{ pattern deviation }}"
@@ -100,17 +101,17 @@ visual appearance color section pattern deviation:
   - "two deviations: {{ pattern deviation }} and {{ pattern deviation }}"
 
 visual appearance body section:
-  - "{{ visual appearance body section head }}\n
-  {{ visual appearance body section body }}\n
-  {{ visual appearance body section tail }}\n
-  {{ visual appearance body section damage }}"
+  - "{{ visual appearance body section head }}
+  \n{{ visual appearance body section body }}
+  \n{{ visual appearance body section tail }}
+  \n{{ visual appearance body section damage }}"
 
 visual appearance body section head:
-  - "Nose size: {{ nose size }}\n
-  Eye shape: {{ eye shape }}\n
-  Ears shape: {{ ears shape }}\n
-  Neck fur: {{ neck fur type }}\n
-  Wiskers size and shape: {{ whiskers size }} {{ whiskers shape }}"
+  - "Nose size: {{ nose size }}
+  \nEye shape: {{ eye shape }}
+  \nEars shape: {{ ears shape }}
+  \nNeck fur: {{ neck fur type }}
+  \nWiskers size and shape: {{ whiskers size }} {{ whiskers shape }}"
 
 visual appearance body section body:
   - "Body segment shape: {{ body segment shape }}"
@@ -119,26 +120,26 @@ visual appearance body section tail:
   - "Tail type and size: {{ tail type }}, {{ tail size }}"
 
 visual appearance body section damage:
-  - "Vitality level: {{ vitality level }}\n
-  No damage"
-  - "Vitality level: {{ vitality level }}\n
-  No damage"
-  - "Vitality level: {{ vitality level }}\n
-  No damage"
-  - "Vitality level: {{ vitality level }}\n
-  No damage"
-  - "Vitality level: {{ vitality level }}\n
-  No damage"
-  - "Vitality level: {{ vitality level }}\n
-  Damage: {{ damage types }}"
+  - "Vitality level: {{ vitality level }}
+  \nNo damage"
+  - "Vitality level: {{ vitality level }}
+  \nNo damage"
+  - "Vitality level: {{ vitality level }}
+  \nNo damage"
+  - "Vitality level: {{ vitality level }}
+  \nNo damage"
+  - "Vitality level: {{ vitality level }}
+  \nNo damage"
+  - "Vitality level: {{ vitality level }}
+  \nDamage: {{ damage types }}"
 
 intellectual appearance:
-  - "Intellectual level: {{ intellectual level }}\n
-  Social level: {{ social level }}\n
-  Personality traits: {{ personality }}, {{ personality }}, {{ personality }}\n
-  Favorite food: {{ favotire food }}\n
-  Favorite activity: {{ favotire activity }}\n
-  Unique ability: {{ unique ability }}"
+  - "Intellectual level: {{ intellectual level }}
+  \nSocial level: {{ social level }}
+  \nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}
+  \nFavorite food: {{ favotire food }}
+  \nFavorite activity: {{ favotire activity }}
+  \nUnique ability: {{ unique ability }}"
 
 native place:
   - forest
