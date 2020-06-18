@@ -388,12 +388,25 @@ visual appearance items section head:
   - "{{ visual appearance items section head items }}"
 
 visual appearance items section head items:
-  - "\nWearing hat"
-  - "\nWearing glasses"
-  - "\nWearing monocle"
-  - "\nHave feather behind ear"
-  - "\nHave earring"
-  - "\nHave earrings"
+  - "\nWearing bandana"
+  - "\nWearing bandana"
+  - "\nWearing bandana"
+  - "\nWearing shawl"
+  - "\nWearing shawl"
+  - "\nWearing shawl"
+  - "\nWearing feather behind ear"
+  - "\nWearing feather behind ear"
+  - "\nWearing feather behind ear"
+  - "\nWearing flower behind ear"
+  - "\nWearing flower behind ear"
+  - "\nWearing flower behind ear"
+  - "\nWearing cowboy hat"
+  - "\nWearing cylinder"
+  - "\nWearing handmade lenses"
+  - "\nWearing handmade monocle"
+  - "\nHave earring in ear"
+  - "\nHave earrings in both ears"
+  - "{{ visual appearance items section head items }}{{ visual appearance items section head items }}"
 
 visual appearance items section body:
   - ""
@@ -418,10 +431,29 @@ visual appearance items section body:
   - "{{ visual appearance items section body items }}"
 
 visual appearance items section body items:
-  - "\nWearing duster"
-  - "\nWearing scarf"
+  - "\nWearing belt"
+  - "\nWearing belt"
+  - "\nWearing belt"
+  - "\nWearing backpack"
+  - "\nWearing backpack"
+  - "\nWearing backpack"
+  - "\nWearing bandolier"
+  - "\nWearing bandolier"
+  - "\nWearing bandolier"
+  - "\nBandages on body"
+  - "\nBandages on body"
+  - "\nBandages on body"
+  - "\nWearing body wraps"
+  - "\nWearing body wraps"
+  - "\nWearing body wraps"
   - "\nWearing amulet"
+  - "\nWearing amulet"
+  - "\nWearing amulet"
+  - "\nWearing scarf"
+  - "\nWearing scarf"
+  - "\nWearing duster"
   - "\nWearing armor"
+  - "{{ visual appearance items section body items }}{{ visual appearance items section body items }}"
 
 visual appearance items section arms:
   - ""
@@ -446,10 +478,23 @@ visual appearance items section arms:
   - "{{ visual appearance items section arms items }}"
 
 visual appearance items section arms items:
+  - "\nBandages on arm"
+  - "\nBandages on arm"
+  - "\nBandages on arm"
+  - "\nBandages on forearm"
+  - "\nBandages on forearm"
+  - "\nBandages on forearm"
+  - "\nBandages on shoulder"
+  - "\nBandages on shoulder"
+  - "\nBandages on shoulder"
+  - "\nWearing shoulderpad"
+  - "\nWearing shoulderpad"
+  - "\nWearing braceletpads"
+  - "\nWearing braceletpads"
   - "\nWearing gloves"
-  - "\nWearing bandage"
-  - "\nWearing ring"
   - "\nWearing bracelet"
+  - "\nWearing ring"
+  - "{{ visual appearance items section arms items }}{{ visual appearance items section arms items }}"
 
 visual appearance items section legs:
   - ""
@@ -474,10 +519,20 @@ visual appearance items section legs:
   - "{{ visual appearance items section legs items }}"
 
 visual appearance items section legs items:
-  - "\nWearing socks"
-  - "\nWearing bandage on legs"
-  - "\nWearing shorts"
+  - "\nBandage on legs"
+  - "\nBandage on legs"
+  - "\nBandage on legs"
+  - "\nSheath on leg"
+  - "\nSheath on leg"
+  - "\nSheath on leg"
+  - "\nWearing legwrappings"
+  - "\nWearing legwrappings"
+  - "\nWearing legwrappings"
+  - "\nWearing thread on leg"
+  - "\nWearing thread on leg"
+  - "\nWearing thread on leg"
   - "\nWearing boots"
+  - "{{ visual appearance items section legs items }}{{ visual appearance items section legs items }}"
 
 visual appearance items section misc:
   - ""
@@ -502,17 +557,28 @@ visual appearance items section misc:
   - "{{ visual appearance items section misc items }}"
 
 visual appearance items section misc items:
-  - "\nHave bottles"
   - "\nHave enerhons"
-  - "\nHave glowthingies"
+  - "\nHave enerhons"
+  - "\nHave enerhons"
+  - "\nHave seeds-enerhons"
+  - "\nHave seeds-enerhons"
+  - "\nHave seeds-enerhons"
+  - "\nHave small lantern"
+  - "\nHave small lantern"
+  - "\nHave small lantern"
+  - "\nHave pencil"
+  - "\nHave piece of paper"
+  - "\nHaving empty bottles"
+  - "{{ visual appearance items section misc items }}{{ visual appearance items section misc items }}"
 
 intellectual appearance:
   - "\nIntellectual level: {{ intellectual level }}
   \nSocial level: {{ social level }}
   \nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}
+  \nVoice: {{ voice type }}
   \nFavorite food: {{ favotire food }}
-  \nFavorite activity: {{ favotire activity }}
-  \nUnique ability: {{ unique ability }}"
+  \nFavorite activity: {{ favorite activity }}
+  \nUnique ability: {{ unique ability }} *and/or {{ unique ability }}*"
 
 
 # ==========================
@@ -1074,7 +1140,109 @@ personality:
   - witty
   - worried
 
-favotire activity:
+voice type:
+  - no voice
+  - silent
+  - on edge of hearing
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+  - "{{ voice class }} {{ voice loudness }}, {{ voice pitch }}"
+
+voice class:
+  - "{{ voice class }}, {{ voice class }}"
+  - velvet
+  - bass
+  - untiring
+  - weak
+  - strong
+  - melodic
+  - imperial
+  - fast
+  - screeching
+  - damaged
+  - vibrating
+  - urk-urk
+  - rotten
+  - howling
+  - thundering
+  - stuttering
+  - ringing
+  - crystal
+  - giant
+  - strong
+  - round
+  - barking
+  - breaking
+  - slow
+  - broken
+  - hoarse
+  - fresh
+  - singing
+  - pi-pi-pi
+  - rusty
+  - relaxed
+  - steel
+  - taut
+  - long
+  - choking
+  - young
+  - old
+  - bright
+  - clear
+  - precise
+  - legible
+  - oily
+  # can be added more
+
+voice loudness:
+  - whispering
+  - quiet
+  - audible
+  - headable
+  - normal
+  - loud
+  - screaming
+  - very loud
+
+voice pitch:
+  - very low-pitched
+  - low-pitched
+  - normal-pitched
+  - high-pitched
+  - very high-pitched
+
+favorite activity:
   - working
   - puzzles
   - timeattacks
@@ -1161,7 +1329,160 @@ favotire food:
   - moonlight
 
 unique ability:
-  - TODO. It is a LOT of abilities.
+  - animal handling
+  - falconry
+  - mimicry
+  - mount
+  - packing
+  - riding
+  - teamster
+  - veterinary
+  - artist
+  - dancing
+  - group perfomance
+  - makeup
+  - musical instrument
+  - solo perfomance
+  - poetry
+  - singing
+  - sleight of hand
+  - stage combat
+  - writing
+  - acrobatics
+  - aerobatics
+  - aquabatics
+  - body sense
+  - breath control
+  - climbing
+  - combat art
+  - fight
+  - hiking
+  - jumping
+  - lifting
+  - running
+  - throwing
+  - accounting
+  - administration
+  - diplomacy
+  - finance
+  - economics
+  - law
+  - mathematics
+  - politics
+  - merchant
+  - public speaking
+  - axe proficiency
+  - bow proficiency
+  - sword proficiency
+  - cloak proficiency
+  - rapier proficiency
+  - shortsword proficiency
+  - two handed sword proficiency
+  - whip proficiency
+  - staff proficiency
+  - karate
+  - judo
+  - wrestling
+  - blowpipe proficiency
+  - bola proficiency
+  - lasso proficiency
+  - bone carving
+  - jeweler
+  - leatherworking
+  - masonry
+  - smith
+  - escaping
+  - disguise
+  - carousing
+  - fast-talk
+  - filch
+  - forced entry
+  - forgery
+  - gambling
+  - intimidation
+  - lockpicking
+  - observation
+  - panhandling
+  - pickpocket
+  - poisons
+  - shadowing
+  - smuggling
+  - traps
+  - stealth
+  - streetwise
+  - architecture
+  - pharmacy
+  - blind fighting
+  - breaking blow
+  - self-hypnosis
+  - hypnosis
+  - light walk
+  - dreaming
+  - entrallment
+  - immovable stance
+  - meditation
+  - mental strength
+  - mind block
+  - persuade
+  - zen archer
+  - area knowledge
+  - cooking
+  - housekeeping
+  - knot-tying
+  - sewing
+  - weather sense
+  - games
+  - heraldry
+  - diagnosis
+  - first aid
+  - medicine
+  - hypnotism
+  - physician
+  - surgery
+  - psychology
+  - brainwashing
+  - interrogation
+  - leadership
+  - propaganda
+  - strategy
+  - tactics
+  - biology
+  - chemistry
+  - astronomy
+  - alchemy
+  - geology
+  - metallurgy
+  - naturalist
+  - paleontology
+  - physiology
+  - exorcism
+  - herb lore
+  - occultism
+  - religion
+  - rituals
+  - symbol drawing
+  - thaumatology
+  - hiking
+  - mimicry
+  - survival
+  - tracking
+  - navigation
+  - gardening
+  - body language
+  - detect lies
+  - mechanic
+  - literature
+  - research
+  - speed reader
+  - teacher
+  - acting
+  - erotic art
+  - gestures
+  - xenology
+  - theology
+  - linguistics
+  - lip reading
+  - hazardous materials
 
 # ============================
 # ====== SHARED Modules ======
