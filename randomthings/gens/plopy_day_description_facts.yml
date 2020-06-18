@@ -1,0 +1,1311 @@
+# Гайд по описанию Плопи-Дея
+# ====================
+# ====== ВНЕШКА ======
+# ====================
+# --- ОБЩИЕ ДАННЫЕ ---
+# Имя, Пол (50/50%), Возраст (больше шанс на матуров или адультов, в среднем 80%, т.к старики и дети мало кому интересны)
+# Высота, мускулатура (ширина, больше шанс получить "средних, либо тонких-худых")
+# Место "рождения" (город или село в котором провел детство, больше шанс появиться ближе к белой реке, меньше - дальше)
+# --- ЦВЕТОВЫЕ ДАННЫЕ ---
+# Тип Дея: Коммон (1 цвет (70%)), Микс (2 цвета (20%)), Рар (3-5 цветов (10%))
+
+pool:
+    - "**Maestro:** Before you stands a creature from `Day-Plopy` type.
+    \n
+    \n{{ character appearance }}"
+vars:
+    creature name: "(( name_plopy_day ))"
+    creature gender: "[[ gender_he_or_she ]]"
+    creature symbol: "[[ plopy_symbol ]]"
+
+# =================================
+# ====== FUNDAMENTAL Modules ======
+# =================================
+character appearance:
+  - "__How does {{ creature gender }} look:__
+  {{ visual appearance }}
+  \n__What {{ creature gender }} is known for:__
+  {{ intellectual appearance }}"
+
+visual appearance:
+  - "{{ visual appearance common section }}
+  {{ visual appearance color section }}
+  {{ visual appearance body section }}
+  {{ visual appearance items section }}"
+
+visual appearance common section:
+  - "\nName, gender and age: {{ creature name }}, {{ creture gender }}, {{ creature age }}
+  \nHeight, width: {{ body height }}, {{ body width }}
+  \nBirthplace: {{ birthplace }}"
+
+visual appearance color section:
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daycommon }}"
+  - "{{ visual appearance color section daymix }}"
+  - "{{ visual appearance color section daymix }}"
+  - "{{ visual appearance color section dayrare }}"
+
+visual appearance color section daycommon:
+  - "\nDay Type: *Common*
+  \nDominating color: {{ color }}, supportive mutation: {{ pattern deviation }}"
+
+visual appearance color section daymix:
+  - "\nDay Type: **M**_ix_
+  \nDominating color: {{ color }}
+  \nRecessive color: {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: **M**_ix_
+  \nDominating colors: {{ color }} & {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+
+visual appearance color section dayrare:
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+  - "\nDay Type: ***__Rare__***
+  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}, {{ color }}, {{ color }}
+  \nSupportive mutation for colors: {{ pattern deviation }}"
+
+visual appearance body section:
+  - "{{ visual appearance body section head }}
+  {{ visual appearance body section body }}
+  {{ visual appearance body section tail }}
+  {{ visual appearance body section damage }}"
+
+visual appearance body section head:
+  - "\nSymbol: {{ creature symbol }}
+  \nHaircut: {{ haircut type }}
+  \nHead tendrils: {{ head tendrils }}
+  \nEye shape: {{ eye shape }}
+  \nEars shape: {{ ears shape }}
+  {{ visual appearance body section head uniqueness }}"
+
+visual appearance body section head uniqueness:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance body section head uniqueness damage }}"
+
+visual appearance body section head uniqueness damage:
+  - "\nFacial tattoo"
+  - "\nFacial tattoo"
+  - "\nFacial tattoo"
+  - "\nFacial tattoo"
+  - "\nFacial tattoo"
+  - "\nHeterochromy"
+  - "\nHeterochromy"
+  - "\nHeterochromy"
+  - "\nHeterochromy"
+  - "\nHeterochromy"
+  - "\nDamaged symbol"
+  - "\nDamaged symbol"
+  - "\nDamaged symbol"
+  - "\nDamaged symbol"
+  - "\nDamaged symbol"
+  - "\nSingle scar on right side of face"
+  - "\nSingle scar on right side of face"
+  - "\nSingle scar on left side of face"
+  - "\nSingle scar on left side of face"
+  - "\nMultiple scars on right side of face"
+  - "\nMultiple scars on right side of face"
+  - "\nMultiple scars on left side of face"
+  - "\nMultiple scars on left side of face"
+  - "\nDestroyed symbol"
+  - "\nDamaged haircut"
+  - "\nDamaged head tendrils"
+  - "\nDamaged right eye"
+  - "\nDamaged left eye"
+  - "\nDamaged right ear"
+  - "\nDamaged left ear"
+  - "\nDamaged nose"
+  - "\nDamaged mouth"
+  - "{{ visual appearance body section head uniqueness damage }}{{ visual appearance body section head uniqueness damage }}"
+
+visual appearance body section body:
+  - "\nBody tendrils: {{ body tendrils }}
+  {{ visual appearance body section body pattern }}
+  {{ visual appearance body section body uniqueness }}"
+
+visual appearance body section body pattern:
+  - "\nMain body have color: ...gray
+  {{ visual appearance body section body pattern torso deviation }}
+  {{ visual appearance body section body pattern back deviation }}
+  {{ visual appearance body section body pattern arms deviation }}
+  {{ visual appearance body section body pattern thighs deviation }}
+  {{ visual appearance body section body pattern leg deviation }}"
+
+visual appearance body section body pattern torso deviation:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nTorso have darker {{ visual appearance body section body pattern torso deviation types }}"
+  - "\nTorso have lighter {{ visual appearance body section body pattern torso deviation types }}"
+  - "{{ visual appearance body section body pattern torso deviation }}{{ visual appearance body section body pattern torso deviation }}"
+
+visual appearance body section body pattern back deviation:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nBack have darker {{ visual appearance body section body pattern back deviation types }}"
+  - "\nBack have lighter {{ visual appearance body section body pattern back deviation types }}"
+  - "{{ visual appearance body section body pattern back deviation }}{{ visual appearance body section body pattern back deviation }}"
+
+visual appearance body section body pattern arms deviation:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nArms have darker {{ visual appearance body section body pattern arms deviation types }}"
+  - "\nArms have lighter {{ visual appearance body section body pattern arms deviation types }}"
+  - "{{ visual appearance body section body pattern arms deviation }}{{ visual appearance body section body pattern arms deviation }}"
+
+visual appearance body section body pattern thighs deviation:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nThighs have darker {{ visual appearance body section body pattern thighs deviation types }}"
+  - "\nThighs have lighter {{ visual appearance body section body pattern thighs deviation types }}"
+  - "{{ visual appearance body section body pattern thighs deviation }}{{ visual appearance body section body pattern thighs deviation }}"
+
+visual appearance body section body pattern leg deviation:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nLegs have darker {{ visual appearance body section body pattern leg deviation types }}"
+  - "\nLegs have lighter {{ visual appearance body section body pattern leg deviation types }}"
+  - "{{ visual appearance body section body pattern leg deviation }}{{ visual appearance body section body pattern leg deviation }}"
+
+
+visual appearance body section body uniqueness:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance body section body uniqueness damage }}"
+
+visual appearance body section body uniqueness damage:
+  - "\nBody tattoo"
+  - "\nBody tattoo"
+  - "\nBody tattoo"
+  - "\nBody tattoo"
+  - "\nScar on arm"
+  - "\nScar on arm"
+  - "\nScar on forearm"
+  - "\nScar on forearm"
+  - "\nScar on shoulder"
+  - "\nScar on shoulder"
+  - "\nScar on leg"
+  - "\nScar on leg"
+  - "\nScar on back"
+  - "\nScar on back"
+  - "\nMultiple scars on arm"
+  - "\nMultiple scars on shoulder"
+  - "\nMultiple scars on leg"
+  - "\nMultiple scars on forearm"
+  - "\nMultiple scars on back"
+  - "\nMissing finger"
+  - "\nMissing arm"
+  - "\nMissing leg"
+  - "\nDamaged finger"
+  - "\nDamaged arm"
+  - "\nDamaged leg"
+  - "\nNeck damage"
+  - "\nMissing body tendril"
+  - "\nDamaged body tendril"
+  - "{{ visual appearance body section body uniqueness damage }}{{ visual appearance body section body uniqueness damage }}"
+
+visual appearance body section tail:
+  - "\nTail type, fur length and pattern: {{ tail type }}, {{ tail fur tupe }}, {{ tail pattern }}
+  {{ visual appearance body section tail uniqueness }}"
+
+visual appearance body section tail uniqueness:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance body section tail uniqueness damage }}"
+
+visual appearance body section tail uniqueness damage:
+  - "\nTailored tail"
+  - "\nTailored tail"
+  - "\nTailored tail"
+  - "\nTailored tail"
+  - "\nTailored tail"
+  - "\nTailored tail"
+  - "\nHaircutted tail"
+  - "\nHaircutted tail"
+  - "\nHaircutted tail"
+  - "\nHaircutted tail"
+  - "\nHaircutted tail"
+  - "\nHaircutted tail"
+  - "\nBurnt tail"
+  - "\nDamaged tail"
+  - "{{ visual appearance body section tail uniqueness damage }}{{ visual appearance body section tail uniqueness damage }}"
+
+visual appearance body section damage:
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}"
+  - "\nVitality level: {{ vitality level }}
+  \nInner damage found: {{ damage types }}"
+
+visual appearance items section:
+  - "{{ visual appearance items section head }}
+  {{ visual appearance items section body }}
+  {{ visual appearance items section arms }}
+  {{ visual appearance items section legs }}
+  {{ visual appearance items section misc }}"
+
+visual appearance items section head:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance items section head items }}"
+
+visual appearance items section head items:
+  - "\nWearing hat"
+  - "\nWearing glasses"
+  - "\nWearing monocle"
+  - "\nHave feather behind ear"
+  - "\nHave earring"
+  - "\nHave earrings"
+
+visual appearance items section body:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance items section body items }}"
+
+visual appearance items section body items:
+  - "\nWearing duster"
+  - "\nWearing scarf"
+  - "\nWearing amulet"
+  - "\nWearing armor"
+
+visual appearance items section arms:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance items section arms items }}"
+
+visual appearance items section arms items:
+  - "\nWearing gloves"
+  - "\nWearing bandage"
+  - "\nWearing ring"
+  - "\nWearing bracelet"
+
+visual appearance items section legs:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance items section legs items }}"
+
+visual appearance items section legs items:
+  - "\nWearing socks"
+  - "\nWearing bandage on legs"
+  - "\nWearing shorts"
+  - "\nWearing boots"
+
+visual appearance items section misc:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ visual appearance items section misc items }}"
+
+visual appearance items section misc items:
+  - "\nHave bottles"
+  - "\nHave enerhons"
+  - "\nHave glowthingies"
+
+intellectual appearance:
+  - "Intellectual level: {{ intellectual level }}
+  \nSocial level: {{ social level }}
+  \nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}
+  \nFavorite food: {{ favotire food }}
+  \nFavorite activity: {{ favotire activity }}
+  \nUnique ability: {{ unique ability }}"
+
+
+# ==========================
+# ====== PART Modules ======
+# ==========================
+# --- Visual appearance: Common section ---
+creature age:
+  - baby ((( random_number 0 1 )) years)
+  - infant ((( random_number 1 3 )) years)
+  - teen ((( random_number 3 4 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - mature ((( random_number 5 20 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - adult ((( random_number 21 60 )) years)
+  - senior ((( random_number 61 100 )) years)
+  - senior ((( random_number 61 100 )) years)
+
+body height:
+  - "(( random_number 50 60 )) millimeters"
+  - "(( random_number 55 65 )) millimeters"
+  - "(( random_number 55 65 )) millimeters"
+  - "(( random_number 55 65 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 57 63 )) millimeters"
+  - "(( random_number 60 70 )) millimeters"
+
+body width:
+  - fat
+  - ample
+  - wide
+  - wide
+  - tough
+  - muscular
+  - muscular
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - average
+  - taut
+  - lean
+  - lean
+  - lean
+  - lean
+  - lean
+  - lean
+  - lean
+  - lean
+  - springy
+  - thin
+  - thin
+  - thin
+  - thin
+  - thin
+  - thin
+  - thin
+  - thin
+  - thin
+
+birthplace:
+  - Somewhere in San-Cen
+  - Somewhere in San-Cen
+  - Somewhere in San-Cen
+  - Somewhere in San-Cen
+  - Somewhere in San-Cen
+  - Somewhere in San-Cen
+  - Besatri
+  - Besatri
+  - Besatri
+  - Riverway
+  - Riverway
+  - Sirotish
+  - Sirotish
+  - Shelishe
+  - Yarotsvet
+  - Shumport
+  - Ubulbesh
+  - Visolesie
+  - Dalitarano
+  - Tuskustie
+  - Krichashaya skala
+  - Pleel
+  - Somewhere on Snakesbelt
+
+# --- Visual appearance: Color section ---
+pattern deviation:
+  - darker color
+  - darker color
+  - darker color
+  - darker color
+  - lighter color
+  - lighter color
+  - lighter color
+  - lighter color
+  - dimmer color
+  - dimmer color
+  - brighter color
+  - brighter color
+  - contrast
+  - contrast
+  - glowing
+  - barely noticeable
+
+# --- Visual appearance: Body section ---
+# --- Visual appearance: Body section: Symbol ---
+# Moved to LIBS
+
+# --- Visual appearance: Body section: Haircut ---
+haircut type:
+  - "no haircut"
+  - "short and wide"
+  - "punk"
+  - "waterfall"
+  - "two-tone bush"
+  - "emo bang"
+  - "symmetrical helmet"
+  - "grape wines"
+  - "crying tree wines"
+
+head tendrils:
+  - "no tendrils"
+  - "four hanging with tear shape at end"
+  - "two curly hornlike"
+  - "six rouned horns"
+  - "two flowerlike thingies with leafs and bulbs"
+  - "two pairs of soft horns with complimentary long tears from bottom"
+  - "waterfall"
+
+# --- Visual appearance: Body section: Eyes ---
+eye shape:
+  - predator shape
+  - mindal shape
+  - eastern shape
+  - cunning shape
+  - halfclosed shape
+  - wide shape
+  - narrow shape
+  - round shape
+  - dome shape
+  - eye shape
+  - sleepy shape
+  - drugged shape
+
+# --- Visual appearance: Body section: Ears ---
+ears shape:
+  - sharp
+  - sharp
+  - pointy
+  - pointy
+  - round
+  - round
+  - fluffy
+  - fluffy
+  - soft
+  - soft
+  - falling
+  - longish
+  - flopped
+  - rhombus
+  - siderounded
+  - scarred
+
+# --- Visual appearance: Body section: Body ---
+body tendrils:
+  - "no tendrils"
+  - "three pairs of rounded 'wings'"
+  - "three pairs of rounded rocks that curls on itself"
+  - "three pairs of curled tendrils ending with a sphere"
+  - "two pairs of tendrils that ends with a droplet"
+  - "two pairs of sharp butterfly-like wings"
+  - "four pairs of soft 'wingrocks'"
+
+# --- Visual appearance: Body section: Body pattern deviations ---
+visual appearance body section body pattern torso deviation types:
+  - "neck beads pattern"
+  - "neck line pattern"
+
+visual appearance body section body pattern back deviation types:
+  - "coat-like pattern"
+  - "spots pattern"
+  - "rhombus pattern"
+  - "teardrop pattern"
+  - "multiple spheres pattern"
+  - "spider pattern"
+  - "Y pattern"
+  - "single sphere pattern"
+  - "couple of horisontal lines"
+  - "couple of vertical lines"
+  - "[[ plopy_symbol ]] shape"
+
+visual appearance body section body pattern arms deviation types:
+  - "mitts-gloves-like pattern"
+  - "gloves-like pattern"
+  - "spot on back of the paw"
+  - "spot on the forearm"
+  - "spot on the shoulder"
+  - "wristband pattern"
+  - "multiple wristband pattern"
+
+visual appearance body section body pattern thighs deviation types:
+  - "button-like pattern"
+  - "sphere-like pattern"
+  - "multiple sphere-like pattern"
+  - "horizontal stripes pattern"
+
+visual appearance body section body pattern leg deviation types:
+  - "long socks-like pattern"
+  - "short socks-like pattern"
+  - "slippers-like pattern"
+  - "stripes-like pattern"
+
+# --- Visual appearance: Body section: Tail ---
+tail type:
+  - very fluffy
+  - very fluffy
+  - very fluffy
+  - curly
+  - curly
+  - curly
+  - trailing
+  - trailing
+  - trailing
+  - shaped
+  - shaped
+  - wide
+  - lean
+  - splitted
+  - woven
+
+tail fur tupe:
+  - velvet fur
+  - short fur
+  - short fur
+  - short fur
+  - medium fur
+  - medium fur
+  - medium fur
+  - medium fur
+  - medium fur
+  - medium fur
+  - medium fur
+  - medium fur
+  - long fur
+  - long fur
+  - long fur
+  - ultralong fur
+
+tail pattern:
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - no specific pattern
+  - darker tip of tail
+  - lighter tip of tail
+  - two-tone tail
+  - gradient tail
+
+# --- Visual appearance: Body section: Damage ---
+vitality level:
+  - powerful
+  - strong
+  - potent
+  - active
+  - active
+  - active
+  - active
+  - normal
+  - normal
+  - normal
+  - normal
+  - stable
+  - stable
+  - stable
+  - stable
+  - supreme
+  - supreme
+  - fragile
+  - anemic
+  - weak
+  - diminished
+
+damage types:
+  - "ate wrong food"
+  - "ate wrong food"
+  - "ate wrong food"
+  - "ate wrong food"
+  - "overeaten"
+  - "overeaten"
+  - "overeaten"
+  - "overeaten"
+  - "turning hybrid"
+  - "turning hybrid"
+  - "internal bleeding"
+
+# --- Intellectual appearance ---
+intellectual level:
+  - non-existent
+  - instinctive
+  - dumb
+  - low
+  - limited
+  - primitive
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - social
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - collective
+  - cunning
+  - cunning
+  - high
+  - very high
+  - exceptional
+  - genius
+
+social level:
+  - insociable
+  - distrusting
+  - low
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - medium
+  - high
+  - high
+  - high
+  - high
+  - high
+  - high
+  - high
+  - high
+  - ultrasocial
+  - ultrasocial
+  - ultrasocial
+  - ultrasocial
+
+personality:
+  - active
+  - adventurous
+  - affectionate
+  - aggressive
+  - ambitious
+  - annoying
+  - anxious
+  - artistic
+  - attentive
+  - bad-tempered
+  - bossy
+  - brave
+  - broad-minded
+  - busive
+  - calm
+  - careful
+  - careless
+  - cautious
+  - charming
+  - cheeky
+  - cheerful
+  - compassionate
+  - compulsive
+  - confident
+  - conscientious
+  - conservative
+  - courageous
+  - courteous
+  - cowardly
+  - crazy
+  - creative
+  - cruel
+  - cynical
+  - decisive
+  - determined
+  - diplomatic
+  - direct
+  - discreet
+  - dishonest
+  - disobedient
+  - distracted
+  - domineering
+  - dynamic
+  - easygoing
+  - emotional
+  - energetic
+  - enthusiastic
+  - extroverted
+  - fair-minded
+  - faithful
+  - fearful
+  - fearless
+  - frank
+  - friendly
+  - funny
+  - generous
+  - gentle
+  - good-tempered
+  - greedy
+  - gregarious
+  - gullible
+  - happy
+  - hard-working
+  - helpful
+  - honest
+  - humble
+  - humorous
+  - hypocritical
+  - imaginative
+  - impartial
+  - impatient
+  - impulsive
+  - independent
+  - intellectual
+  - intelligent
+  - introverted
+  - jealous
+  - kind
+  - lazy
+  - lively
+  - loving
+  - loyal
+  - mean
+  - messy
+  - modest
+  - moody
+  - naughty
+  - neat
+  - nervous
+  - nice
+  - obedient
+  - obsessive
+  - optimistic
+  - outgoing
+  - passionate
+  - patient
+  - persistent
+  - pessimistic
+  - placid
+  - plucky
+  - polite
+  - pompous
+  - popular
+  - practical
+  - proud
+  - rational
+  - reliable
+  - reserved
+  - romantic
+  - rude
+  - ruthless
+  - sarcastic
+  - scared
+  - secretive
+  - self-centered
+  - self-confident
+  - self-disciplined
+  - selfish
+  - sensible
+  - sensitive
+  - serious
+  - shy
+  - silly
+  - sincere
+  - smart
+  - sociable
+  - straightforward
+  - stubborn
+  - superficial
+  - supportive
+  - tactful
+  - tactless
+  - talkative
+  - thoughtful
+  - tidy
+  - timid
+  - unfriendly
+  - unpleasant
+  - untidy
+  - versatile
+  - warm-hearted
+  - witty
+  - worried
+
+favotire activity:
+  - working
+  - puzzles
+  - timeattacks
+  - daydreaming
+  - drawing
+  - logic battles
+  - musicing
+  - learning
+  - modelling
+  - traveling
+  - building
+  - tricking
+  - collectioning
+  - taming
+  - swimming
+  - flying
+  - sport games
+  - reaction games
+  - speleology
+  - camping
+  - riding
+  - dancing
+  - astronomy
+  - microscopy
+  - history
+  - money games
+  - hunting
+  - staffmaking
+  - taxidermy
+  - auctions
+  - woodworking
+  - stoneworking
+  - clayworking
+  - baking
+  - reading
+  - knitting
+  - weaving
+  - gardening
+  - writing
+  - degustation
+  - artistism
+  - singing
+  - yoga
+  - meditation
+  - heavy athletics
+  - light athletics
+  - scavanging
+  - playing
+  - climbing
+  - running
+  - hiding
+  - sleeping
+  - showing affection
+  - scouting
+  - fighting
+
+favotire food:
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - sunlight
+  - enerhon
+  - enerhon
+  - enerhon
+  - enerhon
+  - enerhon
+  - enerhon
+  - enerhon
+  - enerhon
+  - enerhon
+  - "{{ color }} enerhon"
+  - seeds
+  - seeds
+  - seeds
+  - seeds
+  - manaflower
+  - manaflower
+  - moonlight
+
+unique ability:
+  - TODO. It is a LOT of abilities.
+
+# ============================
+# ====== SHARED Modules ======
+# ============================
+# --- Colors ---
+color:
+  - white
+  - black
+  - "{{ color shade }}ivory"
+  - "{{ color shade }}charcoal"
+  - "{{ color shade }}almond"
+  - "{{ color shade }}red"
+  - "{{ color shade }}crimson"
+  - "{{ color shade }}scarlet"
+  - "{{ color shade }}bostonred"
+  - "{{ color shade }}ruby"
+  - "{{ color shade }}flame"
+  - "{{ color shade }}rose"
+  - "{{ color shade }}cherry"
+  - "{{ color shade }}brown"
+  - "{{ color shade }}cinnamon"
+  - "{{ color shade }}tangerine"
+  - "{{ color shade }}auburn"
+  - "{{ color shade }}blush"
+  - "{{ color shade }}orange"
+  - "{{ color shade }}yellow"
+  - "{{ color shade }}daffodil"
+  - "{{ color shade }}canaryyellow"
+  - "{{ color shade }}banana"
+  - "{{ color shade }}bisque"
+  - "{{ color shade }}amber"
+  - "{{ color shade }}lime"
+  - "{{ color shade }}green"
+  - "{{ color shade }}forestgreen"
+  - "{{ color shade }}olive"
+  - "{{ color shade }}dollarbill"
+  - "{{ color shade }}jade"
+  - "{{ color shade }}cadmiumgreen"
+  - "{{ color shade }}bottlegreen"
+  - "{{ color shade }}armygreen"
+  - "{{ color shade }}apple"
+  - "{{ color shade }}emerald"
+  - "{{ color shade }}grass"
+  - "{{ color shade }}aquamarine"
+  - "{{ color shade }}ultramarine"
+  - "{{ color shade }}teal"
+  - "{{ color shade }}blue"
+  - "{{ color shade }}lapislazuli"
+  - "{{ color shade }}iris"
+  - "{{ color shade }}sapphire"
+  - "{{ color shade }}cobalt"
+  - "{{ color shade }}cerulean"
+  - "{{ color shade }}capri"
+  - "{{ color shade }}azure"
+  - "{{ color shade }}royalblue"
+  - "{{ color shade }}purple"
+  - "{{ color shade }}amethyst"
+  - "{{ color shade }}fuchsia"
+  - "{{ color shade }}lust"
+  - "{{ color shade }}indigo"
+  - "{{ color shade }}purpleheart"
+  - "{{ color shade }}lavander"
+  - "{{ color shade }}heliotrope"
+  - "{{ color shade }}pink"
+  - "{{ color shade }}gray"
+  - "{{ color shade }}gold"
+  - "{{ color shade }}silver"
+  - "{{ color shade }}bronze"
+  - "{{ color shade }}brass"
+  - "{{ color shade }}iron"
+  - "{{ color shade }}steel"
+  - "{{ color }}-{{ color }}"
+
+color shade:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "dark "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "light "
+  - "bright "
+  - "bright "
+  - "bright "
+  - "bright "
+  - "bright "
+  - "dim "
+  - "dim "
+  - "dim "
+  - "dim "
+  - "dim "
+  - "medium "
+  - "warm "
+  - "cold "
+  - "metallic "
+  - "pearl "
+  - "pastel "
+  - "neon "
+  - "glowing "
+  - "chrome "
+  - "celestial "
+  - "deep "
+  - "electric "
