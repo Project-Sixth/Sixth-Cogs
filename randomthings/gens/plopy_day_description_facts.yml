@@ -166,7 +166,7 @@ visual appearance body section body:
   {{ visual appearance body section body uniqueness }}"
 
 visual appearance body section body pattern:
-  - "\nMain body have color: ...gray
+  - "\nMain body have color: (( random_number 36 127 )) gray of 255 possible.
   {{ visual appearance body section body pattern torso deviation }}
   {{ visual appearance body section body pattern back deviation }}
   {{ visual appearance body section body pattern arms deviation }}
@@ -507,7 +507,7 @@ visual appearance items section misc items:
   - "\nHave glowthingies"
 
 intellectual appearance:
-  - "Intellectual level: {{ intellectual level }}
+  - "\nIntellectual level: {{ intellectual level }}
   \nSocial level: {{ social level }}
   \nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}
   \nFavorite food: {{ favotire food }}
