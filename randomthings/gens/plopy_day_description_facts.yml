@@ -34,7 +34,7 @@ visual appearance:
   {{ visual appearance items section }}"
 
 visual appearance common section:
-  - "\nName, gender and age: {{ creature name }}, {{ creture gender }}, {{ creature age }}
+  - "\nName, gender and age: {{ creature name }}, {{ creature gender }}, {{ creature age }}
   \nHeight, width: {{ body height }}, {{ body width }}
   \nBirthplace: {{ birthplace }}"
 
