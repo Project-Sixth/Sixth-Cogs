@@ -121,16 +121,48 @@ visual appearance body section head uniqueness:
   - ""
   - ""
   - ""
-  - ""
-  - ""
-  - "{{ visual appearance body section head uniqueness damage }}"
+  - "{{ visual appearance body section head uniqueness additions }}{{ visual appearance body section head uniqueness }}"
+  - "{{ visual appearance body section head uniqueness additions }}{{ visual appearance body section head uniqueness }}"
+  - "{{ visual appearance body section head uniqueness damage }}{{ visual appearance body section head uniqueness }}"
+
+visual appearance body section head uniqueness additions:
+  - "Additional tendrils on tips of the ears"
+  - "Additional tendrils on tips of the ears"
+  - "Additional tendrils on tips of the ears"
+  - "Additional tendrils on tips of the ears"
+  - "Additional tendrils on back of the ears"
+  - "Additional tendrils on back of the ears"
+  - "Additional tendrils on back of the ears"
+  - "Additional tendrils on back of the ears"
+  - "Colored marks below eye"
+  - "Colored marks below eye"
+  - "Colored marks below eye"
+  - "Colored marks below eye"
+  - "Colored marks below eyes"
+  - "Colored marks below eyes"
+  - "Colored marks below eyes"
+  - "Colored marks below eyes"
+  - "Face paint"
+  - "Face paint"
+  - "Face paint"
+  - "Face paint"
+  - "Additional tendrils on cheeks"
+  - "Additional tendrils on chin"
+  - "Additional tendrils on neck"
+  - "Additional tendrils near mouth"
+  - "Very long face fur"
+  - "Third eye"
+  - "Multiple pairs of ears"
+  - "Multiple pairs of eyes"
+  - "Two marks"
+  - "{{ visual appearance body section head uniqueness additions }}{{ visual appearance body section head uniqueness additions }}"
 
 visual appearance body section head uniqueness damage:
-  - "\nFacial tattoo"
-  - "\nFacial tattoo"
-  - "\nFacial tattoo"
-  - "\nFacial tattoo"
-  - "\nFacial tattoo"
+  - "\nFacial uneraseable tattoo"
+  - "\nFacial uneraseable tattoo"
+  - "\nFacial uneraseable tattoo"
+  - "\nFacial uneraseable tattoo"
+  - "\nFacial uneraseable tattoo"
   - "\nHeterochromy"
   - "\nHeterochromy"
   - "\nHeterochromy"
@@ -269,7 +301,7 @@ visual appearance body section body uniqueness:
   - ""
   - ""
   - ""
-  - "{{ visual appearance body section body uniqueness damage }}"
+  - "{{ visual appearance body section body uniqueness damage }}{{ visual appearance body section body uniqueness }}"
 
 visual appearance body section body uniqueness damage:
   - "\nBody tattoo"
@@ -303,7 +335,7 @@ visual appearance body section body uniqueness damage:
   - "{{ visual appearance body section body uniqueness damage }}{{ visual appearance body section body uniqueness damage }}"
 
 visual appearance body section tail:
-  - "\nTail type, fur length and pattern: {{ tail type }}, {{ tail fur tupe }}, {{ tail pattern }}
+  - "\nTail type, fur length and pattern: {{ tail type }}, {{ tail fur type }}, {{ tail pattern }}
   {{ visual appearance body section tail uniqueness }}"
 
 visual appearance body section tail uniqueness:
@@ -326,7 +358,7 @@ visual appearance body section tail uniqueness:
   - ""
   - ""
   - ""
-  - "{{ visual appearance body section tail uniqueness damage }}"
+  - "{{ visual appearance body section tail uniqueness damage }}{{ visual appearance body section tail uniqueness }}"
 
 visual appearance body section tail uniqueness damage:
   - "\nTailored tail"
@@ -385,7 +417,7 @@ visual appearance items section head:
   - ""
   - ""
   - ""
-  - "{{ visual appearance items section head items }}"
+  - "{{ visual appearance items section head items }}{{ visual appearance items section head }}"
 
 visual appearance items section head items:
   - "\nWearing bandana"
@@ -428,7 +460,7 @@ visual appearance items section body:
   - ""
   - ""
   - ""
-  - "{{ visual appearance items section body items }}"
+  - "{{ visual appearance items section body items }}{{ visual appearance items section body }}"
 
 visual appearance items section body items:
   - "\nWearing belt"
@@ -475,7 +507,7 @@ visual appearance items section arms:
   - ""
   - ""
   - ""
-  - "{{ visual appearance items section arms items }}"
+  - "{{ visual appearance items section arms items }}{{ visual appearance items section arms }}"
 
 visual appearance items section arms items:
   - "\nBandages on arm"
@@ -516,7 +548,7 @@ visual appearance items section legs:
   - ""
   - ""
   - ""
-  - "{{ visual appearance items section legs items }}"
+  - "{{ visual appearance items section legs items }}{{ visual appearance items section legs }}"
 
 visual appearance items section legs items:
   - "\nBandage on legs"
@@ -554,7 +586,7 @@ visual appearance items section misc:
   - ""
   - ""
   - ""
-  - "{{ visual appearance items section misc items }}"
+  - "{{ visual appearance items section misc items }}{{ visual appearance items section misc }}"
 
 visual appearance items section misc items:
   - "\nHave enerhons"
@@ -589,6 +621,7 @@ creature age:
   - baby ((( random_number 0 1 )) years)
   - infant ((( random_number 1 3 )) years)
   - teen ((( random_number 3 4 )) years)
+
   - mature ((( random_number 5 20 )) years)
   - mature ((( random_number 5 20 )) years)
   - mature ((( random_number 5 20 )) years)
@@ -599,6 +632,7 @@ creature age:
   - mature ((( random_number 5 20 )) years)
   - mature ((( random_number 5 20 )) years)
   - mature ((( random_number 5 20 )) years)
+
   - adult ((( random_number 21 60 )) years)
   - adult ((( random_number 21 60 )) years)
   - adult ((( random_number 21 60 )) years)
@@ -609,23 +643,31 @@ creature age:
   - adult ((( random_number 21 60 )) years)
   - adult ((( random_number 21 60 )) years)
   - adult ((( random_number 21 60 )) years)
+
   - senior ((( random_number 61 100 )) years)
   - senior ((( random_number 61 100 )) years)
 
 body height:
   - "(( random_number 50 60 )) millimeters"
+  
   - "(( random_number 55 65 )) millimeters"
   - "(( random_number 55 65 )) millimeters"
   - "(( random_number 55 65 )) millimeters"
+  
   - "(( random_number 57 63 )) millimeters"
   - "(( random_number 57 63 )) millimeters"
   - "(( random_number 57 63 )) millimeters"
   - "(( random_number 57 63 )) millimeters"
   - "(( random_number 57 63 )) millimeters"
-  - "(( random_number 57 63 )) millimeters"
-  - "(( random_number 57 63 )) millimeters"
-  - "(( random_number 57 63 )) millimeters"
-  - "(( random_number 57 63 )) millimeters"
+  
+  - "(( random_number 58 62 )) millimeters"
+  - "(( random_number 58 62 )) millimeters"
+  - "(( random_number 58 62 )) millimeters"
+  - "(( random_number 58 62 )) millimeters"
+  - "(( random_number 58 62 )) millimeters"
+  - "(( random_number 58 62 )) millimeters"
+  - "(( random_number 58 62 )) millimeters"
+  
   - "(( random_number 60 70 )) millimeters"
 
 body width:
@@ -722,23 +764,31 @@ pattern deviation:
 # --- Visual appearance: Body section: Haircut ---
 haircut type:
   - "no haircut"
-  - "short and wide"
-  - "punk"
-  - "waterfall"
-  - "two-tone bush"
-  - "emo bang"
-  - "symmetrical helmet"
-  - "grape wines"
-  - "crying tree wines"
+  - "short and wide" # Type 1
+  - "punk" # Type 2
+  - "waterfall" # Type 3
+  - "two-tone bush" # Type 4
+  - "emo bang" # Type 5
+  - "symmetrical helmet" # Type 6
+  - "grape wines" # Type 7
+  - "crying tree wines" # Type 8
 
 head tendrils:
   - "no tendrils"
-  - "four hanging with tear shape at end"
-  - "two curly hornlike"
-  - "six rouned horns"
-  - "two flowerlike thingies with leafs and bulbs"
-  - "two pairs of soft horns with complimentary long tears from bottom"
-  - "waterfall"
+  - "four hanging with tear shape at end" # Type 1
+  - "two curly hornlike" # Type 2
+  - "six rouned horns" # Type 3
+  - "two flowerlike thingies with leafs and bulbs" # Type 4
+  - "two pairs of soft horns with complimentary long tears from bottom" # Type 5
+  - "waterfall" # Type 6
+  - "(( random_number 1 3 )) pairs of short straight horns"
+  - "(( random_number 1 3 )) pairs of short curly horns"
+  - "(( random_number 1 3 )) pairs of long straight horns"
+  - "(( random_number 1 3 )) pairs of long curly horns"
+  - "(( random_number 1 3 )) pairs of short straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
 
 # --- Visual appearance: Body section: Eyes ---
 eye shape:
@@ -757,19 +807,19 @@ eye shape:
 
 # --- Visual appearance: Body section: Ears ---
 ears shape:
+  - sharp # Type 1
   - sharp
-  - sharp
+  - pointy # Type 3
   - pointy
-  - pointy
+  - round # Type 5
   - round
-  - round
-  - fluffy
+  - fluffy # Type 7
   - fluffy
   - soft
   - soft
   - falling
   - longish
-  - flopped
+  - flopped # Type 9
   - rhombus
   - siderounded
   - scarred
@@ -777,12 +827,12 @@ ears shape:
 # --- Visual appearance: Body section: Body ---
 body tendrils:
   - "no tendrils"
-  - "three pairs of rounded 'wings'"
-  - "three pairs of rounded rocks that curls on itself"
-  - "three pairs of curled tendrils ending with a sphere"
-  - "two pairs of tendrils that ends with a droplet"
-  - "two pairs of sharp butterfly-like wings"
-  - "four pairs of soft 'wingrocks'"
+  - "three pairs of rounded 'wings'"  # Type 1
+  - "three pairs of rounded rocks that curls on itself"  # Type 2
+  - "three pairs of curled tendrils ending with a sphere" # Type 3
+  - "two pairs of tendrils that ends with a droplet" # Type 4
+  - "two pairs of sharp butterfly-like wings" # Type 5
+  - "four pairs of soft 'wingrocks'" # Type 6
 
 # --- Visual appearance: Body section: Body pattern deviations ---
 visual appearance body section body pattern torso deviation types:
@@ -841,7 +891,7 @@ tail type:
   - splitted
   - woven
 
-tail fur tupe:
+tail fur type:
   - velvet fur
   - short fur
   - short fur
