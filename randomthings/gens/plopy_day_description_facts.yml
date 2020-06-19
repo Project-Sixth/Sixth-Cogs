@@ -1231,6 +1231,25 @@ voice type:
 
 voice class:
   - "{{ voice class }}, {{ voice class }}"
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
   - velvet
   - bass
   - untiring
@@ -1278,9 +1297,33 @@ voice class:
 voice loudness:
   - whispering
   - quiet
+  - quiet
+  - quiet
+  - quiet
   - audible
-  - headable
+  - audible
+  - audible
+  - audible
+  - audible
+  - audible
+  - audible
+  - hearable
+  - hearable
+  - hearable
+  - hearable
+  - hearable
+  - hearable
+  - hearable
   - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - normal
+  - loud
+  - loud
+  - loud
   - loud
   - screaming
   - very loud
@@ -1288,7 +1331,25 @@ voice loudness:
 voice pitch:
   - very low-pitched
   - low-pitched
+  - low-pitched
+  - low-pitched
   - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - normal-pitched
+  - high-pitched
+  - high-pitched
   - high-pitched
   - very high-pitched
 
