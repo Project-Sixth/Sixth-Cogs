@@ -48,9 +48,7 @@ def generate_dayplopynamepart_english():
     possible_names_templates = [
         'CV', 'CV', 'CV', 'CV', 'CV', 'CV', 'CV', 'CV', 'CV', 'CV',
         'VC', 'VC', 'VC', 'VC', 'VC', 'VC', 'VC', 'VC', 'VC', 'VC',
-        'VCь', 'VCь', 'VCь', 'VCь', 'VCь', 'VCь', 'VCь', 'VCь', 'VCь', 'VCь',
         'CVC', 'CVC', 'CVC', 'CVC', 'CVC', 'CVC', 'CVC', 'CVC', 'CVC', 'CVC',
-        'CVCь', 'CVCь', 'CVCь', 'CVCь', 'CVCь', 'CVCь', 'CVCь', 'CVCь', 'CVCь', 'CVCь',
         'CVR', 'CVM',
         'LVC', 'MVC',
         'LV', 'MV', 'VR', 'VM',
