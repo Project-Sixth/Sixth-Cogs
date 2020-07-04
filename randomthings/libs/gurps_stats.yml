@@ -1,0 +1,13 @@
+# One is ++, guaranteed to be perfect, others can be worse or better than normal
+- "Strength++: (( random_number 12 14 )), Dexterity: (( random_number 8 12 )), Intelligence: (( random_number 8 12 )), Health: (( random_number 8 12 ))"
+- "Strength: (( random_number 8 12 )), Dexterity++: (( random_number 12 14 )), Intelligence: (( random_number 8 12 )), Health: (( random_number 8 12 ))"
+- "Strength: (( random_number 8 12 )), Dexterity: (( random_number 8 12 )), Intelligence++: (( random_number 12 14 )), Health: (( random_number 8 12 ))"
+- "Strength: (( random_number 8 12 )), Dexterity: (( random_number 8 12 )), Intelligence: (( random_number 8 12 )), Health++: (( random_number 12 14 ))"
+
+# Two is +, guaranteed to be at least good, others can be worse
+- "Strength+: (( random_number 11 13 )), Dexterity+: (( random_number 11 13 )), Intelligence: (( random_number 8 12 )), Health: (( random_number 8 12 ))"
+- "Strength+: (( random_number 11 13 )), Dexterity: (( random_number 8 12 )), Intelligence+: (( random_number 11 13 )), Health: (( random_number 8 12 ))"
+- "Strength+: (( random_number 11 13 )), Dexterity: (( random_number 8 12 )), Intelligence: (( random_number 8 12 )), Health+: (( random_number 11 13 ))"
+- "Strength: (( random_number 8 12 )), Dexterity+: (( random_number 11 13 )), Intelligence+: (( random_number 11 13 )), Health: (( random_number 8 12 ))"
+- "Strength: (( random_number 8 12 )), Dexterity+: (( random_number 11 13 )), Intelligence: (( random_number 8 12 )), Health+: (( random_number 11 13 ))"
+- "Strength: (( random_number 8 12 )), Dexterity: (( random_number 8 12 )), Intelligence+: (( random_number 11 13 )), Health+: (( random_number 11 13 ))"

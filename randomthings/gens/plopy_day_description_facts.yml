@@ -4,10 +4,40 @@
 # ====================
 # --- ОБЩИЕ ДАННЫЕ ---
 # Имя, Пол (50/50%), Возраст (больше шанс на матуров или адультов, в среднем 80%, т.к старики и дети мало кому интересны)
-# Высота, мускулатура (ширина, больше шанс получить "средних, либо тонких-худых")
-# Место "рождения" (город или село в котором провел детство, больше шанс появиться ближе к белой реке, меньше - дальше)
+# Высота, мускулатура (ширина, больше шанс получить "средних, либо тонких-худых", т.к это домоседы-Деи)
+# Место "рождения" (город или село в котором провел детство, больше шанс появиться ближе к белой реке/более населенном городе, меньше - дальше)
 # --- ЦВЕТОВЫЕ ДАННЫЕ ---
 # Тип Дея: Коммон (1 цвет (70%)), Микс (2 цвета (20%)), Рар (3-5 цветов (10%))
+# --- ФИЗИЧЕСКИЕ ДАННЫЕ ---
+# -- Голова --
+# Символ
+# Прическа
+# Штуки на голове
+# Форма глаз и ушей
+# Возможные отличительные приметы (например, шрамы или татуировки) - 5% на каждый новый отличительный объект
+# -- Тело --
+# Штуки на теле
+# Основной цвет шкуры
+# Дополнительные паттерны или отличительные черты на теле
+# -- Хвост --
+# Тип хвоста, его длина и ширина, паттерн.
+# Отличительные черты хвоста
+# -- Урон --
+# Уровень жизни и активности
+# 5% - возможный внутренний урон
+# --- ПРЕДМЕТЫ ---
+# По 5% шанс иметь предметы на голове, теле, руках, ногах и прочих
+# =========================
+# ====== СПОСОБНОСТИ ======
+# =========================
+# Уровень ума
+# Уровень социальности
+# Основные черты характера
+# Голос
+# Любимая еда
+# Любимое занятие
+# Талант/уникальный дар
+# Уровень по GURPS
 
 pool:
     - "**Maestro:** Before you stands a creature from `Day-Plopy` type.
@@ -126,36 +156,37 @@ visual appearance body section head uniqueness:
   - "{{ visual appearance body section head uniqueness damage }}{{ visual appearance body section head uniqueness }}"
 
 visual appearance body section head uniqueness additions:
-  - "Additional tendrils on tips of the ears"
-  - "Additional tendrils on tips of the ears"
-  - "Additional tendrils on tips of the ears"
-  - "Additional tendrils on tips of the ears"
-  - "Additional tendrils on back of the ears"
-  - "Additional tendrils on back of the ears"
-  - "Additional tendrils on back of the ears"
-  - "Additional tendrils on back of the ears"
-  - "Colored marks below eye"
-  - "Colored marks below eye"
-  - "Colored marks below eye"
-  - "Colored marks below eye"
-  - "Colored marks below eyes"
-  - "Colored marks below eyes"
-  - "Colored marks below eyes"
-  - "Colored marks below eyes"
-  - "Face paint"
-  - "Face paint"
-  - "Face paint"
-  - "Face paint"
-  - "Additional tendrils on cheeks"
-  - "Additional tendrils on chin"
-  - "Additional tendrils on neck"
-  - "Additional tendrils near mouth"
-  - "Very long face fur"
-  - "Third eye"
-  - "Multiple pairs of ears"
-  - "Multiple pairs of eyes"
-  - "Two marks"
-  - "{{ visual appearance body section head uniqueness additions }}{{ visual appearance body section head uniqueness additions }}"
+  - "\nAdditional tendrils ({{ tendril }}) on tips of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on tips of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on tips of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on tips of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on back of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on back of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on back of the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on back of the ears"
+  - "\nColored marks below eye"
+  - "\nColored marks below eye"
+  - "\nColored marks below eye"
+  - "\nColored marks below eye"
+  - "\nColored marks below eyes"
+  - "\nColored marks below eyes"
+  - "\nColored marks below eyes"
+  - "\nColored marks below eyes"
+  - "\nFace paint"
+  - "\nFace paint"
+  - "\nFace paint"
+  - "\nFace paint"
+  - "\nAdditional tendrils ({{ tendril }}) from the ears"
+  - "\nAdditional tendrils ({{ tendril }}) from the ears"
+  - "\nAdditional tendrils ({{ tendril }}) on cheeks"
+  - "\nAdditional tendrils ({{ tendril }}) on chin"
+  - "\nAdditional tendrils ({{ tendril }}) on neck"
+  - "\nAdditional tendrils ({{ tendril }}) near mouth"
+  - "\nVery long face fur"
+  - "\nThird eye"
+  - "\nMultiple pairs of ears"
+  - "\nMultiple pairs of eyes"
+  - "\nTwo marks"
 
 visual appearance body section head uniqueness damage:
   - "\nFacial uneraseable tattoo"
@@ -190,7 +221,6 @@ visual appearance body section head uniqueness damage:
   - "\nDamaged left ear"
   - "\nDamaged nose"
   - "\nDamaged mouth"
-  - "{{ visual appearance body section head uniqueness damage }}{{ visual appearance body section head uniqueness damage }}"
 
 visual appearance body section body:
   - "\nBody tendrils: {{ body tendrils }}
@@ -216,9 +246,9 @@ visual appearance body section body pattern torso deviation:
   - ""
   - ""
   - ""
+  - ""
   - "\nTorso have darker {{ visual appearance body section body pattern torso deviation types }}"
   - "\nTorso have lighter {{ visual appearance body section body pattern torso deviation types }}"
-  - "{{ visual appearance body section body pattern torso deviation }}{{ visual appearance body section body pattern torso deviation }}"
 
 visual appearance body section body pattern back deviation:
   - ""
@@ -231,9 +261,9 @@ visual appearance body section body pattern back deviation:
   - ""
   - ""
   - ""
+  - ""
   - "\nBack have darker {{ visual appearance body section body pattern back deviation types }}"
   - "\nBack have lighter {{ visual appearance body section body pattern back deviation types }}"
-  - "{{ visual appearance body section body pattern back deviation }}{{ visual appearance body section body pattern back deviation }}"
 
 visual appearance body section body pattern arms deviation:
   - ""
@@ -246,9 +276,9 @@ visual appearance body section body pattern arms deviation:
   - ""
   - ""
   - ""
+  - ""
   - "\nArms have darker {{ visual appearance body section body pattern arms deviation types }}"
   - "\nArms have lighter {{ visual appearance body section body pattern arms deviation types }}"
-  - "{{ visual appearance body section body pattern arms deviation }}{{ visual appearance body section body pattern arms deviation }}"
 
 visual appearance body section body pattern thighs deviation:
   - ""
@@ -261,9 +291,9 @@ visual appearance body section body pattern thighs deviation:
   - ""
   - ""
   - ""
+  - ""
   - "\nThighs have darker {{ visual appearance body section body pattern thighs deviation types }}"
   - "\nThighs have lighter {{ visual appearance body section body pattern thighs deviation types }}"
-  - "{{ visual appearance body section body pattern thighs deviation }}{{ visual appearance body section body pattern thighs deviation }}"
 
 visual appearance body section body pattern leg deviation:
   - ""
@@ -276,10 +306,9 @@ visual appearance body section body pattern leg deviation:
   - ""
   - ""
   - ""
+  - ""
   - "\nLegs have darker {{ visual appearance body section body pattern leg deviation types }}"
   - "\nLegs have lighter {{ visual appearance body section body pattern leg deviation types }}"
-  - "{{ visual appearance body section body pattern leg deviation }}{{ visual appearance body section body pattern leg deviation }}"
-
 
 visual appearance body section body uniqueness:
   - ""
@@ -299,9 +328,12 @@ visual appearance body section body uniqueness:
   - ""
   - ""
   - ""
-  - ""
-  - ""
+  - "{{ visual appearance body section body uniqueness additions }}{{ visual appearance body section body uniqueness }}"
+  - "{{ visual appearance body section body uniqueness additions }}{{ visual appearance body section body uniqueness }}"
   - "{{ visual appearance body section body uniqueness damage }}{{ visual appearance body section body uniqueness }}"
+
+visual appearance body section body uniqueness additions:
+  - ""
 
 visual appearance body section body uniqueness damage:
   - "\nBody tattoo"
@@ -332,7 +364,6 @@ visual appearance body section body uniqueness damage:
   - "\nNeck damage"
   - "\nMissing body tendril"
   - "\nDamaged body tendril"
-  - "{{ visual appearance body section body uniqueness damage }}{{ visual appearance body section body uniqueness damage }}"
 
 visual appearance body section tail:
   - "\nTail type, fur length and pattern: {{ tail type }}, {{ tail fur type }}, {{ tail pattern }}
@@ -356,9 +387,33 @@ visual appearance body section tail uniqueness:
   - ""
   - ""
   - ""
-  - ""
-  - ""
+  - "{{ visual appearance body section tail uniqueness additions }}{{ visual appearance body section tail uniqueness }}"
+  - "{{ visual appearance body section tail uniqueness additions }}{{ visual appearance body section tail uniqueness }}"
   - "{{ visual appearance body section tail uniqueness damage }}{{ visual appearance body section tail uniqueness }}"
+
+visual appearance body section tail uniqueness additions:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "\nAdditional tendrils from the tail"
+  - "\nAdditional tendrils from the tail"
+  - "\nAdditional tendrils from the tail"
+  - "\nAdditional tendrils from the tail"
+  - "\nAdditional tendrils from the tail"
+  - "\nAdditional tendrils from the tail"
 
 visual appearance body section tail uniqueness damage:
   - "\nTailored tail"
@@ -375,7 +430,6 @@ visual appearance body section tail uniqueness damage:
   - "\nHaircutted tail"
   - "\nBurnt tail"
   - "\nDamaged tail"
-  - "{{ visual appearance body section tail uniqueness damage }}{{ visual appearance body section tail uniqueness damage }}"
 
 visual appearance body section damage:
   - "\nVitality level: {{ vitality level }}"
@@ -438,7 +492,6 @@ visual appearance items section head items:
   - "\nWearing handmade monocle"
   - "\nHave earring in ear"
   - "\nHave earrings in both ears"
-  - "{{ visual appearance items section head items }}{{ visual appearance items section head items }}"
 
 visual appearance items section body:
   - ""
@@ -485,7 +538,6 @@ visual appearance items section body items:
   - "\nWearing scarf"
   - "\nWearing duster"
   - "\nWearing armor"
-  - "{{ visual appearance items section body items }}{{ visual appearance items section body items }}"
 
 visual appearance items section arms:
   - ""
@@ -526,7 +578,6 @@ visual appearance items section arms items:
   - "\nWearing gloves"
   - "\nWearing bracelet"
   - "\nWearing ring"
-  - "{{ visual appearance items section arms items }}{{ visual appearance items section arms items }}"
 
 visual appearance items section legs:
   - ""
@@ -564,7 +615,6 @@ visual appearance items section legs items:
   - "\nWearing thread on leg"
   - "\nWearing thread on leg"
   - "\nWearing boots"
-  - "{{ visual appearance items section legs items }}{{ visual appearance items section legs items }}"
 
 visual appearance items section misc:
   - ""
@@ -601,17 +651,24 @@ visual appearance items section misc items:
   - "\nHave pencil"
   - "\nHave piece of paper"
   - "\nHaving empty bottles"
-  - "{{ visual appearance items section misc items }}{{ visual appearance items section misc items }}"
 
 intellectual appearance:
   - "\nIntellectual level: {{ intellectual level }}
   \nSocial level: {{ social level }}
-  \nPersonality traits: {{ personality }}, {{ personality }}, {{ personality }}
+  \nPersonality traits: [[ personality ]], [[ personality ]], [[ personality ]]
   \nVoice: {{ voice type }}
-  \nFavorite food: {{ favotire food }}
+  \nFavorite food: {{ favorite food }}
   \nFavorite activity: {{ favorite activity }}
-  \nUnique ability: {{ unique ability }} *and/or {{ unique ability }}*"
+  \nHated activity: {{ favorite activity }}
+  \nPhobia: {{ phobia }}
+  \nUnique ability: {{ unique ability }} *and/or {{ unique ability }}*
+  \nGURPS attributes: [[ gurps_stats ]]"
 
+# Добавить привычки
+# Добавить вредные привычки
+# Добавить манеры поведения при своих и чужих и в стрессе
+# Добавить желания?
+# 
 
 # ==========================
 # ====== PART Modules ======
@@ -672,6 +729,8 @@ body height:
 
 body width:
   - fat
+  - ample
+  - ample
   - ample
   - wide
   - wide
@@ -737,6 +796,7 @@ birthplace:
   - Krichashaya skala
   - Pleel
   - Somewhere on Snakesbelt
+  - In the Great Unknown
 
 # --- Visual appearance: Color section ---
 pattern deviation:
@@ -763,32 +823,199 @@ pattern deviation:
 
 # --- Visual appearance: Body section: Haircut ---
 haircut type:
-  - "no haircut"
-  - "short and wide" # Type 1
-  - "punk" # Type 2
-  - "waterfall" # Type 3
-  - "two-tone bush" # Type 4
-  - "emo bang" # Type 5
-  - "symmetrical helmet" # Type 6
-  - "grape wines" # Type 7
-  - "crying tree wines" # Type 8
+  - "no haircut at all"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "{{ haircut length }} {{ haircut mass }} {{ haircut hairtype }}{{ haircut materia }} {{ haircut list }}"
+  - "[type 1] short and wide" # Type 1
+  - "[type 2] punk" # Type 2
+  - "[type 3] waterfall" # Type 3
+  - "[type 4] two-tone bush" # Type 4
+  - "[type 5] emo bang" # Type 5
+  - "[type 6] symmetrical helmet" # Type 6
+  - "[type 7] grape wines" # Type 7
+  - "[type 8] crying tree wines" # Type 8
+
+haircut length:
+  - hedgehog-long
+  - short
+  - short
+  - match-long
+  - match-long
+  - match-long
+  - match-long
+  - finger-long
+  - finger-long
+  - finger-long
+  - finger-long
+  - finger-long
+  - finger-long
+  - finger-long
+  - finger-long
+  - palm-long
+  - palm-long
+  - palm-long
+  - palm-long
+  - shoulder-long
+  - shoulder-long
+  - waist-long
+
+haircut mass:
+  - rare
+  - frequent
+  - frequent
+  - frequent
+  - frequent
+  - thick
+  - thick
+  - thick
+
+haircut hairtype:
+  - straight
+  - lean
+  - airy
+  - curly
+  - wild
+  - wavy
+  - spiky
+  - roundy
+  - ovaly
+  - rhomby
+  - teardroply
+
+haircut materia:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - " soft"
+  - " dry"
+  - " oily"
+  - " silky"
+  - " cool"
+  - " hard"
+  - " thin"
+  - " thick"
+  - " creased"
+  - " sleek"
+  - " rebellious"
+  - " disobidient"
+
+haircut list:
+  - waterfall
+  - waterfall
+  - waterfall
+  - waterfall
+  - bowl
+  - bowl
+  - bowl
+  - bowl
+  - asymmetric cut
+  - asymmetric cut
+  - asymmetric cut
+  - asymmetric cut
+  - dreadlocks
+  - dreadlocks
+  - dreadlocks
+  - dreadlocks
+  - businessmen
+  - businessmen
+  - businessmen
+  - businessmen
+  - wings
+  - wings
+  - ponytail
+  - ponytail
+  - french braid
+  - french braid
+  - double buns
+  - double buns
+  - caesar cut
+  - bob cut
+  - crownbraid
+  - crew cut
+  - tonsure
+  - feather cut
+  - undercut
+  - flattop
+  - hi-top
+  - bouffant
+  - bun
+  - bunches
+  - chignon
+  - dido flip
+  - afro
+  - beehive
+  - bangs
+  - blowout
+  - devilock
+  - hime cut
+  - liberty spikes
+  - jewfro
+  - marcel waves
+  - ponyhawk
+  - pompadour
+  - rattail
+  - shag cut
+  - braid
+  - cornrows
+  - punk
 
 head tendrils:
-  - "no tendrils"
-  - "four hanging with tear shape at end" # Type 1
-  - "two curly hornlike" # Type 2
-  - "six rouned horns" # Type 3
-  - "two flowerlike thingies with leafs and bulbs" # Type 4
-  - "two pairs of soft horns with complimentary long tears from bottom" # Type 5
-  - "waterfall" # Type 6
+  - "no tendrils at all"
+  - "[type 1] four hanging with tear shape at end" # Type 1
+  - "[type 2] two curly hornlike" # Type 2
+  - "[type 3] six rouned horns" # Type 3
+  - "[type 4] two flowerlike thingies with leafs and bulbs" # Type 4
+  - "[type 5] two pairs of soft horns with complimentary long tears from bottom" # Type 5
+  - "[type 6] waterfall" # Type 6
   - "(( random_number 1 3 )) pairs of short straight horns"
   - "(( random_number 1 3 )) pairs of short curly horns"
   - "(( random_number 1 3 )) pairs of long straight horns"
   - "(( random_number 1 3 )) pairs of long curly horns"
   - "(( random_number 1 3 )) pairs of short straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of short curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
 
 # --- Visual appearance: Body section: Eyes ---
 eye shape:
@@ -827,16 +1054,35 @@ ears shape:
 # --- Visual appearance: Body section: Body ---
 body tendrils:
   - "no tendrils"
-  - "three pairs of rounded 'wings'"  # Type 1
-  - "three pairs of rounded rocks that curls on itself"  # Type 2
-  - "three pairs of curled tendrils ending with a sphere" # Type 3
-  - "two pairs of tendrils that ends with a droplet" # Type 4
-  - "two pairs of sharp butterfly-like wings" # Type 5
-  - "four pairs of soft 'wingrocks'" # Type 6
+  - "[type 1] three pairs of rounded 'wings'"  # Type 1
+  - "[type 2] three pairs of rounded rocks that curls on itself"  # Type 2
+  - "[type 3] three pairs of curled tendrils ending with a sphere" # Type 3
+  - "[type 4] two pairs of tendrils that ends with a droplet" # Type 4
+  - "[type 5] two pairs of sharp butterfly-like wings" # Type 5
+  - "[type 6] four pairs of soft 'wingrocks'" # Type 6
+  - "(( random_number 1 3 )) pairs of short straight 'wingrocks'"
+  - "(( random_number 1 3 )) pairs of short curly 'wingrocks'"
+  - "(( random_number 1 3 )) pairs of long straight 'wingrocks'"
+  - "(( random_number 1 3 )) pairs of long curly 'wingrocks'"
+  - "(( random_number 1 3 )) pairs of short straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+
 
 # --- Visual appearance: Body section: Body pattern deviations ---
 visual appearance body section body pattern torso deviation types:
   - "neck beads pattern"
+  - "neck rhombus pattern"
+  - "neck eights pattern"
   - "neck line pattern"
 
 visual appearance body section body pattern back deviation types:
@@ -844,11 +1090,16 @@ visual appearance body section body pattern back deviation types:
   - "spots pattern"
   - "rhombus pattern"
   - "teardrop pattern"
+  - "infinity pattern"
   - "multiple spheres pattern"
   - "spider pattern"
   - "Y pattern"
+  - "W pattern"
+  - "B pattern"
+  - "Z pattern"
+  - "R pattern"
   - "single sphere pattern"
-  - "couple of horisontal lines"
+  - "couple of horizontal lines"
   - "couple of vertical lines"
   - "[[ plopy_symbol ]] shape"
 
@@ -1044,151 +1295,6 @@ social level:
   - ultrasocial
   - ultrasocial
   - ultrasocial
-
-personality:
-  - active
-  - adventurous
-  - affectionate
-  - aggressive
-  - ambitious
-  - annoying
-  - anxious
-  - artistic
-  - attentive
-  - bad-tempered
-  - bossy
-  - brave
-  - broad-minded
-  - busive
-  - calm
-  - careful
-  - careless
-  - cautious
-  - charming
-  - cheeky
-  - cheerful
-  - compassionate
-  - compulsive
-  - confident
-  - conscientious
-  - conservative
-  - courageous
-  - courteous
-  - cowardly
-  - crazy
-  - creative
-  - cruel
-  - cynical
-  - decisive
-  - determined
-  - diplomatic
-  - direct
-  - discreet
-  - dishonest
-  - disobedient
-  - distracted
-  - domineering
-  - dynamic
-  - easygoing
-  - emotional
-  - energetic
-  - enthusiastic
-  - extroverted
-  - fair-minded
-  - faithful
-  - fearful
-  - fearless
-  - frank
-  - friendly
-  - funny
-  - generous
-  - gentle
-  - good-tempered
-  - greedy
-  - gregarious
-  - gullible
-  - happy
-  - hard-working
-  - helpful
-  - honest
-  - humble
-  - humorous
-  - hypocritical
-  - imaginative
-  - impartial
-  - impatient
-  - impulsive
-  - independent
-  - intellectual
-  - intelligent
-  - introverted
-  - jealous
-  - kind
-  - lazy
-  - lively
-  - loving
-  - loyal
-  - mean
-  - messy
-  - modest
-  - moody
-  - naughty
-  - neat
-  - nervous
-  - nice
-  - obedient
-  - obsessive
-  - optimistic
-  - outgoing
-  - passionate
-  - patient
-  - persistent
-  - pessimistic
-  - placid
-  - plucky
-  - polite
-  - pompous
-  - popular
-  - practical
-  - proud
-  - rational
-  - reliable
-  - reserved
-  - romantic
-  - rude
-  - ruthless
-  - sarcastic
-  - scared
-  - secretive
-  - self-centered
-  - self-confident
-  - self-disciplined
-  - selfish
-  - sensible
-  - sensitive
-  - serious
-  - shy
-  - silly
-  - sincere
-  - smart
-  - sociable
-  - straightforward
-  - stubborn
-  - superficial
-  - supportive
-  - tactful
-  - tactless
-  - talkative
-  - thoughtful
-  - tidy
-  - timid
-  - unfriendly
-  - unpleasant
-  - untidy
-  - versatile
-  - warm-hearted
-  - witty
-  - worried
 
 voice type:
   - no voice
@@ -1410,7 +1516,41 @@ favorite activity:
   - scouting
   - fighting
 
-favotire food:
+phobia:
+  - thundercloud
+  - thundercloud
+  - thundercloud
+  - thundercloud
+  - thundercloud
+  - thundercloud
+  - thundercloud
+  - thundercloud
+  - water
+  - water
+  - water
+  - water
+  - water
+  - water
+  - water
+  - water
+  - fire
+  - fire
+  - fire
+  - fire
+  - fire
+  - fire
+  - fire
+  - fire
+  - open spaces
+  - dead
+  - nightplopy
+  - hybridplopy
+  - superplopy
+  - bright light
+  - darkness
+  - "[[ phobia ]]"
+
+favorite food:
   - sunlight
   - sunlight
   - sunlight
@@ -1741,3 +1881,23 @@ color shade:
   - "celestial "
   - "deep "
   - "electric "
+
+tendril:
+  - "{{ tendril length }} {{ tendril type }} with {{ tendril size }} [[ plopy_symbol_simple_shape ]] shape at end"
+
+tendril size:
+  - "small"
+  - "medium"
+  - "big"
+
+tendril type:
+  - "waterfall"
+  - "branch"
+  - "line"
+
+tendril length:
+  - "ultrashort"
+  - "short"
+  - "medium"
+  - "long"
+  - "ultralong"
