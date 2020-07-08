@@ -1,0 +1,148 @@
+pool:
+    - "**Maestro:** Before you appears new `Generic Bird`.
+    \n
+    {{ main appearance }}"
+
+# =================================
+# ====== FUNDAMENTAL Modules ======
+# =================================
+main appearance:
+  - "\n=== Main section ===
+  \nSpecies name: TODO
+  \nBody size: {{ body size }}
+  \nDiet: {{ diet }}
+  \nHunt strategy: TODO
+  \nFlock size: TODO
+  \nMaterial: TODO
+  \n
+  \n=== Color appearance ===
+  \nMain color: [[ ubercolor ]]
+  \nMain pattern: TODO
+  \nBeak color?: TODO
+  \nClaw color?: TODO
+  \nEye color?: TODO
+  \nInsides color?: TODO
+  \nMutations (color): TODO
+  \n
+  \n=== Look ===
+  \nBeak size, shape, length: TODO
+  \nWing size, shape, length: TODO
+  \nClaw size, shape, length: TODO
+  \nTail size, shape, length: TODO
+  \nMutations (body): TODO
+  \n
+  \n=== Abilities ===
+  \nIntellectual level: {{ intellectual level }}
+  \nSocial level: {{ social level }}
+  \nBlood: warm/cold
+  \nProtective mechanisms: TODO
+  \nReproductive mechanism: {{ reproductive mechanism }}
+  \nMutations (abilities): TODO"
+
+body size:
+  - "micro (3cm, hummingbird)"
+  - "tiny (6cm, sparrow)"
+  - "small (12cm, pigeon)"
+  - "average (24cm, kestrel)"
+  - "big (60cm, hawk)"
+  - "huge (120cm, harpy)"
+
+diet:
+  - "Herbivore, {{ diet herbivore }}"
+  - "Herbivore, {{ diet herbivore }}"
+  - "Herbivore, {{ diet herbivore }}"
+  - "Herbivore, {{ diet herbivore }}"
+  - "Carnivore, {{ diet carnivore }}"
+  - "Carnivore, {{ diet carnivore }}"
+  - "Carnivore, {{ diet carnivore }}"
+  - "Carnivore, {{ diet carnivore }}"
+  - "Omnivore, {{ diet omnivore }}"
+  - "Omnivore, {{ diet omnivore }}"
+  - "Multivore, {{ diet multivore }}"
+
+diet specification:
+  - "exact"
+  - "grouped"
+  - "all"
+
+diet herbivore:
+  - "{{ diet specification }} nuts"
+  - "{{ diet specification }} nuts"
+  - "{{ diet specification }} berries"
+  - "{{ diet specification }} berries"
+  - "{{ diet specification }} greens"
+  - "{{ diet specification }} greens"
+  - "{{ diet specification }} seeds"
+  - "{{ diet specification }} seeds"
+  - "{{ diet specification }} plants"
+  - "{{ diet specification }} plants"
+  - "{{ diet specification }} vegetables"
+  - "{{ diet specification }} vegetables"
+  - "{{ diet herbivore }} and {{ diet herbivore }}"
+
+diet carnivore:
+  - "{{ diet specification }} insect"
+  - "{{ diet specification }} insect"
+  - "{{ diet specification }} slug"
+  - "{{ diet specification }} slug"
+  - "{{ diet specification }} fish"
+  - "{{ diet specification }} fish"
+  - "{{ diet specification }} mammal"
+  - "{{ diet specification }} mammal"
+  - "{{ diet specification }} bird"
+  - "{{ diet specification }} bird"
+  - "{{ diet specification }} dead"
+  - "{{ diet specification }} dead"
+  - "{{ diet carnivore }} and {{ diet carnivore }}"
+
+diet omnivore:
+  - "{{ diet herbivore }}, {{ diet carnivore }}"
+
+diet multivore:
+  - "{{ diet specification }} mana"
+  - "{{ diet specification }} stone"
+  - "{{ diet specification }} fire"
+  - "{{ diet specification }} water"
+  - "{{ diet specification }} air"
+  - "{{ diet specification }} emotion"
+  - "{{ diet specification }} lightning"
+  - "{{ diet specification }} light"
+  - "{{ diet specification }} darkness"
+  - "{{ diet specification }} thoughts"
+  - "{{ diet specification }} fears"
+  - "{{ diet specification }} desires"
+  - "{{ diet specification }} woods"
+  - "{{ diet specification }} souls"
+  - "{{ diet specification }} blood"
+  - "{{ diet specification }} tea"
+  - "{{ diet specification }} coffee"
+  - "{{ diet specification }} sweets"
+  - "{{ diet specification }} sours"
+  - "{{ diet multivore }} and {{ diet multivore }}"
+
+intellectual level:
+  - "primitive"
+  - "instinctive"
+  - "hive mind, centered"
+  - "hive mind, uncentered"
+  - "intellegent"
+  - "superintellegent"
+
+social level:
+  - "sociopathic"
+  - "antisocial"
+  - "prefer loneliness"
+  - "prefer couples"
+  - "prefer crowds"
+  - "social"
+  - "supersocial"
+
+reproductive mechanism:
+  - "live birth, (( random_number 1 3 )) creatures"
+  - "live birth, (( random_number 2 8 )) creatures"
+  - "live birth, (( random_number 6 15 )) creatures"
+  - "live birth, (( random_number 20 40 )) creatures"
+  - "egglaying, (( random_number 1 3 )) eggs"
+  - "egglaying, (( random_number 2 8 )) eggs"
+  - "egglaying, (( random_number 6 15 )) eggs"
+  - "egglaying, (( random_number 20 40 )) eggs"

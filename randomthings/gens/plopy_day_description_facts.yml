@@ -82,41 +82,41 @@ visual appearance color section:
 
 visual appearance color section daycommon:
   - "\nDay Type: *Common*
-  \nDominating color: {{ color }}, supportive mutation: {{ pattern deviation }}"
+  \nDominating color: [[ ubercolor ]], supportive mutation: {{ pattern deviation }}"
 
 visual appearance color section daymix:
   - "\nDay Type: **M**_ix_
-  \nDominating color: {{ color }}
-  \nRecessive color: {{ color }}
+  \nDominating color: [[ ubercolor ]]
+  \nRecessive color: [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: **M**_ix_
-  \nDominating colors: {{ color }} & {{ color }}
+  \nDominating colors: [[ ubercolor ]] & [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
 
 visual appearance color section dayrare:
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
   - "\nDay Type: ***__Rare__***
-  \nIncluded colors: {{ color }}, {{ color }}, {{ color }}, {{ color }}, {{ color }}
+  \nIncluded colors: [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]], [[ ubercolor ]]
   \nSupportive mutation for colors: {{ pattern deviation }}"
 
 visual appearance body section:
@@ -516,6 +516,12 @@ visual appearance items section body:
   - "{{ visual appearance items section body items }}{{ visual appearance items section body }}"
 
 visual appearance items section body items:
+  - "\nWearing shroom cape"
+  - "\nWearing shroom cape"
+  - "\nWearing shroom cape"
+  - "\nWearing leaf cape"
+  - "\nWearing leaf cape"
+  - "\nWearing leaf cape"
   - "\nWearing belt"
   - "\nWearing belt"
   - "\nWearing belt"
@@ -1008,14 +1014,17 @@ head tendrils:
   - "(( random_number 1 3 )) pairs of short straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of short curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of short curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short flatten tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium flatten tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long flatten tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
 
 # --- Visual appearance: Body section: Eyes ---
 eye shape:
@@ -1066,16 +1075,22 @@ body tendrils:
   - "(( random_number 1 3 )) pairs of long curly 'wingrocks'"
   - "(( random_number 1 3 )) pairs of short straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of short straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short straight flatten with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of short curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of short curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of short curly flatten with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium straight flatten with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of medium curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of medium curly flatten with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long straight tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long straight branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long straight flatten with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long curly tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
   - "(( random_number 1 3 )) pairs of long curly branch-tendrils with [[ plopy_symbol_simple_shape ]] shape at end"
+  - "(( random_number 1 3 )) pairs of long curly flatten with [[ plopy_symbol_simple_shape ]] shape at end"
 
 
 # --- Visual appearance: Body section: Body pattern deviations ---
@@ -1525,6 +1540,8 @@ phobia:
   - thundercloud
   - thundercloud
   - thundercloud
+  - thundercloud
+  - thundercloud
   - water
   - water
   - water
@@ -1533,6 +1550,10 @@ phobia:
   - water
   - water
   - water
+  - water
+  - water
+  - fire
+  - fire
   - fire
   - fire
   - fire
@@ -1543,6 +1564,7 @@ phobia:
   - fire
   - open spaces
   - dead
+  - dayplopy
   - nightplopy
   - hybridplopy
   - superplopy
@@ -1570,7 +1592,7 @@ favorite food:
   - enerhon
   - enerhon
   - enerhon
-  - "{{ color }} enerhon"
+  - "[[ color ]] enerhon"
   - seeds
   - seeds
   - seeds
@@ -1738,166 +1760,50 @@ unique ability:
 # ============================
 # ====== SHARED Modules ======
 # ============================
-# --- Colors ---
-color:
-  - white
-  - black
-  - "{{ color shade }}ivory"
-  - "{{ color shade }}charcoal"
-  - "{{ color shade }}almond"
-  - "{{ color shade }}red"
-  - "{{ color shade }}crimson"
-  - "{{ color shade }}scarlet"
-  - "{{ color shade }}bostonred"
-  - "{{ color shade }}ruby"
-  - "{{ color shade }}flame"
-  - "{{ color shade }}rose"
-  - "{{ color shade }}cherry"
-  - "{{ color shade }}brown"
-  - "{{ color shade }}cinnamon"
-  - "{{ color shade }}tangerine"
-  - "{{ color shade }}auburn"
-  - "{{ color shade }}blush"
-  - "{{ color shade }}orange"
-  - "{{ color shade }}yellow"
-  - "{{ color shade }}daffodil"
-  - "{{ color shade }}canaryyellow"
-  - "{{ color shade }}banana"
-  - "{{ color shade }}bisque"
-  - "{{ color shade }}amber"
-  - "{{ color shade }}lime"
-  - "{{ color shade }}green"
-  - "{{ color shade }}forestgreen"
-  - "{{ color shade }}olive"
-  - "{{ color shade }}dollarbill"
-  - "{{ color shade }}jade"
-  - "{{ color shade }}cadmiumgreen"
-  - "{{ color shade }}bottlegreen"
-  - "{{ color shade }}armygreen"
-  - "{{ color shade }}apple"
-  - "{{ color shade }}emerald"
-  - "{{ color shade }}grass"
-  - "{{ color shade }}aquamarine"
-  - "{{ color shade }}ultramarine"
-  - "{{ color shade }}teal"
-  - "{{ color shade }}blue"
-  - "{{ color shade }}lapislazuli"
-  - "{{ color shade }}iris"
-  - "{{ color shade }}sapphire"
-  - "{{ color shade }}cobalt"
-  - "{{ color shade }}cerulean"
-  - "{{ color shade }}capri"
-  - "{{ color shade }}azure"
-  - "{{ color shade }}royalblue"
-  - "{{ color shade }}purple"
-  - "{{ color shade }}amethyst"
-  - "{{ color shade }}fuchsia"
-  - "{{ color shade }}lust"
-  - "{{ color shade }}indigo"
-  - "{{ color shade }}purpleheart"
-  - "{{ color shade }}lavander"
-  - "{{ color shade }}heliotrope"
-  - "{{ color shade }}pink"
-  - "{{ color shade }}gray"
-  - "{{ color shade }}gold"
-  - "{{ color shade }}silver"
-  - "{{ color shade }}bronze"
-  - "{{ color shade }}brass"
-  - "{{ color shade }}iron"
-  - "{{ color shade }}steel"
-  - "{{ color }}-{{ color }}"
-
-color shade:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - "dark "
-  - "dark "
-  - "dark "
-  - "dark "
-  - "dark "
-  - "dark "
-  - "dark "
-  - "dark "
-  - "dark "
-  - "light "
-  - "light "
-  - "light "
-  - "light "
-  - "light "
-  - "light "
-  - "light "
-  - "light "
-  - "light "
-  - "bright "
-  - "bright "
-  - "bright "
-  - "bright "
-  - "bright "
-  - "dim "
-  - "dim "
-  - "dim "
-  - "dim "
-  - "dim "
-  - "medium "
-  - "warm "
-  - "cold "
-  - "metallic "
-  - "pearl "
-  - "pastel "
-  - "neon "
-  - "glowing "
-  - "chrome "
-  - "celestial "
-  - "deep "
-  - "electric "
-
 tendril:
-  - "{{ tendril length }} {{ tendril type }} with {{ tendril size }} [[ plopy_symbol_simple_shape ]] shape at end"
+  - "{{ tendril length }} {{ tendril type }} with {{ tendril thingy size }} [[ plopy_symbol_simple_shape ]] shape at end"
 
-tendril size:
+tendril thingy size:
+  - "tiny"
   - "small"
+  - "small"
+  - "average"
+  - "average"
+  - "average"
+  - "medium"
+  - "medium"
   - "medium"
   - "big"
+  - "big"
+  - "giant"
+  - "enourmous"
 
 tendril type:
   - "waterfall"
+  - "waterfall"
+  - "waterfall"
+  - "waterfall"
+  - "branch"
+  - "branch"
+  - "branch"
   - "branch"
   - "line"
+  - "line"
+  - "line"
+  - "flattenline"
+  - "squareline"
+  - "hexaline"
 
 tendril length:
   - "ultrashort"
   - "short"
+  - "short"
+  - "medium"
+  - "medium"
   - "medium"
   - "long"
+  - "long"
+  - "long"
+  - "long"
+  - "ultralong"
   - "ultralong"
