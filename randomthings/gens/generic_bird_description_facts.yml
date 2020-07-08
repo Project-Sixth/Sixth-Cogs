@@ -12,38 +12,44 @@ main appearance:
   \nBody size: {{ body size }}
   \nDiet: {{ diet }}
   \nHunt strategy: TODO
-  \nFlock size: TODO
-  \nMaterial: TODO
+  \nFlock size: {{ flock size }}
+  \nMaterial: {{ material }}
   \n
   \n=== Color appearance ===
   \nMain color: [[ ubercolor ]]
   \nMain pattern: TODO
   \nBeak color?: TODO
   \nClaw color?: TODO
-  \nEye color?: TODO
-  \nInsides color?: TODO
+  \nEye color?: {{ eye color }}
+  \nInsides color?: {{ insides color }}
   \nMutations (color): TODO
   \n
   \n=== Look ===
   \nBeak size, shape, length: TODO
-  \nWing size, shape, length: TODO
+  \nWing size and shape: {{ wings description }}
   \nClaw size, shape, length: TODO
-  \nTail size, shape, length: TODO
-  \nMutations (body): TODO
+  \nTail size, shape, length: {{ tail description }}
+  \n{{ mutations of body }}
   \n
   \n=== Abilities ===
   \nIntellectual level: {{ intellectual level }}
   \nSocial level: {{ social level }}
-  \nBlood: warm/cold
-  \nProtective mechanisms: TODO
+  \nBlood: {{ blood type }}
+  \nProtective mechanisms: {{ protective mechanism }}
   \nReproductive mechanism: {{ reproductive mechanism }}
   \nMutations (abilities): TODO"
 
 body size:
   - "micro (3cm, hummingbird)"
   - "tiny (6cm, sparrow)"
+  - "tiny (6cm, sparrow)"
+  - "small (12cm, pigeon)"
+  - "small (12cm, pigeon)"
   - "small (12cm, pigeon)"
   - "average (24cm, kestrel)"
+  - "average (24cm, kestrel)"
+  - "average (24cm, kestrel)"
+  - "big (60cm, hawk)"
   - "big (60cm, hawk)"
   - "huge (120cm, harpy)"
 
@@ -58,7 +64,7 @@ diet:
   - "Carnivore, {{ diet carnivore }}"
   - "Omnivore, {{ diet omnivore }}"
   - "Omnivore, {{ diet omnivore }}"
-  - "Multivore, {{ diet multivore }}"
+  - "Exotovore, {{ diet multivore }}"
 
 diet specification:
   - "exact"
@@ -118,27 +124,279 @@ diet multivore:
   - "{{ diet specification }} coffee"
   - "{{ diet specification }} sweets"
   - "{{ diet specification }} sours"
+  - "{{ diet specification }} metal"
+  - "{{ diet specification }} batteries"
+  - "{{ diet specification }} ether"
+  - "{{ diet specification }} magic"
+  - "{{ diet specification }} words"
+  - "{{ diet specification }} voices"
   - "{{ diet multivore }} and {{ diet multivore }}"
 
+flock size:
+  - "small, about (( random_number 2 8 )) birds"
+  - "small, about (( random_number 4 16 )) birds"
+  - "small, about (( random_number 8 32 )) birds"
+  - "small, about (( random_number 16 64 )) birds"
+  - "small, about (( random_number 100 300 )) birds"
+  - "medium, about (( random_number 8 15 )) birds"
+  - "medium, about (( random_number 15 40 )) birds"
+  - "medium, about (( random_number 25 70 )) birds"
+  - "medium, about (( random_number 45 150 )) birds"
+  - "medium, about (( random_number 150 400 )) birds"
+  - "large, about (( random_number 20 40 )) birds"
+  - "large, about (( random_number 50 110 )) birds"
+  - "large, about (( random_number 100 300 )) birds"
+  - "large, about (( random_number 250 1000 )) birds"
+  - "large, about (( random_number 800 5000 )) birds"
+
+material:
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "metal"
+  - "energy"
+  - "crystal"
+  - "glass"
+
+eye color:
+  - "same as main color, bright sclera"
+  - "same as main color, bright sclera"
+  - "same as main color, bright sclera"
+  - "same as main color, bright sclera"
+  - "same as main color, bright sclera"
+  - "same as main color, bright sclera"
+  - "same as main color, bright sclera"
+  - "same as main color, dark sclera"
+  - "same as main color, dark sclera"
+  - "same as main color, dark sclera"
+  - "same as main color, dark sclera"
+  - "same as beak color"
+  - "same as beak color"
+  - "same as beak color"
+  - "same as beak color"
+  - "same as claw color"
+  - "same as claw color"
+  - "same as claw color"
+  - "same as claw color"
+  - "same as insides color"
+  - "[[ ubercolor ]]"
+
+insides color:
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "red"
+  - "reddish"
+  - "reddish"
+  - "reddish"
+  - "reddish"
+  - "reddish"
+  - "reddish"
+  - "reddish"
+  - "same as main color"
+  - "same as main color"
+  - "same as main color"
+  - "same as main color"
+  - "[[ ubercolor ]]"
+
+wings description:
+  - "{{ wings shape }}, {{ wings length }}"
+
+wings shape:
+  - "lugia-like"
+  - "cloud-like"
+  - "dragon-like"
+  - "plane-like"
+  - "bat-like"
+  - "triangle"
+  - "square"
+  - "pray-like"
+
+wings length:
+  - "nonexistent (either no wings or comically small)"
+  - "very small (about half of bodysize)"
+  - "small (about bodysize)"
+  - "small (about bodysize)"
+  - "nominal (about twice of bodysize)"
+  - "nominal (about twice of bodysize)"
+  - "nominal (about twice of bodysize)"
+  - "big (about thrice of bodysize)"
+  - "big (about thrice of bodysize)"
+  - "huge (about quadriple of bodysize)"
+  - "enourmous (about pentacle of bodysize)"
+
+tail description:
+  - "{{ tail shape }}, {{ tail size }} {{ tail length }}"
+
+tail shape:
+  - "trapezoid"
+  - "trapezoid"
+  - "trapezoid"
+  - "rhombus"
+  - "rhombus"
+  - "diamond"
+  - "diamond"
+  - "triangle"
+  - "triangle"
+  - "square"
+  - "flatline"
+
+tail size:
+  - "very thin"
+  - "thin"
+  - "skinny"
+  - "wide"
+  - "feathery"
+  - "fluffy"
+  - "bushy"
+  - "thick"
+  - "very thick"
+
+tail length:
+  - "non-existent"
+  - "tiny (quarter of body length)"
+  - "small (third of body length)"
+  - "small (third of body length)"
+  - "normal (half of body length)"
+  - "normal (half of body length)"
+  - "normal (half of body length)"
+  - "normal (half of body length)"
+  - "significant (about body length)"
+  - "significant (about body length)"
+  - "big (about one and a half of body length)"
+  - "huge (about twice of body length)"
+  - "enourmous (about thrice of body length)"
+
+
+mutations of body:
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ mutations of body s }}{{ mutations of body }}"
+
+mutations of body s:
+  - "\nAdditional pair of wings"
+  - "\nAdditional eye"
+  - "\nAdditional pair of eyes"
+  - "\nAdditional pair of legs"
+  - "\nAdditional pair of arms"
+  - "\nWing-arms"
+  - "\nLong feathers on wing"
+  - "\nLong feathers on tail"
+  - "\nGlowing tendril"
+  - "\nGlowing spot"
+  - "\nGlowing mark"
+  - "\nMarks on forehead"
+  - "\nMarks on back"
+  - "\nAdditional mouth"
+  - "\nExternal organs"
+  - "\nAir-inflated body"
+  - "\nHeavy bones"
+  - "\nHeavy feathers"
+  - "\nVisible ears"
+
 intellectual level:
+  - "ultrainstinctive, native organism"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "low-instinctive, animal"
+  - "high-instinctive, tamed animal"
+  - "high-instinctive, tamed animal"
+  - "high-instinctive, tamed animal"
+  - "high-instinctive, tamed animal"
+  - "high-instinctive, tamed animal"
+  - "high-instinctive, tamed animal"
   - "primitive"
-  - "instinctive"
-  - "hive mind, centered"
-  - "hive mind, uncentered"
-  - "intellegent"
-  - "superintellegent"
+  - "primitive"
+  - "primitive"
+  - "primitive"
+  - "primitive"
+  - "primitive"
+  - "hive mind, queen-centered"
+  - "hive mind, king-centered"
+  - "hive mind, decentralized"
+  - "self-aware, dolphin-like"
+  - "self-aware, dolphin-like"
+  - "intellegent, human-like"
+  - "intellegent, human-like"
+  - "superintellegent, alien-like"
 
 social level:
-  - "sociopathic"
-  - "antisocial"
-  - "prefer loneliness"
-  - "prefer couples"
-  - "prefer crowds"
-  - "social"
-  - "supersocial"
+  - "sociopathic, ensures loneliness"
+  - "antisocial, hides from everyone"
+  - "low-social, prefer loneliness"
+  - "low-social, prefer loneliness"
+  - "simple-social, prefer couples or small groups"
+  - "simple-social, prefer couples or small groups"
+  - "simple-social, prefer couples or small groups"
+  - "simple-social, prefer couples or small groups"
+  - "high-social, prefer big groups or crowds"
+  - "high-social, prefer big groups or crowds"
+  - "high-social, prefer big groups or crowds"
+  - "high-social, prefer big groups or crowds"
+  - "supersocial, prefer huge flocks"
+
+blood type:
+  - "ice-cold"
+  - "cold"
+  - "cold"
+  - "cold"
+  - "cold"
+  - "warm"
+  - "warm"
+  - "warm"
+  - "warm"
+  - "fiery hot"
+
+protective mechanism:
+  - "running away"
+  - "running away"
+  - "running away"
+  - "running away"
+  - "flying away"
+  - "flying away"
+  - "flying away"
+  - "flying away"
+  - "flying away"
+  - "flying away"
+  - "flying away"
+  - "flying away"
+  - "attack with group"
+  - "attack with group"
+  - "attack with group"
+  - "relentless attack"
+  - "relentless attack"
+  - "relentless attack"
+  - "swimming away"
+  - "camouflage"
+  - "poisonous"
+  - "spiked"
 
 reproductive mechanism:
-  - "live birth, (( random_number 1 3 )) creatures"
+  - "live birth, gives life to (( random_number 1 3 )) creatures"
   - "live birth, (( random_number 2 8 )) creatures"
   - "live birth, (( random_number 6 15 )) creatures"
   - "live birth, (( random_number 20 40 )) creatures"
@@ -146,3 +404,12 @@ reproductive mechanism:
   - "egglaying, (( random_number 2 8 )) eggs"
   - "egglaying, (( random_number 6 15 )) eggs"
   - "egglaying, (( random_number 20 40 )) eggs"
+
+reproductive mechanism breed type:
+  - "live birth"
+  - "ovoparous (laying eggs)"
+  - "ovovivaparous (laying half-hatched eggs)"
+
+reproductive mechanism live birth creatures:
+  - "blind creatures"
+  - "sighted creatures"
