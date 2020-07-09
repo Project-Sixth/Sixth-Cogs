@@ -11,24 +11,24 @@ main appearance:
   \nSpecies name: TODO
   \nBody size: {{ body size }}
   \nDiet: {{ diet }}
-  \nHunt strategy: TODO
+  \nHunt strategy: {{ hunt strategy }}
   \nFlock size: {{ flock size }}
   \nMaterial: {{ material }}
-  \nLives: TODO (underwater/trees/bushes/etc)
+  \nLives: {{ living place }}
   \n
   \n=== Color appearance ===
   \nMain color: [[ ubercolor ]]
-  \nMain pattern: TODO
-  \nBeak color?: TODO
-  \nClaw color?: TODO
-  \nEye color?: {{ eye color }}
-  \nInsides color?: {{ insides color }}
+  \nMain pattern: {{ main pattern }}
+  \nBeak color: {{ beak color }}
+  \nClaw color: {{ claw color }}
+  \nEye color: {{ eye color }}
+  \nInsides color: {{ insides color }}
   \nMutations (color): TODO
   \n
   \n=== Look ===
   \nBeak size, shape, length: TODO
   \nWing size and shape: {{ wings description }}
-  \nClaw size, shape, length: TODO
+  \nClaw size, shape, length: {{ claw description }}
   \nTail size, shape, length: {{ tail description }}
   {{ mutations of body }}
   \n
@@ -146,6 +146,22 @@ diet multivore:
   - "{{ diet specification }} voices"
   - "{{ diet multivore }} and {{ diet multivore }}"
 
+hunt strategy:
+  - "attacks with group"
+  - "attacks with group"
+  - "attacks alone"
+  - "attacks alone"
+  - "traps"
+  - "traps"
+  - "ambushes"
+  - "ambushes"
+  - "exausting"
+  - "exausting"
+  - "luring to more complex enemy"
+  - "luring to more complex enemy"
+  - "overpowering"
+  - "oneshotting"
+
 flock size:
   - "small, about (( random_number 2 8 )) birds"
   - "small, about (( random_number 4 16 )) birds"
@@ -205,6 +221,88 @@ material exotic:
   - "fire"
   - "ectoplasm"
   - "liquid of some type"
+
+living place:
+  - "underwater"
+  - "hot places such as volcanos"
+  - "on top of high trees"
+  - "in trees"
+  - "in bushes"
+  - "on grassy ground"
+  - "in ground"
+  - "on barren ground"
+  - "in tree roots"
+  - "near cities"
+  - "on trashsites"
+  - "inside magical places"
+  - "inside temples"
+  - "on top of mountains"
+  - "on bottom of mountains"
+  - "in caves"
+  - "cold places such as under ice"
+  - "high in the sky, never lands"
+
+main pattern:
+  - "solid color"
+  - "gradient color"
+  - "stripes"
+  - "triangles"
+  - "squares"
+  - "hexagons"
+  - "pentagons"
+  - "stars"
+  - "rust"
+  - "plates"
+  - "spikes"
+  - "flames"
+  - "aires"
+  - "lightnings"
+  - "digital"
+  - "feral"
+
+beak color:
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "same as main color"
+  - "same as main color"
+  - "[[ ubercolor ]]"
+
+claw color:
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "natural"
+  - "same as main color"
+  - "same as main color"
+  - "[[ ubercolor ]]"
 
 eye color:
   - "same as main color, {{ eye color sclera }}"
@@ -288,6 +386,39 @@ wings length:
   - "big (about thrice of bodysize)"
   - "huge (about quadriple of bodysize)"
   - "enourmous (about pentacle of bodysize)"
+
+claw description:
+  - "{{ claw shape }}, {{ claw size }} {{ claw length }}"
+
+claw shape:
+  - "bird of prey with jagged edges"
+  - "bird of prey with smooth edges"
+  - "herbibird with pointy claws"
+  - "herbibird with curly claws"
+
+claw size:
+  - "very small"
+  - "small"
+  - "small"
+  - "middle-sized"
+  - "middle-sized"
+  - "middle-sized"
+  - "middle-sized"
+  - "large"
+  - "large"
+  - "very large"
+
+claw length:
+  - "very short"
+  - "short"
+  - "short"
+  - "average-sized"
+  - "average-sized"
+  - "average-sized"
+  - "average-sized"
+  - "long"
+  - "long"
+  - "very long"
 
 tail description:
   - "{{ tail shape }}, {{ tail size }} {{ tail length }}"
