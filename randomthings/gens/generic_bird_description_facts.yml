@@ -14,6 +14,7 @@ main appearance:
   \nHunt strategy: TODO
   \nFlock size: {{ flock size }}
   \nMaterial: {{ material }}
+  \nLives: TODO (underwater/trees/bushes/etc)
   \n
   \n=== Color appearance ===
   \nMain color: [[ ubercolor ]]
@@ -29,7 +30,7 @@ main appearance:
   \nWing size and shape: {{ wings description }}
   \nClaw size, shape, length: TODO
   \nTail size, shape, length: {{ tail description }}
-  \n{{ mutations of body }}
+  {{ mutations of body }}
   \n
   \n=== Abilities ===
   \nIntellectual level: {{ intellectual level }}
@@ -37,7 +38,7 @@ main appearance:
   \nBlood: {{ blood type }}
   \nProtective mechanisms: {{ protective mechanism }}
   \nReproductive mechanism: {{ reproductive mechanism }}
-  \nMutations (abilities): TODO"
+  {{ mutations of abilities }}"
 
 body size:
   - "micro (3cm, hummingbird)"
@@ -67,9 +68,22 @@ diet:
   - "Exotovore, {{ diet multivore }}"
 
 diet specification:
+  - "very exact"
   - "exact"
-  - "grouped"
+  - "one"
+  - "couple"
+  - "some"
+  - "some"
+  - "some"
+  - "some"
+  - "some"
+  - "some"
+  - "some"
+  - "some"
   - "all"
+  - "all"
+  - "all"
+  - "every"
 
 diet herbivore:
   - "{{ diet specification }} nuts"
@@ -162,54 +176,86 @@ material:
   - "flesh and bones"
   - "flesh and bones"
   - "flesh and bones"
-  - "metal"
-  - "energy"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "flesh and bones"
+  - "{{ material exotic }}"
+
+material exotic:
+  - "metal, probably iron"
+  - "metal, probably copper"
+  - "metal, probably brass"
+  - "metal, probably lead"
+  - "metal, probably silver"
+  - "metal, probably gold"
+  - "metal, probably bronze"
+  - "metal, probably uranium"
+  - "magical energy"
+  - "physical energy"
   - "crystal"
   - "glass"
+  - "volcanic rock"
+  - "jewelery rock"
+  - "water"
+  - "some form of gas"
+  - "fire"
+  - "ectoplasm"
+  - "liquid of some type"
 
 eye color:
-  - "same as main color, bright sclera"
-  - "same as main color, bright sclera"
-  - "same as main color, bright sclera"
-  - "same as main color, bright sclera"
-  - "same as main color, bright sclera"
-  - "same as main color, bright sclera"
-  - "same as main color, bright sclera"
-  - "same as main color, dark sclera"
-  - "same as main color, dark sclera"
-  - "same as main color, dark sclera"
-  - "same as main color, dark sclera"
-  - "same as beak color"
-  - "same as beak color"
-  - "same as beak color"
-  - "same as beak color"
-  - "same as claw color"
-  - "same as claw color"
-  - "same as claw color"
-  - "same as claw color"
-  - "same as insides color"
-  - "[[ ubercolor ]]"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as main color, {{ eye color sclera }}"
+  - "same as beak color, {{ eye color sclera }}"
+  - "same as beak color, {{ eye color sclera }}"
+  - "same as claw color, {{ eye color sclera }}"
+  - "same as claw color, {{ eye color sclera }}"
+  - "[[ ubercolor ]], {{ eye color sclera }}"
+
+eye color sclera:
+  - "bright sclera"
+  - "bright sclera"
+  - "bright sclera"
+  - "dark sclera"
+  - "dark sclera"
+  - "colored sclera"
 
 insides color:
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "red"
-  - "reddish"
-  - "reddish"
-  - "reddish"
-  - "reddish"
-  - "reddish"
-  - "reddish"
-  - "reddish"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "nominal"
+  - "same as main color"
   - "same as main color"
   - "same as main color"
   - "same as main color"
@@ -228,6 +274,7 @@ wings shape:
   - "triangle"
   - "square"
   - "pray-like"
+  - "tentacle-like"
 
 wings length:
   - "nonexistent (either no wings or comically small)"
@@ -413,3 +460,38 @@ reproductive mechanism breed type:
 reproductive mechanism live birth creatures:
   - "blind creatures"
   - "sighted creatures"
+
+mutations of abilities:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ mutations of abilities a }}{{ mutations of abilities }}"
+
+mutations of abilities a:
+  - "\nLevitates instead of flying"
+  - "\nCapable of hearing much lower frequencies"
+  - "\nCapable of hearing much higher frequencies"
+  - "\nCan see in the dark like it is a day"
+  - "\nCan mimicry"
+  - "\nControls fire"
+  - "\nControls water"
+  - "\nControls air"
+  - "\nControls lightning"
+  - "\nDont feel hunger"
+  - "\nCan survive without food indefenitely"
+  - "\nImmune to poison"
+  - "\nImmune to diseases"
+  - "\nImmune to fire"
+  - "\nImmune to drowning"
+  - "\nImmune to lighting"
+  - "\nImmune to damage"
+  - "\nImmune to age"
+  - "\nAbility to tell precise time from its birth"
+  - "\nVery good memory"
+  - "\nRemembers every moment of its life"
+  - "\nCould shapeshift"
