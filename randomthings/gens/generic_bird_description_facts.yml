@@ -23,10 +23,10 @@ main appearance:
   \nClaw color: {{ claw color }}
   \nEye color: {{ eye color }}
   \nInsides color: {{ insides color }}
-  \nMutations (color): TODO
+  {{ mutations of color }}
   \n
   \n=== Look ===
-  \nBeak size, shape, length: TODO
+  \nBeak size, shape, length: {{ beak description }}
   \nWing size and shape: {{ wings description }}
   \nClaw size, shape, length: {{ claw description }}
   \nTail size, shape, length: {{ tail description }}
@@ -360,6 +360,74 @@ insides color:
   - "same as main color"
   - "[[ ubercolor ]]"
 
+mutations of color:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - "{{ mutations of color c }}{{ mutations of color }}"
+
+mutations of color c:
+  - "\nGlowing feathers"
+  - "\nShimmering feathers"
+  - "\nTransparent feathers"
+  - "\nHolographic feathers"
+
+beak description:
+  - "{{ beak shape }}, {{ beak size }} {{ beak length }}"
+
+beak shape:
+  - "curled"
+  - "straight"
+  - "eagle"
+  - "serrated"
+  - "edgy"
+  - "wavy"
+  - "mouth"
+  - "hobot"
+
+beak size:
+  - "nonexistent"
+  - "tiny"
+  - "tiny"
+  - "small"
+  - "small"
+  - "small"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "big"
+  - "big"
+  - "big"
+  - "huge"
+  - "huge"
+
+beak length:
+  - "nonexistent"
+  - "tiny"
+  - "tiny"
+  - "small"
+  - "small"
+  - "small"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "sizeable"
+  - "big"
+  - "big"
+  - "big"
+  - "huge"
+  - "huge"
+
 wings description:
   - "{{ wings shape }}, {{ wings length }}"
 
@@ -568,6 +636,14 @@ protective mechanism:
   - "relentless attack"
   - "relentless attack"
   - "relentless attack"
+  - "scare with puffed-up size"
+  - "scare with puffed-up size"
+  - "hide in plain sight"
+  - "hide in plain sight"
+  - "play dead"
+  - "play dead"
+  - "scream very loudly"
+  - "photoepillepsy"
   - "swimming away"
   - "camouflage"
   - "poisonous"
