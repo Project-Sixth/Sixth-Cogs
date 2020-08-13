@@ -11,7 +11,7 @@ class ReactionRoles(commands.Cog):
         bot.add_listener(self.on_raw_reaction_add, "on_raw_reaction_add")
         bot.add_listener(self.on_raw_reaction_remove, "on_raw_reaction_remove")
     
-    async def on_raw_reaction_add(payload):
+    async def on_raw_reaction_add(self, payload):
         print(payload)
         if payload.user_id == self.bot.user.id:
             return 
@@ -24,7 +24,7 @@ class ReactionRoles(commands.Cog):
                 changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
                 await executedMember.add_roles([changedRole], f'For adding Emoji ID {payload.emoji.id}')
 
-    async def on_raw_reaction_remove(payload):
+    async def on_raw_reaction_remove(self, payload):
         print(payload)
         if payload.user_id == self.bot.user.id:
             return 
