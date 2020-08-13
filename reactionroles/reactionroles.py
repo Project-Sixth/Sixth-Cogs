@@ -84,5 +84,5 @@ class ReactionRoles(commands.Cog):
         for r in allReactions:
             answer += f'\nEmoji {r["emoji_id"]} on message {r["message_id"]} activates {r["role_id"]}.'
         answer += "```"
-        ctx.send(answer)
+        await ctx.send(answer)
     
