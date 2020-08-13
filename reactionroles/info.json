@@ -1,0 +1,7 @@
+{
+    "author": ["Project: Six"],
+    "short": "Reaction Roles",
+    "description": "Allows you to give or take roles using reactions",
+    "tags": ["reaction", "role", "moderation", "tool"],
+    "install_msg": "Reaction roles have been installed."
+}
