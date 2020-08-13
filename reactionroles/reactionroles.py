@@ -12,27 +12,18 @@ class ReactionRoles(commands.Cog):
         bot.add_listener(self.on_raw_reaction_remove, "on_raw_reaction_remove")
     
     async def on_raw_reaction_add(self, payload):
-        print(payload)
         if payload.user_id == self.bot.user.id:
             return 
         
         executedGuild = [x for x in self.bot.guilds if x.id == payload.guild_id][0]
-        print(executedGuild)
         allReactions = await self.config.guild(executedGuild).reactions()
-        print(allReactions)
         for i in allReactions:
-            print(i)
-            print(i["message_id"] == payload.message_id)
-            print(i["emoji_id"] == payload.emoji.id)
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
                 executedMember = [x for x in executedGuild.members if x.id == payload.user_id][0]
-                print(executedMember)
                 changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
-                print(changedRole)
-                await executedMember.add_roles([changedRole], f'For adding Emoji ID {payload.emoji.id}')
+                await executedMember.add_roles(changedRole, f'For adding Emoji ID {payload.emoji.id}')
 
     async def on_raw_reaction_remove(self, payload):
-        print(payload)
         if payload.user_id == self.bot.user.id:
             return 
         
@@ -42,7 +33,7 @@ class ReactionRoles(commands.Cog):
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
                 executedMember = [x for x in executedGuild.members if x.id == payload.user_id][0]
                 changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
-                await executedMember.remove_roles([changedRole], f'For removing Emoji ID {payload.emoji.id}')
+                await executedMember.remove_roles(changedRole, f'For removing Emoji ID {payload.emoji.id}')
     
     @commands.group()
     @checks.admin()
