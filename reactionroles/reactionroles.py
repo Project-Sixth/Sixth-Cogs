@@ -82,7 +82,7 @@ class ReactionRoles(commands.Cog):
         allReactions = await self.config.guild(ctx.guild).reactions()
         answer = "```Here is all RR active on server:"
         for r in allReactions:
-            answer += f"\nEmoji {r.emoji_id} on message {r.message_id} activates {r.role_id}."
+            answer += f'\nEmoji {r["emoji_id"]} on message {r["message_id"]} activates {r["role_id"]}.'
         answer += "```"
         ctx.send(answer)
     
