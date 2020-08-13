@@ -10,6 +10,7 @@ class ReactionRoles(commands.Cog):
         self.config.register_guild(**default_settings)
     
     async def on_raw_reaction_add(payload):
+        print(payload)
         if payload.user_id == self.bot.user.id:
             return 
         
@@ -22,6 +23,7 @@ class ReactionRoles(commands.Cog):
                 await executedMember.add_roles([changedRole], f'For adding Emoji ID {payload.emoji.id}')
 
     async def on_raw_reaction_remove(payload):
+        print(payload)
         if payload.user_id == self.bot.user.id:
             return 
         
