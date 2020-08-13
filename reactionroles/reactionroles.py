@@ -8,6 +8,8 @@ class ReactionRoles(commands.Cog):
             "reactions": []
         }
         self.config.register_guild(**default_settings)
+        bot.add_listener(self.on_raw_reaction_add, "on_raw_reaction_add")
+        bot.add_listener(self.on_raw_reaction_remove, "on_raw_reaction_remove")
     
     async def on_raw_reaction_add(payload):
         print(payload)
