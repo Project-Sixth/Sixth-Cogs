@@ -72,7 +72,7 @@ class ReactionRoles(commands.Cog):
             newReactions.append(r)
         await self.config.guild(ctx.guild).reactions.set(newReactions)
         msg = await ctx.message.channel.fetch_message(messageId)
-        await msg.remove_reaction(emoji)
+        await msg.remove_reaction(emoji, self.bot.user)
     
     @reactionroles.command('list')
     async def _list(self, ctx):
