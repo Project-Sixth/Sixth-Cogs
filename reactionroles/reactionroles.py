@@ -41,7 +41,7 @@ class ReactionRoles(commands.Cog):
         pass
     
     @reactionroles.command('add')
-    async def _add(self, ctx, messageId: str, emoji: commands.EmojiConverter, mentionedRole: commands.RoleConverter):
+    async def _add(self, ctx, messageId: str, emoji: commands.PartialEmojiConverter, mentionedRole: commands.RoleConverter):
         """
         Adds a ReactionRole. Takes MessageID, Emoji and MentionedRole.
         Adds Emoji to certain MessageID, and everyone who clicks it receive MentionedRole.
@@ -59,7 +59,7 @@ class ReactionRoles(commands.Cog):
         
     
     @reactionroles.command('remove')
-    async def _remove(self, ctx, messageId: str, emoji: commands.EmojiConverter):
+    async def _remove(self, ctx, messageId: str, emoji: commands.PartialEmojiConverter):
         """
         Removes a ReactionRole. Takes MessageID, Emoji.
         Removes certain Emoji from MessageID.
