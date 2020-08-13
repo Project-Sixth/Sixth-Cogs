@@ -17,11 +17,16 @@ class ReactionRoles(commands.Cog):
             return 
         
         executedGuild = [x for x in self.bot.guilds if x.id == payload.guild_id][0]
+        print(executedGuild)
         allReactions = await self.config.guild(executedGuild).reactions()
+        print(allReactions)
         for i in allReactions:
+            print(i)
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
                 executedMember = [x for x in executedGuild.members if x.id == payload.user_id][0]
+                print(executedMember)
                 changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
+                print(changedRole)
                 await executedMember.add_roles([changedRole], f'For adding Emoji ID {payload.emoji.id}')
 
     async def on_raw_reaction_remove(self, payload):
