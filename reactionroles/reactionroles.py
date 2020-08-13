@@ -22,6 +22,8 @@ class ReactionRoles(commands.Cog):
         print(allReactions)
         for i in allReactions:
             print(i)
+            print(i["message_id"] == payload.message_id)
+            print(i["emoji_id"] == payload.emoji.id)
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
                 executedMember = [x for x in executedGuild.members if x.id == payload.user_id][0]
                 print(executedMember)
