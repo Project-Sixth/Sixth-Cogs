@@ -22,6 +22,8 @@ class ReactionRoles(commands.Cog):
         print(f'DEBUG - allReactions: {allReactions}')
         for i in allReactions:
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
+                print(f'DEBUG - executedGuild.members: {executedGuild.members}')
+                print(f'DEBUG - payload.user_id: {payload.user_id}')
                 executedMembers = [x for x in executedGuild.members if x.id == payload.user_id]
                 print(f'DEBUG - executedMembers: {executedMembers}')
                 executedMember = executedMembers[0]
