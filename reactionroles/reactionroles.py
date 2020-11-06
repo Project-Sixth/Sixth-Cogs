@@ -15,40 +15,37 @@ class ReactionRoles(commands.Cog):
         if payload.user_id == self.bot.user.id:
             return 
         
-        executedGuilds = [x for x in self.bot.guilds if x.id == payload.guild_id]
-        print(f'DEBUG - executedGuilds: {executedGuilds}')
-        executedGuild = executedGuilds[0]
+        executedGuild = self.bot.get_guild(payload.guild_id)
         allReactions = await self.config.guild(executedGuild).reactions()
-        print(f'DEBUG - allReactions: {allReactions}')
         for i in allReactions:
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
-                # print(f'DEBUG - executedGuild.members: {executedGuild.members}')
-                # print(f'DEBUG - payload.user_id: {payload.user_id}')
-                # executedMembers = [x for x in executedGuild.members if x.id == payload.user_id]
-                # print(f'DEBUG - executedMembers: {executedMembers}')
-                # executedMember = executedMembers[0]
                 executedMember = executedGuild.get_member(payload.user_id)
                 if executedMember:
-                    # changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
                     changedRole = executedGuild.get_role(i["role_id"])
                     if changedRole:
                         await executedMember.add_roles(changedRole, reason=f'For adding Emoji ID {payload.emoji.id}')
                     else:
-                        print(f'no role {i["role_id"]}')
+                        print(f'ERROR: no role {i["role_id"]}')
                 else:
-                    print(f'no member {payload.user_id}')
+                    print(f'ERROR: no member {payload.user_id}')
 
     async def on_raw_reaction_remove(self, payload):
         if payload.user_id == self.bot.user.id:
             return 
         
-        executedGuild = [x for x in self.bot.guilds if x.id == payload.guild_id][0]
+        executedGuild = self.bot.get_guild(payload.guild_id)
         allReactions = await self.config.guild(executedGuild).reactions()
         for i in allReactions:
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
-                executedMember = [x for x in executedGuild.members if x.id == payload.user_id][0]
-                changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
-                await executedMember.remove_roles(changedRole, reason=f'For removing Emoji ID {payload.emoji.id}')
+                executedMember = executedGuild.get_member(payload.user_id)
+                if executedMember:
+                    changedRole = executedGuild.get_role(i["role_id"])
+                    if changedRole:
+                        await executedMember.remove_roles(changedRole, reason=f'For removing Emoji ID {payload.emoji.id}')
+                    else:
+                        print(f'ERROR: no role {i["role_id"]}')
+                else:
+                    print(f'ERROR: no member {payload.user_id}')
     
     @commands.group()
     @checks.admin()
