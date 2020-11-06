@@ -15,11 +15,16 @@ class ReactionRoles(commands.Cog):
         if payload.user_id == self.bot.user.id:
             return 
         
-        executedGuild = [x for x in self.bot.guilds if x.id == payload.guild_id][0]
+        executedGuilds = [x for x in self.bot.guilds if x.id == payload.guild_id]
+        print(f'DEBUG - executedGuilds: {executedGuilds}')
+        executedGuild = executedGuilds[0]
         allReactions = await self.config.guild(executedGuild).reactions()
+        print(f'DEBUG - allReactions: {allReactions}')
         for i in allReactions:
             if i["message_id"] == payload.message_id and i["emoji_id"] == payload.emoji.id:
-                executedMember = [x for x in executedGuild.members if x.id == payload.user_id][0]
+                executedMembers = [x for x in executedGuild.members if x.id == payload.user_id]
+                print(f'DEBUG - executedMembers: {executedMembers}')
+                executedMember = executedMembers[0]
                 changedRole = [x for x in executedGuild.roles if i["role_id"] == x.id][0]
                 await executedMember.add_roles(changedRole, reason=f'For adding Emoji ID {payload.emoji.id}')
 
